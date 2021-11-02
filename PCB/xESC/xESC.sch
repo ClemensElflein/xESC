@@ -735,4 +735,8 @@ Wire Wire Line
 	6800 2500 7150 2500
 Text Label 1750 4050 0    50   ~ 0
 INPUT
+Wire Wire Line
+	9350 2250 8850 2250
+Text Label 8850 2250 0    50   ~ 0
+V_M
 $EndSCHEMATC

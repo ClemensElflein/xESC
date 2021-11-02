@@ -30,7 +30,7 @@ TXD
 Text HLabel 5750 3350 2    50   Output ~ 0
 RXD
 Text Notes 2100 3000 0    50   ~ 0
-TODO:\nAdd daisy chaining
+TODO:\nAdd daisy chaining,\nadd pads for connectors\nadd programming header\nadd arduino uart header
 Text HLabel 5750 3650 2    50   Output ~ 0
 INPUT
 Text HLabel 5750 4000 2    50   Input ~ 0
