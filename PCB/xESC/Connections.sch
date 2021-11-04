@@ -338,10 +338,10 @@ Wire Wire Line
 Text HLabel 4800 6100 2    50   Input ~ 0
 SS_EXT_SPI
 $Comp
-L Connector:TestPoint TP?
+L Connector:TestPoint TP8
 U 1 1 61DD08D4
 P 4550 6100
-F 0 "TP?" H 4608 6218 50  0000 L CNN
+F 0 "TP8" H 4608 6218 50  0000 L CNN
 F 1 "TestPoint" H 4608 6127 50  0000 L CNN
 F 2 "xESC:TestPoint_Pad_1.5x1.5mm" H 4750 6100 50  0001 C CNN
 F 3 "~" H 4750 6100 50  0001 C CNN
@@ -350,4 +350,33 @@ F 3 "~" H 4750 6100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 6100 4550 6100
+$Comp
+L Connector:TestPoint TP9
+U 1 1 61E1451D
+P 3400 1450
+F 0 "TP9" H 3458 1568 50  0000 L CNN
+F 1 "TestPoint" H 3458 1477 50  0000 L CNN
+F 2 "xESC:TestPoint_Pad_1.5x1.5mm" H 3600 1450 50  0001 C CNN
+F 3 "~" H 3600 1450 50  0001 C CNN
+	1    3400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 61E15E2F
+P 3700 1500
+F 0 "D2" H 3700 1283 50  0000 C CNN
+F 1 "D_Schottky" H 3700 1374 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3700 1500 50  0001 C CNN
+F 3 "~" H 3700 1500 50  0001 C CNN
+	1    3700 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4050 1500 3850 1500
+Connection ~ 4050 1500
+Wire Wire Line
+	3550 1500 3400 1500
+Wire Wire Line
+	3400 1500 3400 1450
 $EndSCHEMATC

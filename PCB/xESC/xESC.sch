@@ -35,6 +35,7 @@ F15 "MOSI" I R 1400 5000 50
 F16 "SCK" I R 1400 5100 50 
 F17 "INPUT_PWM" O R 1400 3950 50 
 F18 "INPUT_ANALOG" O R 1400 4050 50 
+F19 "SS_EXT_SPI" I R 1400 4650 50 
 $EndSheet
 $Comp
 L power:GND #PWR0101
@@ -638,7 +639,7 @@ U 1 1 61C71604
 P 2650 6400
 F 0 "H1" H 2750 6449 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2750 6358 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 2650 6400 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 2650 6400 50  0001 C CNN
 F 3 "~" H 2650 6400 50  0001 C CNN
 	1    2650 6400
 	1    0    0    -1  
@@ -679,7 +680,7 @@ U 1 1 61C9B6F5
 P 2850 6400
 F 0 "H2" H 2950 6449 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2950 6358 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 2850 6400 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 2850 6400 50  0001 C CNN
 F 3 "~" H 2850 6400 50  0001 C CNN
 	1    2850 6400
 	1    0    0    -1  
@@ -690,7 +691,7 @@ U 1 1 61CA0CC2
 P 3050 6400
 F 0 "H3" H 3150 6449 50  0000 L CNN
 F 1 "MountingHole_Pad" H 3150 6358 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 3050 6400 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 3050 6400 50  0001 C CNN
 F 3 "~" H 3050 6400 50  0001 C CNN
 	1    3050 6400
 	1    0    0    -1  
@@ -701,7 +702,7 @@ U 1 1 61CA62C7
 P 3250 6400
 F 0 "H4" H 3350 6449 50  0000 L CNN
 F 1 "MountingHole_Pad" H 3350 6358 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 3250 6400 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 3250 6400 50  0001 C CNN
 F 3 "~" H 3250 6400 50  0001 C CNN
 	1    3250 6400
 	1    0    0    -1  
@@ -730,5 +731,9 @@ Wire Wire Line
 Wire Wire Line
 	6700 2600 7150 2600
 Text Label 7150 2600 0    50   ~ 0
+EXT_SPI_SS
+Wire Wire Line
+	1400 4650 1850 4650
+Text Label 1850 4650 0    50   ~ 0
 EXT_SPI_SS
 $EndSCHEMATC
