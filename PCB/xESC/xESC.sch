@@ -20,22 +20,21 @@ F0 "Connections" 50
 F1 "Connections.sch" 50
 F2 "V_IN" O R 1400 2550 50 
 F3 "GND" U R 1400 2650 50 
-F4 "HALL_V+" I R 1400 3050 50 
-F5 "HALL_U" O R 1400 3150 50 
-F6 "HALL_V" O R 1400 3250 50 
-F7 "HALL_W" O R 1400 3350 50 
-F8 "TXD" I R 1400 3700 50 
-F9 "RXD" O R 1400 3800 50 
-F10 "U" I R 1400 4200 50 
-F11 "V" I R 1400 4300 50 
-F12 "W" I R 1400 4400 50 
-F13 "VCCIO" I R 1400 2450 50 
-F14 "RESET" I R 1400 4800 50 
-F15 "MISO" I R 1400 4900 50 
-F16 "MOSI" I R 1400 5000 50 
-F17 "SCK" I R 1400 5100 50 
-F18 "INPUT_PWM" O R 1400 3950 50 
-F19 "INPUT_ANALOG" O R 1400 4050 50 
+F4 "HALL_U" O R 1400 3150 50 
+F5 "HALL_V" O R 1400 3250 50 
+F6 "HALL_W" O R 1400 3350 50 
+F7 "TXD" I R 1400 3700 50 
+F8 "RXD" O R 1400 3800 50 
+F9 "U" I R 1400 4200 50 
+F10 "V" I R 1400 4300 50 
+F11 "W" I R 1400 4400 50 
+F12 "VCCIO" I R 1400 2450 50 
+F13 "RESET" I R 1400 4800 50 
+F14 "MISO" I R 1400 4900 50 
+F15 "MOSI" I R 1400 5000 50 
+F16 "SCK" I R 1400 5100 50 
+F17 "INPUT_PWM" O R 1400 3950 50 
+F18 "INPUT_ANALOG" O R 1400 4050 50 
 $EndSheet
 $Comp
 L power:GND #PWR0101
@@ -68,8 +67,6 @@ Wire Wire Line
 Wire Wire Line
 	6200 1750 6100 1750
 Connection ~ 6100 1750
-Wire Wire Line
-	6100 1750 6100 1650
 $Comp
 L MCU_Microchip_ATmega:ATmega328-AU U1
 U 1 1 6182D94F
@@ -87,8 +84,6 @@ Wire Wire Line
 	1750 2550 1750 2000
 Wire Wire Line
 	1400 2450 1900 2450
-Wire Wire Line
-	1900 2450 1900 2150
 $Comp
 L power:VCC #PWR0103
 U 1 1 618309BA
@@ -126,27 +121,6 @@ Wire Wire Line
 Connection ~ 6100 5350
 Wire Wire Line
 	6100 5350 6100 5100
-Wire Wire Line
-	4700 2400 4700 2050
-Connection ~ 4700 2400
-$Comp
-L Jumper:SolderJumper_2_Open JP8
-U 1 1 6181EAAC
-P 4700 1900
-F 0 "JP8" V 4654 1968 50  0000 L CNN
-F 1 "SolderJumper_2_Open" V 4745 1968 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 4700 1900 50  0001 C CNN
-F 3 "~" H 4700 1900 50  0001 C CNN
-	1    4700 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4700 1750 4700 1650
-Wire Wire Line
-	4700 1650 6100 1650
-Connection ~ 6100 1650
-Wire Wire Line
-	6100 1650 6100 1550
 $Comp
 L Device:Resonator Y1
 U 1 1 6182040E
@@ -351,17 +325,9 @@ W_ENABLE
 Text Label 8850 4400 0    50   ~ 0
 W_DIR
 Wire Wire Line
-	8850 2450 9350 2450
-Wire Wire Line
 	9350 2550 8850 2550
 Text Label 8850 2550 0    50   ~ 0
 VCC_IO
-Text Label 8850 2450 0    50   ~ 0
-5V
-Wire Wire Line
-	1400 3050 1800 3050
-Text Label 1800 3050 0    50   ~ 0
-5V
 $Comp
 L Device:C C?
 U 1 1 61860011
@@ -490,106 +456,6 @@ Wire Wire Line
 Connection ~ 2650 2450
 Wire Wire Line
 	2650 2450 2900 2450
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP9
-U 1 1 618804A4
-P 2650 2150
-F 0 "JP9" H 2650 2355 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 2650 2264 50  0000 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm_NumberLabels" H 2650 2150 50  0001 C CNN
-F 3 "~" H 2650 2150 50  0001 C CNN
-	1    2650 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2650 2450 2650 2300
-Wire Wire Line
-	1900 2150 2450 2150
-Connection ~ 1900 2150
-Wire Wire Line
-	1900 2150 1900 2000
-Wire Wire Line
-	2850 2150 3200 2150
-Text Label 3200 2150 0    50   ~ 0
-5V
-Wire Wire Line
-	2900 3150 3700 3150
-Wire Wire Line
-	2650 3250 3500 3250
-Wire Wire Line
-	2400 3350 3300 3350
-$Comp
-L Device:D_Schottky D2
-U 1 1 618AA33D
-P 3300 2750
-F 0 "D2" V 3254 2830 50  0000 L CNN
-F 1 "D_Schottky" V 3345 2830 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3300 2750 50  0001 C CNN
-F 3 "~" H 3300 2750 50  0001 C CNN
-	1    3300 2750
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky D3
-U 1 1 618AB2E8
-P 3500 2750
-F 0 "D3" V 3454 2830 50  0000 L CNN
-F 1 "D_Schottky" V 3545 2830 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3500 2750 50  0001 C CNN
-F 3 "~" H 3500 2750 50  0001 C CNN
-	1    3500 2750
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky D4
-U 1 1 618AD730
-P 3700 2750
-F 0 "D4" V 3654 2830 50  0000 L CNN
-F 1 "D_Schottky" V 3745 2830 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3700 2750 50  0001 C CNN
-F 3 "~" H 3700 2750 50  0001 C CNN
-	1    3700 2750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3300 3350 3300 2900
-Connection ~ 3300 3350
-Wire Wire Line
-	3300 3350 3900 3350
-Wire Wire Line
-	3500 3250 3500 2900
-Connection ~ 3500 3250
-Wire Wire Line
-	3500 3250 3900 3250
-Wire Wire Line
-	3700 3150 3700 2900
-Connection ~ 3700 3150
-Wire Wire Line
-	3700 3150 3900 3150
-$Comp
-L power:VCC #PWR0114
-U 1 1 618B76AE
-P 3500 2000
-F 0 "#PWR0114" H 3500 1850 50  0001 C CNN
-F 1 "VCC" H 3515 2173 50  0000 C CNN
-F 2 "" H 3500 2000 50  0001 C CNN
-F 3 "" H 3500 2000 50  0001 C CNN
-	1    3500 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3300 2600 3300 2450
-Wire Wire Line
-	3300 2450 3500 2450
-Wire Wire Line
-	3500 2450 3500 2000
-Wire Wire Line
-	3500 2600 3500 2450
-Connection ~ 3500 2450
-Wire Wire Line
-	3700 2600 3700 2450
-Wire Wire Line
-	3700 2450 3500 2450
 $Comp
 L power:VCC #PWR0115
 U 1 1 618C424A
@@ -748,10 +614,9 @@ F13 "VH" I L 9350 4100 50
 F14 "VL" I L 9350 4200 50 
 F15 "WH" I L 9350 4400 50 
 F16 "WL" I L 9350 4500 50 
-F17 "5V" O L 9350 2450 50 
-F18 "U" O R 10450 2850 50 
-F19 "V" O R 10450 3000 50 
-F20 "W" O R 10450 3150 50 
+F17 "U" O R 10450 2850 50 
+F18 "V" O R 10450 3000 50 
+F19 "W" O R 10450 3150 50 
 $EndSheet
 Text Label 8850 2950 0    50   ~ 0
 MOSI
@@ -765,4 +630,105 @@ Text Label 4850 2600 0    50   ~ 0
 INPUT_ANALOG
 Wire Wire Line
 	4850 2600 5500 2600
+Wire Wire Line
+	6100 1550 6100 1750
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 61C71604
+P 2650 6400
+F 0 "H1" H 2750 6449 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2750 6358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 2650 6400 50  0001 C CNN
+F 3 "~" H 2650 6400 50  0001 C CNN
+	1    2650 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6500 2650 6700
+Wire Wire Line
+	2650 6700 2850 6700
+Wire Wire Line
+	3250 6700 3250 6500
+Wire Wire Line
+	3050 6500 3050 6700
+Connection ~ 3050 6700
+Wire Wire Line
+	3050 6700 3250 6700
+Wire Wire Line
+	2850 6700 2850 6500
+Connection ~ 2850 6700
+Wire Wire Line
+	2850 6700 2950 6700
+$Comp
+L power:GND #PWR0119
+U 1 1 61C8FEAA
+P 2950 6700
+F 0 "#PWR0119" H 2950 6450 50  0001 C CNN
+F 1 "GND" H 2955 6527 50  0000 C CNN
+F 2 "" H 2950 6700 50  0001 C CNN
+F 3 "" H 2950 6700 50  0001 C CNN
+	1    2950 6700
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 6700
+Wire Wire Line
+	2950 6700 3050 6700
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 61C9B6F5
+P 2850 6400
+F 0 "H2" H 2950 6449 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2950 6358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 2850 6400 50  0001 C CNN
+F 3 "~" H 2850 6400 50  0001 C CNN
+	1    2850 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 61CA0CC2
+P 3050 6400
+F 0 "H3" H 3150 6449 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3150 6358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 3050 6400 50  0001 C CNN
+F 3 "~" H 3050 6400 50  0001 C CNN
+	1    3050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 61CA62C7
+P 3250 6400
+F 0 "H4" H 3350 6449 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3350 6358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 3250 6400 50  0001 C CNN
+F 3 "~" H 3250 6400 50  0001 C CNN
+	1    3250 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2000 1900 2450
+Wire Wire Line
+	2400 3350 3900 3350
+Wire Wire Line
+	2650 3250 3900 3250
+Wire Wire Line
+	2900 3150 3900 3150
+$Comp
+L power:VCC #PWR0107
+U 1 1 61CFD9F9
+P 2650 2000
+F 0 "#PWR0107" H 2650 1850 50  0001 C CNN
+F 1 "VCC" H 2665 2173 50  0000 C CNN
+F 2 "" H 2650 2000 50  0001 C CNN
+F 3 "" H 2650 2000 50  0001 C CNN
+	1    2650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2000 2650 2450
+Wire Wire Line
+	6700 2600 7150 2600
+Text Label 7150 2600 0    50   ~ 0
+EXT_SPI_SS
 $EndSCHEMATC

@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/lib/TMC6100/footprints.pretty)(options "")(descr ""))
+  (lib (name xESC)(type KiCad)(uri ${KIPRJMOD}/lib/xESC/xESC.pretty)(options "")(descr ""))
 )

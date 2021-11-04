@@ -69,8 +69,6 @@ Wire Wire Line
 Connection ~ 2200 4600
 Wire Wire Line
 	2200 4600 1550 4600
-Text HLabel 1300 7250 3    50   BiDi ~ 0
-VCC_IO
 $Comp
 L Device:C C4
 U 1 1 61837A5D
@@ -350,17 +348,6 @@ F4 "PHASE" U L 8950 1850 50
 F5 "HS_GATE" I L 8950 1750 50 
 F6 "LS_GATE" I L 8950 1950 50 
 $EndSheet
-$Comp
-L Regulator_Linear:MIC5504-1.8YM5 U4
-U 1 1 6187C01A
-P 3150 6850
-F 0 "U4" H 3150 7217 50  0000 C CNN
-F 1 "MIC5504-1.8YM5" H 3150 7126 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 3150 6450 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf" H 2900 7100 50  0001 C CNN
-	1    3150 6850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6800 5400 7050 5400
 Wire Wire Line
@@ -384,95 +371,6 @@ Text Label 5800 1750 0    50   ~ 0
 5V
 Wire Wire Line
 	5800 1750 7050 1750
-$Comp
-L Device:C C8
-U 1 1 618870BF
-P 3750 6950
-F 0 "C8" H 3865 6996 50  0000 L CNN
-F 1 "100nF" H 3865 6905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3788 6800 50  0001 C CNN
-F 3 "~" H 3750 6950 50  0001 C CNN
-	1    3750 6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3550 6750 3750 6750
-Wire Wire Line
-	3750 6750 3750 6800
-Wire Wire Line
-	3150 7150 3150 7350
-Wire Wire Line
-	3150 7350 3750 7350
-Wire Wire Line
-	3750 7350 3750 7100
-Wire Wire Line
-	3150 7350 3150 7550
-Connection ~ 3150 7350
-$Comp
-L power:GND #PWR0107
-U 1 1 6188D671
-P 3150 7550
-F 0 "#PWR0107" H 3150 7300 50  0001 C CNN
-F 1 "GND" H 3155 7377 50  0000 C CNN
-F 2 "" H 3150 7550 50  0001 C CNN
-F 3 "" H 3150 7550 50  0001 C CNN
-	1    3150 7550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2750 6750 2500 6750
-Wire Wire Line
-	2750 6950 2500 6950
-Wire Wire Line
-	2500 6950 2500 6750
-Connection ~ 2500 6750
-Wire Wire Line
-	2500 6750 2300 6750
-Text Label 2300 6750 0    50   ~ 0
-5V
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP1
-U 1 1 61897811
-P 1300 6750
-F 0 "JP1" H 1300 6955 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 1300 6864 50  0000 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm_NumberLabels" H 1300 6750 50  0001 C CNN
-F 3 "~" H 1300 6750 50  0001 C CNN
-	1    1300 6750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1300 7250 1300 7100
-Wire Wire Line
-	1300 7100 1750 7100
-Connection ~ 1300 7100
-Wire Wire Line
-	1300 7100 1300 6900
-Text Label 1750 7100 0    50   ~ 0
-VCC_IO
-Wire Wire Line
-	1100 6750 650  6750
-Wire Wire Line
-	1500 6750 1950 6750
-Wire Wire Line
-	3750 6750 4150 6750
-Connection ~ 3750 6750
-Text Label 4150 6750 0    50   ~ 0
-3V3
-Text Label 1950 6750 0    50   ~ 0
-3V3
-Text Label 650  6750 0    50   ~ 0
-5V
-Text Notes 650  6550 0    50   ~ 0
-Solder Jumper to select VCCIO\nDefaults to TMC6100's 5V output.\n1 - 2: 5V\n2 - 3: 3.3V
-Wire Notes Line
-	550  6150 550  7750
-Wire Notes Line
-	550  7750 4450 7750
-Wire Notes Line
-	4450 7750 4450 6150
-Wire Notes Line
-	4450 6150 550  6150
 $Sheet
 S 8950 3600 550  900 
 U 618D9FC1
@@ -705,7 +603,7 @@ $EndComp
 Wire Wire Line
 	2000 1400 2000 950 
 Wire Wire Line
-	2200 2250 2200 950 
+	2200 2250 2200 1250
 Wire Wire Line
 	2200 950  2100 950 
 Wire Wire Line
@@ -824,11 +722,7 @@ Text HLabel 1300 3150 0    50   Input ~ 0
 WH
 Text HLabel 1300 3250 0    50   Input ~ 0
 WL
-Wire Wire Line
-	7050 1750 7250 1750
 Connection ~ 7050 1750
-Text HLabel 7250 1750 2    50   Output ~ 0
-5V
 Text HLabel 8300 1850 0    50   Output ~ 0
 U
 Text HLabel 8300 2950 0    50   Output ~ 0
@@ -856,4 +750,17 @@ Wire Wire Line
 Wire Wire Line
 	5200 7200 5450 7200
 Connection ~ 5450 7200
+Wire Wire Line
+	7050 1750 7050 700 
+Wire Wire Line
+	7050 700  2750 700 
+Wire Wire Line
+	2750 700  2750 1250
+Wire Wire Line
+	2750 1250 2200 1250
+Connection ~ 2200 1250
+Wire Wire Line
+	2200 1250 2200 950 
+Text HLabel 2100 800  0    50   Output ~ 0
+VCC_IO
 $EndSCHEMATC
