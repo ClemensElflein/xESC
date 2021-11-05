@@ -632,17 +632,6 @@ Wire Wire Line
 Connection ~ 2000 1850
 Wire Wire Line
 	2000 1850 3600 1850
-$Comp
-L Amplifier_Operational:LMV321 U3
-U 1 1 61A3792F
-P 10050 5300
-F 0 "U3" H 10394 5346 50  0000 L CNN
-F 1 "LMV321" H 10394 5255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 10050 5300 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 10050 5300 50  0001 C CNN
-	1    10050 5300
-	1    0    0    -1  
-$EndComp
 Text Label 9950 4900 0    50   ~ 0
 VCC_IO
 Wire Wire Line
@@ -659,7 +648,7 @@ L Device:R R10
 U 1 1 61A55492
 P 9300 5650
 F 0 "R10" V 9093 5650 50  0000 C CNN
-F 1 "R" V 9184 5650 50  0000 C CNN
+F 1 "1.5kR" V 9184 5650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 9230 5650 50  0001 C CNN
 F 3 "~" H 9300 5650 50  0001 C CNN
 	1    9300 5650
@@ -670,7 +659,7 @@ L Device:R R11
 U 1 1 61A57FE0
 P 9700 5650
 F 0 "R11" V 9493 5650 50  0000 C CNN
-F 1 "R" V 9584 5650 50  0000 C CNN
+F 1 "150kR" V 9584 5650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 9630 5650 50  0001 C CNN
 F 3 "~" H 9700 5650 50  0001 C CNN
 	1    9700 5650
@@ -844,4 +833,15 @@ Wire Wire Line
 Wire Wire Line
 	4900 7200 5200 7200
 Connection ~ 5200 7200
+$Comp
+L Amplifier_Operational:MCP601R U3
+U 1 1 6188D007
+P 10050 5300
+F 0 "U3" H 10394 5346 50  0000 L CNN
+F 1 "MCP601R" H 10394 5255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 10050 5300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf" H 10050 5500 50  0001 C CNN
+	1    10050 5300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
