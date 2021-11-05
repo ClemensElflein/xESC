@@ -39,7 +39,7 @@ F 3 "" H 3600 4500 60  0000 C CNN
 	2    3600 4500
 	1    0    0    -1  
 $EndComp
-Text HLabel 5100 6650 0    50   Input ~ 0
+Text HLabel 4750 6650 0    50   Input ~ 0
 V_M
 Wire Wire Line
 	3600 1650 3350 1650
@@ -462,7 +462,7 @@ L Device:R R7
 U 1 1 6193F98F
 P 8750 5200
 F 0 "R7" H 8820 5246 50  0000 L CNN
-F 1 "30mR - 1W" H 8820 5155 50  0000 L CNN
+F 1 "3mR - 1W" H 8820 5155 50  0000 L CNN
 F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 8680 5200 50  0001 C CNN
 F 3 "~" H 8750 5200 50  0001 C CNN
 	1    8750 5200
@@ -561,7 +561,7 @@ Wire Wire Line
 	6650 7150 6650 6900
 Wire Wire Line
 	6650 6600 6650 6450
-Text Label 6650 6450 0    50   ~ 0
+Text Label 6650 6450 1    50   ~ 0
 FAULT
 Wire Wire Line
 	5800 1950 7250 1950
@@ -741,10 +741,7 @@ F 3 "~" H 5200 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 6650 5200 6650
-Wire Wire Line
 	5200 6900 5200 6650
-Connection ~ 5200 6650
 Wire Wire Line
 	5200 6650 5450 6650
 Wire Wire Line
@@ -763,4 +760,88 @@ Wire Wire Line
 	2200 1250 2200 950 
 Text HLabel 2100 800  0    50   Output ~ 0
 VCC_IO
+$Comp
+L Device:R R?
+U 1 1 6188DA17
+P 6350 6750
+F 0 "R?" H 6420 6796 50  0000 L CNN
+F 1 "150R" H 6420 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6280 6750 50  0001 C CNN
+F 3 "~" H 6350 6750 50  0001 C CNN
+	1    6350 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 6188DA1D
+P 6350 7300
+F 0 "D?" V 6389 7182 50  0000 R CNN
+F 1 "LED" V 6298 7182 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6350 7300 50  0001 C CNN
+F 3 "~" H 6350 7300 50  0001 C CNN
+	1    6350 7300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 7150 6350 6900
+Wire Wire Line
+	6350 6600 6350 6450
+Wire Wire Line
+	6350 7450 6350 7600
+Text Label 6350 7600 3    50   ~ 0
+VCC_IO
+Text Label 1400 1950 0    50   ~ 0
+DRV_EN
+Text Label 6350 6450 1    50   ~ 0
+DRV_EN
+Wire Wire Line
+	3600 2350 2200 2350
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 618B45F2
+P 2050 2350
+F 0 "JP?" H 2050 2555 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 2050 2464 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 2050 2350 50  0001 C CNN
+F 3 "~" H 2050 2350 50  0001 C CNN
+	1    2050 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2350 1750 2350
+$Comp
+L power:GND #PWR?
+U 1 1 618B6034
+P 1750 2350
+F 0 "#PWR?" H 1750 2100 50  0001 C CNN
+F 1 "GND" H 1755 2177 50  0000 C CNN
+F 2 "" H 1750 2350 50  0001 C CNN
+F 3 "" H 1750 2350 50  0001 C CNN
+	1    1750 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 6650 4900 6650
+Connection ~ 5200 6650
+$Comp
+L Device:D_Zener D?
+U 1 1 618C9F81
+P 4900 6900
+F 0 "D?" V 4854 6980 50  0000 L CNN
+F 1 "50V" V 4945 6980 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4900 6900 50  0001 C CNN
+F 3 "~" H 4900 6900 50  0001 C CNN
+	1    4900 6900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 6750 4900 6650
+Connection ~ 4900 6650
+Wire Wire Line
+	4900 6650 5200 6650
+Wire Wire Line
+	4900 7050 4900 7200
+Wire Wire Line
+	4900 7200 5200 7200
+Connection ~ 5200 7200
 $EndSCHEMATC
