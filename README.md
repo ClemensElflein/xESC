@@ -2,13 +2,47 @@
 
 # xESC
 
-The xESC is am electronic speed controller (ESC) for sensored brushless DC (BLDC) motors.
+The xESC is an easy to use, low cost electronic speed controller (ESC) design for sensored brushless DC (BLDC) motors. It can be used with hall sensors as well as optical or magnetic encoders. The firmware implements torque and speed control, therefore you can use the ESC for robotics applications where accurate speed control is required.
 
-### Front
-![xESC front](/docs/img/xESC_front.png)
 
-### Back
-![xESC back](/docs/img/xESC_back.png)
+
+
+
+### PCB Design
+
+#### Front
+
+![xESC front](docs/img/xESC_front.png)
+
+
+
+#### Back
+
+![xESC back](docs/img/xESC_back.png)
+
+
+
+
+
+### Firmware Features
+
+The ESC can be configured and controlled via the UART interface and provides live feedback about phase current, speed and motor position. If you don't need the advanced functions, the motor speed can be set via analog input or PWM input. Finally, the analog input can be configured as temperature sensor input.
+
+
+
+The following options can be configured in the firmware:
+
+- PI values for the speed controller
+- Hall Sensor Polarity
+- Overcurrent, Overvoltage, Undervoltage, Overtemperature Thresholds
+- Analog input mode: Auto, Disabled, Temperature
+- PWM input mode: Auto, Disabled
+
+
+
+
 
 # License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+Feel free to use the design in your projects, but don't try to sell the design or products based on it without getting my consent first.
