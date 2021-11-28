@@ -1,11 +1,10 @@
 #include "BLDC.h"
 
-bool tmc6100_found = false;
-uint32_t bldc_ticks = 0;
+static bool tmc6100_found = false;
 
 ISR(PCINT1_vect) // handle pin change interrupt for all hall phases.
 {
-    if (REGISTER[REG_DRIVER_STATUS])
+    if (registers.driver_status)
     {
         PORTD = 0b00000000;
         TCCR0A &= 0b00001111;
@@ -84,14 +83,13 @@ ISR(PCINT1_vect) // handle pin change interrupt for all hall phases.
         TCCR2A &= 0b11001111;
         break;
     }
-    PORTB ^= 0b100;
-    bldc_ticks++;
+    registers.bldc_ticks++;
 }
 
 void init_bldc()
 {
     tmc6100_found = false;
-    REGISTER[REG_DRIVER_STATUS] = 0;
+    registers.driver_status = 0;
     // Set driver enable pin as output
     DDRC |= 0b00010000;
     /* Set SS pin as output */
@@ -167,12 +165,12 @@ void update_driver_status()
 {
     if (!tmc6100_found)
     {
-        REGISTER[REG_DRIVER_STATUS] = (1UL << 15);
+        registers.driver_status = (1UL << 15);
         return;
     }
 
-    REGISTER[REG_DRIVER_STATUS] = tmc6100_readInt(0, TMC6100_GSTAT) & 0x7FFF;
-    if (REGISTER[REG_DRIVER_STATUS])
+    registers.driver_status = tmc6100_readInt(0, TMC6100_GSTAT) & 0x7FFF;
+    if (registers.driver_status)
     {
         PCINT1_vect();
     }

@@ -20,7 +20,7 @@ volatile float filter = 0.5;
 
 void speed_control()
 {
-  uint32_t ticks = bldc_ticks;
+  uint32_t ticks = registers.bldc_ticks;
   uint32_t diff = ticks - last_bldc_ticks;
   float ticks_per_second = (float)diff / 0.01f;
   ticks_per_second_filtered = filter * ticks_per_second_filtered + (1.0 - filter) * ticks_per_second;
@@ -50,24 +50,24 @@ void speed_control()
 }
 
 // Called with 100Hz
+
 ISR(TIMER1_COMPA_vect)
 {
-  switch (REGISTER[REG_CONTROL_MODE])
+  switch (registers.control_mode)
   {
   case CONTROL_MODE_SPEED_CTL:
     speed_control();
     break;
   case CONTROL_MODE_TORQUE_CTL:
-    OCR2B = OCR0A = OCR0B = (REGISTER[REG_SETPOINT] >> 8);
+    OCR2B = OCR0A = OCR0B = (registers.setpoint >> 8);
     break;
   default:
-    OCR2B = OCR0A = OCR0B = 0;
+    OCR2B = OCR0A = OCR0B = 100;
     break;
   }
 
   update_driver_status();
 }
-
 
 int main()
 {
@@ -87,6 +87,11 @@ int main()
   ADCSRA = 0b11111111;
   ADMUX = 0b01100011;
 
-  while (1)
-    ;
+
+  while (1) {
+    if(registers.actions) {
+      reset_driver();
+      registers.actions = 0;
+    }
+  }
 }

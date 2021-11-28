@@ -10,9 +10,6 @@ extern "C"
 #include <avr/delay.h>
 #include "Registers.h"
 
-extern bool tmc6100_found;
-extern uint32_t bldc_ticks;
-
 void init_bldc();
 
 void set_driver_enabled(bool);
