@@ -1,0 +1,49 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 9950 1450 550  1000
+U 61A3D6CE
+F0 "MOSFET" 50
+F1 "MOSFET.sch" 50
+F2 "VM" I L 9950 1650 50 
+F3 "HS" I L 9950 1750 50 
+F4 "LS" I L 9950 1850 50 
+F5 "SENSE" O L 9950 2100 50 
+F6 "DRV" O L 9950 2200 50 
+$EndSheet
+$Sheet
+S 9950 2700 550  1000
+U 61A57DD0
+F0 "sheet61A57DC9" 50
+F1 "MOSFET.sch" 50
+F2 "VM" I L 9950 2900 50 
+F3 "HS" I L 9950 3000 50 
+F4 "LS" I L 9950 3100 50 
+F5 "SENSE" O L 9950 3350 50 
+F6 "DRV" O L 9950 3450 50 
+$EndSheet
+$Sheet
+S 9950 3950 550  1000
+U 61A580D2
+F0 "sheet61A580CB" 50
+F1 "MOSFET.sch" 50
+F2 "VM" I L 9950 4150 50 
+F3 "HS" I L 9950 4250 50 
+F4 "LS" I L 9950 4350 50 
+F5 "SENSE" O L 9950 4600 50 
+F6 "DRV" O L 9950 4700 50 
+$EndSheet
+$EndSCHEMATC
