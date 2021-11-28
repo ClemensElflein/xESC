@@ -5,7 +5,8 @@
 The xESC is an easy to use, low cost electronic speed controller (ESC) design for sensored brushless DC (BLDC) motors. It can be used with hall sensors as well as optical or magnetic encoders. The firmware implements torque and speed control, therefore you can use the ESC for robotics applications where accurate speed control is required.
 
 
-
+# Hint
+This design is work in progress. Do not use in production!
 
 
 ### PCB Design
@@ -39,7 +40,9 @@ The following options can be configured in the firmware:
 - PWM input mode: Auto, Disabled
 
 
-
+# Known Issues
+- The 5V regulator in the TMC6100 gets too when VSS > 12V.
+- There are voltage spikes on the supply voltage. Resistors on the MOSFET gates reduce those. The values are TBD.
 
 
 # License
