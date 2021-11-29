@@ -46,4 +46,566 @@ F4 "LS" I L 9950 4350 50
 F5 "SENSE" O L 9950 4600 50 
 F6 "DRV" O L 9950 4700 50 
 $EndSheet
+Text HLabel 9300 900  0    50   Input ~ 0
+VM
+Wire Wire Line
+	9300 900  9300 1650
+Wire Wire Line
+	9300 1650 9950 1650
+Wire Wire Line
+	9300 1650 9300 2900
+Wire Wire Line
+	9300 2900 9950 2900
+Connection ~ 9300 1650
+Wire Wire Line
+	9300 2900 9300 3750
+Wire Wire Line
+	9300 4150 9950 4150
+Connection ~ 9300 2900
+Wire Wire Line
+	9950 1750 9050 1750
+Wire Wire Line
+	9950 1850 9050 1850
+Wire Wire Line
+	9950 2100 9050 2100
+Wire Wire Line
+	9950 2200 9050 2200
+Wire Wire Line
+	9950 3000 9050 3000
+Wire Wire Line
+	9950 3100 9050 3100
+Wire Wire Line
+	9950 3350 9050 3350
+Wire Wire Line
+	9950 3450 9050 3450
+Wire Wire Line
+	9950 4250 9050 4250
+Wire Wire Line
+	9950 4350 9050 4350
+Wire Wire Line
+	9950 4600 9050 4600
+Wire Wire Line
+	9950 4700 9050 4700
+Text Label 9050 1750 0    50   ~ 0
+HSU
+Text Label 9050 1850 0    50   ~ 0
+LSU
+Text Label 9050 2100 0    50   ~ 0
+SENSE_U
+Text Label 9050 2200 0    50   ~ 0
+DRV_U
+Text Label 9050 3000 0    50   ~ 0
+HSV
+Text Label 9050 3100 0    50   ~ 0
+LSV
+Text Label 9050 3350 0    50   ~ 0
+SENSE_V
+Text Label 9050 3450 0    50   ~ 0
+DRV_V
+Text Label 9050 4250 0    50   ~ 0
+HSW
+Text Label 9050 4350 0    50   ~ 0
+LSW
+Text Label 9050 4600 0    50   ~ 0
+SENSE_W
+Text Label 9050 4700 0    50   ~ 0
+DRV_W
+$Comp
+L 2021-11-28_18-58-59:TMC6200-TA U1
+U 1 1 61A416BF
+P 3400 2100
+F 0 "U1" H 4600 2487 60  0000 C CNN
+F 1 "TMC6200-TA" H 4600 2381 60  0000 C CNN
+F 2 "footprints:TMC6200-TA" H 4600 2340 60  0001 C CNN
+F 3 "" H 3400 2100 60  0000 C CNN
+	1    3400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 61A4478E
+P 3700 6250
+F 0 "C8" H 3815 6296 50  0000 L CNN
+F 1 "470nF/16V" H 3815 6205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3738 6100 50  0001 C CNN
+F 3 "~" H 3700 6250 50  0001 C CNN
+	1    3700 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 61A4B0D8
+P 4350 6250
+F 0 "C9" H 4465 6296 50  0000 L CNN
+F 1 "470nF/16V" H 4465 6205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4388 6100 50  0001 C CNN
+F 3 "~" H 4350 6250 50  0001 C CNN
+	1    4350 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 61A4BB26
+P 5000 6250
+F 0 "C10" H 5115 6296 50  0000 L CNN
+F 1 "470nF/16V" H 5115 6205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5038 6100 50  0001 C CNN
+F 3 "~" H 5000 6250 50  0001 C CNN
+	1    5000 6250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 2300 6950 2300
+Wire Wire Line
+	5800 3200 6950 3200
+Wire Wire Line
+	5800 3400 6950 3400
+Wire Wire Line
+	5800 2600 6950 2600
+Wire Wire Line
+	2250 2100 3400 2100
+Text Label 2250 2100 0    50   ~ 0
+CU
+Text Label 6950 2600 2    50   ~ 0
+CV
+Text Label 6950 3400 2    50   ~ 0
+CW
+Text Label 6950 2300 2    50   ~ 0
+DRV_U
+Wire Wire Line
+	5800 2800 6950 2800
+Text Label 6950 2800 2    50   ~ 0
+DRV_V
+Text Label 6950 3200 2    50   ~ 0
+DRV_W
+Wire Wire Line
+	3700 6100 3700 5850
+Wire Wire Line
+	4350 6100 4350 5850
+Wire Wire Line
+	5000 6100 5000 5850
+Wire Wire Line
+	5000 6400 5000 6900
+Wire Wire Line
+	4350 6400 4350 6900
+Wire Wire Line
+	3700 6400 3700 6900
+Text Label 3700 5850 3    50   ~ 0
+CU
+Text Label 3700 6900 1    50   ~ 0
+DRV_U
+Text Label 4350 6900 1    50   ~ 0
+DRV_V
+Text Label 5000 6900 1    50   ~ 0
+DRV_W
+Text Label 5000 5850 3    50   ~ 0
+CW
+Text Label 4350 5850 3    50   ~ 0
+CV
+Wire Wire Line
+	5800 2200 6950 2200
+Wire Wire Line
+	3400 2500 2250 2500
+Wire Wire Line
+	5800 2400 6950 2400
+Text Label 6950 2200 2    50   ~ 0
+HSU
+Text Label 2250 2500 0    50   ~ 0
+LSU
+Text Label 6950 2400 2    50   ~ 0
+SENSE_U
+Wire Wire Line
+	5800 2700 6950 2700
+Wire Wire Line
+	5800 2900 6950 2900
+Wire Wire Line
+	5800 3100 6950 3100
+Wire Wire Line
+	5800 3300 6950 3300
+Wire Wire Line
+	3400 2300 2250 2300
+Wire Wire Line
+	3400 2400 2250 2400
+Text Label 6950 2700 2    50   ~ 0
+HSV
+Text Label 2250 2400 0    50   ~ 0
+LSV
+Text Label 6950 2900 2    50   ~ 0
+SENSE_V
+Text Label 6950 3300 2    50   ~ 0
+HSW
+Text Label 2250 2300 0    50   ~ 0
+LSW
+Text Label 6950 3100 2    50   ~ 0
+SENSE_W
+Wire Wire Line
+	3400 2800 3000 2800
+Wire Wire Line
+	3000 2800 3000 4400
+Wire Wire Line
+	5800 2100 6150 2100
+Wire Wire Line
+	6150 2100 6150 4750
+$Comp
+L power:GND #PWR0107
+U 1 1 61A624FF
+P 6150 5150
+F 0 "#PWR0107" H 6150 4900 50  0001 C CNN
+F 1 "GND" H 6155 4977 50  0000 C CNN
+F 2 "" H 6150 5150 50  0001 C CNN
+F 3 "" H 6150 5150 50  0001 C CNN
+	1    6150 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 61A6318F
+P 3000 5150
+F 0 "#PWR0108" H 3000 4900 50  0001 C CNN
+F 1 "GND" H 3005 4977 50  0000 C CNN
+F 2 "" H 3000 5150 50  0001 C CNN
+F 3 "" H 3000 5150 50  0001 C CNN
+	1    3000 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4400 3000 4400
+Connection ~ 3000 4400
+Wire Wire Line
+	3000 4400 3000 4800
+$Comp
+L Device:C C11
+U 1 1 61A64EE0
+P 6450 3900
+F 0 "C11" H 6335 3854 50  0000 R CNN
+F 1 "22nF/100V" H 6335 3945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6488 3750 50  0001 C CNN
+F 3 "~" H 6450 3900 50  0001 C CNN
+	1    6450 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 3800 6250 3800
+Wire Wire Line
+	6250 3800 6250 3750
+Wire Wire Line
+	6250 3750 6450 3750
+Wire Wire Line
+	6450 4050 6250 4050
+Wire Wire Line
+	6250 4050 6250 4000
+Wire Wire Line
+	6250 4000 5800 4000
+$Comp
+L Device:C C7
+U 1 1 61A6A715
+P 2550 4550
+F 0 "C7" H 2665 4596 50  0000 L CNN
+F 1 "100nF/50V" H 2665 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2588 4400 50  0001 C CNN
+F 3 "~" H 2550 4550 50  0001 C CNN
+	1    2550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3900 2550 3900
+Wire Wire Line
+	2550 3900 2550 4400
+Wire Wire Line
+	2550 4700 2550 4800
+Wire Wire Line
+	2550 4800 3000 4800
+Connection ~ 3000 4800
+Wire Wire Line
+	3000 4800 3000 5150
+$Comp
+L Device:C C12
+U 1 1 61A70190
+P 6750 3600
+F 0 "C12" H 6865 3646 50  0000 L CNN
+F 1 "100nF/100V" H 6865 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6788 3450 50  0001 C CNN
+F 3 "~" H 6750 3600 50  0001 C CNN
+	1    6750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3600 6600 3600
+Wire Wire Line
+	6600 3600 6600 3450
+Wire Wire Line
+	6600 3450 6750 3450
+Wire Wire Line
+	6750 3750 6600 3750
+Wire Wire Line
+	6600 3750 6600 3700
+Wire Wire Line
+	6600 3700 5800 3700
+Wire Wire Line
+	6750 3750 7050 3750
+Connection ~ 6750 3750
+Connection ~ 9300 3750
+Wire Wire Line
+	9300 3750 9300 4150
+$Comp
+L Device:C C14
+U 1 1 61A793EE
+P 7450 4000
+F 0 "C14" H 7565 4046 50  0000 L CNN
+F 1 "100nF/100V" H 7565 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7488 3850 50  0001 C CNN
+F 3 "~" H 7450 4000 50  0001 C CNN
+	1    7450 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3850 7450 3750
+Connection ~ 7450 3750
+Wire Wire Line
+	7450 3750 9300 3750
+Wire Wire Line
+	7450 4150 7450 4750
+Wire Wire Line
+	7450 4750 7050 4750
+Connection ~ 6150 4750
+Wire Wire Line
+	6150 4750 6150 5150
+$Comp
+L Device:C C6
+U 1 1 61A7E7A1
+P 1900 4550
+F 0 "C6" H 2015 4596 50  0000 L CNN
+F 1 "100nF/50V" H 2015 4505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1938 4400 50  0001 C CNN
+F 3 "~" H 1900 4550 50  0001 C CNN
+	1    1900 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3200 1900 3200
+Wire Wire Line
+	1900 3200 1900 4400
+Wire Wire Line
+	1900 4700 1900 4800
+Wire Wire Line
+	1900 4800 2550 4800
+Connection ~ 2550 4800
+Wire Wire Line
+	1900 3200 1700 3200
+Connection ~ 1900 3200
+Text Label 1700 3200 0    50   ~ 0
+VOFS
+$Comp
+L Device:R R13
+U 1 1 61A85C65
+P 6100 6300
+F 0 "R13" H 6170 6346 50  0000 L CNN
+F 1 "DNP" H 6170 6255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6030 6300 50  0001 C CNN
+F 3 "~" H 6100 6300 50  0001 C CNN
+	1    6100 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 61A892F5
+P 6100 6850
+F 0 "R14" H 6170 6896 50  0000 L CNN
+F 1 "DNP" H 6170 6805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6030 6850 50  0001 C CNN
+F 3 "~" H 6100 6850 50  0001 C CNN
+	1    6100 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 61A8B506
+P 6100 7200
+F 0 "#PWR0109" H 6100 6950 50  0001 C CNN
+F 1 "GND" H 6105 7027 50  0000 C CNN
+F 2 "" H 6100 7200 50  0001 C CNN
+F 3 "" H 6100 7200 50  0001 C CNN
+	1    6100 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 7200 6100 7000
+Wire Wire Line
+	6100 6700 6100 6550
+Connection ~ 6100 6550
+Wire Wire Line
+	6100 6550 6100 6450
+Wire Wire Line
+	6100 6150 6100 5950
+Wire Wire Line
+	6100 6550 6450 6550
+Text Label 6850 6550 2    50   ~ 0
+VOFS
+$Comp
+L Device:C C4
+U 1 1 61AA82B8
+P 1550 2700
+F 0 "C4" H 1665 2746 50  0000 L CNN
+F 1 "2.2uF/50V" H 1665 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 2550 50  0001 C CNN
+F 3 "~" H 1550 2700 50  0001 C CNN
+	1    1550 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 61AB1026
+P 1850 2600
+F 0 "C5" H 1965 2646 50  0000 L CNN
+F 1 "2.2uF/50V" H 1965 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1888 2450 50  0001 C CNN
+F 3 "~" H 1850 2600 50  0001 C CNN
+	1    1850 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 2600 2000 2600
+Wire Wire Line
+	3400 2700 1700 2700
+Wire Wire Line
+	1700 2600 1250 2600
+Wire Wire Line
+	1250 2600 1250 2700
+Wire Wire Line
+	1400 2700 1250 2700
+Connection ~ 1250 2700
+Wire Wire Line
+	1250 2700 800  2700
+$Comp
+L power:GND #PWR0110
+U 1 1 61ABF5D8
+P 800 2700
+F 0 "#PWR0110" H 800 2450 50  0001 C CNN
+F 1 "GND" H 805 2527 50  0000 C CNN
+F 2 "" H 800 2700 50  0001 C CNN
+F 3 "" H 800 2700 50  0001 C CNN
+	1    800  2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 61AC2597
+P 7050 4350
+F 0 "C13" H 7165 4396 50  0000 L CNN
+F 1 "100nF/100V" H 7165 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7088 4200 50  0001 C CNN
+F 3 "~" H 7050 4350 50  0001 C CNN
+	1    7050 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4100 7050 4100
+Wire Wire Line
+	7050 4100 7050 4200
+Wire Wire Line
+	7050 4500 7050 4750
+Connection ~ 7050 4750
+Wire Wire Line
+	7050 4750 6150 4750
+Wire Wire Line
+	7050 4100 7050 3750
+Connection ~ 7050 4100
+Connection ~ 7050 3750
+Wire Wire Line
+	7050 3750 7450 3750
+Text HLabel 6300 4300 2    50   Input ~ 0
+DRV_ENABLE
+Wire Wire Line
+	6300 4300 5800 4300
+Wire Wire Line
+	5800 4500 6300 4500
+Wire Wire Line
+	3400 3300 1000 3300
+Wire Wire Line
+	3400 3400 1000 3400
+Wire Wire Line
+	3400 3500 1000 3500
+Wire Wire Line
+	3400 3600 1000 3600
+Text HLabel 1000 3300 0    50   Input ~ 0
+NCS
+Text HLabel 1000 3400 0    50   Input ~ 0
+SCK
+Text HLabel 1000 3500 0    50   Input ~ 0
+MOSI
+Text HLabel 1000 3600 0    50   Output ~ 0
+MISO
+Wire Wire Line
+	3400 3700 1000 3700
+Connection ~ 2550 3900
+Wire Wire Line
+	3400 3800 1000 3800
+Wire Wire Line
+	3400 4000 1000 4000
+Wire Wire Line
+	3400 4100 1000 4100
+Wire Wire Line
+	3400 4200 1000 4200
+Wire Wire Line
+	3400 4300 1000 4300
+Text HLabel 1000 3700 0    50   Input ~ 0
+UH
+Text HLabel 1000 3800 0    50   Input ~ 0
+UL
+Text HLabel 1000 4000 0    50   Input ~ 0
+VH
+Text HLabel 1000 4100 0    50   Input ~ 0
+VL
+Text HLabel 1000 4200 0    50   Input ~ 0
+WH
+Text HLabel 1000 4300 0    50   Input ~ 0
+WL
+Wire Wire Line
+	5800 4400 6300 4400
+Text HLabel 6300 4400 2    50   Output ~ 0
+FAULT
+Wire Wire Line
+	3400 2900 1000 2900
+Wire Wire Line
+	1000 3000 3400 3000
+Wire Wire Line
+	3400 3100 1000 3100
+Text HLabel 1000 2900 0    50   Output ~ 0
+CURU_5V
+Text HLabel 1000 3000 0    50   Output ~ 0
+CURV_5V
+Text HLabel 1000 3100 0    50   Output ~ 0
+CURW_5V
+Text Label 2350 3900 0    50   ~ 0
+VCCIO
+Text Label 6300 4500 2    50   ~ 0
+VCCIO
+Text Label 6100 5950 2    50   ~ 0
+VCCIO
+Text Label 2250 2700 0    50   ~ 0
+5VOUT
+Text Label 6450 5950 0    50   ~ 0
+5VOUT
+$Comp
+L Device:R R15
+U 1 1 61B37EC5
+P 6450 6300
+F 0 "R15" H 6520 6346 50  0000 L CNN
+F 1 "DNP" H 6520 6255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6380 6300 50  0001 C CNN
+F 3 "~" H 6450 6300 50  0001 C CNN
+	1    6450 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 6150 6450 5950
+Wire Wire Line
+	6450 6450 6450 6550
+Connection ~ 6450 6550
+Wire Wire Line
+	6450 6550 6850 6550
+Wire Wire Line
+	1000 3900 2550 3900
+Text HLabel 1000 3900 0    50   Output ~ 0
+VCCIO
 $EndSCHEMATC
