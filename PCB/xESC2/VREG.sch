@@ -313,41 +313,20 @@ Text Notes 6500 2550 0    50   ~ 0
 Optional 3.3V LDO
 Text HLabel 8300 2800 1    50   Output ~ 0
 3V3_OUT
-$Comp
-L Device:CP C15
-U 1 1 61E808FC
-P 2500 4100
-F 0 "C15" H 2618 4146 50  0000 L CNN
-F 1 "47uF/100V" H 2618 4055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 2538 3950 50  0001 C CNN
-F 3 "~" H 2500 4100 50  0001 C CNN
-	1    2500 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2500 4250 2500 4350
-Wire Wire Line
-	2500 4350 2700 4350
 Wire Wire Line
 	3200 4350 3200 4250
 Wire Wire Line
-	2500 3950 2500 3750
-Wire Wire Line
-	2500 3750 2450 3750
-Wire Wire Line
 	3200 3750 2700 3750
 Connection ~ 3200 3750
-Connection ~ 2500 3750
 Wire Wire Line
 	2700 3700 2700 3750
 Connection ~ 2700 3750
 Wire Wire Line
-	2700 3750 2500 3750
-Wire Wire Line
 	2700 4550 2700 4350
-Connection ~ 2700 4350
 Wire Wire Line
 	2700 4350 3200 4350
 Text HLabel 2450 2800 0    50   Input ~ 0
 VIN
+Wire Wire Line
+	2450 3750 2700 3750
 $EndSCHEMATC
