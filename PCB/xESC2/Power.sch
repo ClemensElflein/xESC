@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 7
 Title ""
 Date ""
 Rev ""
@@ -608,302 +608,8 @@ Wire Wire Line
 	9300 2700 9300 2900
 Wire Wire Line
 	9300 2900 9300 4150
-$Comp
-L xESC2:XL2001 U2
-U 1 1 61A8FB60
-P 2050 6700
-F 0 "U2" H 2050 7565 50  0000 C CNN
-F 1 "XL2001" H 2050 7474 50  0000 C CNN
-F 2 "Package_SO:SOP-8_3.9x4.9mm_P1.27mm" H 2050 6700 50  0001 C CNN
-F 3 "" H 2050 6700 50  0001 C CNN
-	1    2050 6700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 6200 2650 6200
-Wire Wire Line
-	2650 6200 2650 6800
-Wire Wire Line
-	2450 6100 2650 6100
-Wire Wire Line
-	2650 6100 2650 6200
-Connection ~ 2650 6200
-$Comp
-L power:GND #PWR0111
-U 1 1 61A9A39C
-P 2650 7400
-F 0 "#PWR0111" H 2650 7150 50  0001 C CNN
-F 1 "GND" H 2655 7227 50  0000 C CNN
-F 2 "" H 2650 7400 50  0001 C CNN
-F 3 "" H 2650 7400 50  0001 C CNN
-	1    2650 7400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 6300 2500 6300
-Wire Wire Line
-	2450 6400 2500 6400
-Wire Wire Line
-	2500 6400 2500 6300
-Connection ~ 2500 6300
-Wire Wire Line
-	2500 6300 2850 6300
-$Comp
-L Device:D_Schottky D1
-U 1 1 61AA93AD
-P 2850 6550
-F 0 "D1" V 2804 6630 50  0000 L CNN
-F 1 "SS36" V 2895 6630 50  0000 L CNN
-F 2 "Diode_SMD:D_SMA" H 2850 6550 50  0001 C CNN
-F 3 "~" H 2850 6550 50  0001 C CNN
-	1    2850 6550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2850 6700 2850 6800
-Wire Wire Line
-	2850 6800 2650 6800
-Connection ~ 2650 6800
-Wire Wire Line
-	2650 6800 2650 7400
-Wire Wire Line
-	2850 6300 2850 6400
-$Comp
-L Device:L L1
-U 1 1 61ABFB6F
-P 3150 6300
-F 0 "L1" V 3340 6300 50  0000 C CNN
-F 1 "47uH/3A" V 3249 6300 50  0000 C CNN
-F 2 "Inductor_SMD:L_Wuerth_HCI-1040" H 3150 6300 50  0001 C CNN
-F 3 "~" H 3150 6300 50  0001 C CNN
-	1    3150 6300
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2850 6300 3000 6300
-Connection ~ 2850 6300
-Wire Wire Line
-	3300 6300 3400 6300
-Wire Wire Line
-	3400 6300 3400 5750
-Wire Wire Line
-	3400 5750 1450 5750
-Wire Wire Line
-	1450 5750 1450 6100
-Wire Wire Line
-	1450 6100 1650 6100
-Connection ~ 3400 6300
-$Comp
-L Device:C C15
-U 1 1 61AD3294
-P 1000 6400
-F 0 "C15" H 1115 6446 50  0000 L CNN
-F 1 "1uF/50V" H 1115 6355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1038 6250 50  0001 C CNN
-F 3 "~" H 1000 6400 50  0001 C CNN
-	1    1000 6400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 6300 1250 6300
-Wire Wire Line
-	1250 6300 1250 6200
-Wire Wire Line
-	1250 6200 1000 6200
-Wire Wire Line
-	1000 6200 1000 6250
-Wire Wire Line
-	1650 6400 1600 6400
-Wire Wire Line
-	1600 6400 1600 6600
-Wire Wire Line
-	1600 6600 1500 6600
-$Comp
-L Device:C C16
-U 1 1 61AE7E4C
-P 1500 6950
-F 0 "C16" H 1615 6996 50  0000 L CNN
-F 1 "1uF/50V" H 1615 6905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1538 6800 50  0001 C CNN
-F 3 "~" H 1500 6950 50  0001 C CNN
-	1    1500 6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 6800 1500 6600
-$Comp
-L power:GND #PWR0112
-U 1 1 61B035C9
-P 1000 7400
-F 0 "#PWR0112" H 1000 7150 50  0001 C CNN
-F 1 "GND" H 1005 7227 50  0000 C CNN
-F 2 "" H 1000 7400 50  0001 C CNN
-F 3 "" H 1000 7400 50  0001 C CNN
-	1    1000 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C17
-U 1 1 61B0A706
-P 3400 6950
-F 0 "C17" H 3515 6996 50  0000 L CNN
-F 1 "1uF/50V" H 3515 6905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3438 6800 50  0001 C CNN
-F 3 "~" H 3400 6950 50  0001 C CNN
-	1    3400 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0113
-U 1 1 61B115E5
-P 3400 7400
-F 0 "#PWR0113" H 3400 7150 50  0001 C CNN
-F 1 "GND" H 3405 7227 50  0000 C CNN
-F 2 "" H 3400 7400 50  0001 C CNN
-F 3 "" H 3400 7400 50  0001 C CNN
-	1    3400 7400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 6800 3400 6300
-Wire Wire Line
-	3400 6300 4000 6300
-Wire Wire Line
-	3400 7400 3400 7250
-$Comp
-L Device:CP C18
-U 1 1 61B26523
-P 4000 6950
-F 0 "C18" H 4118 6996 50  0000 L CNN
-F 1 "100uF/16V" H 4118 6905 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4038 6800 50  0001 C CNN
-F 3 "~" H 4000 6950 50  0001 C CNN
-	1    4000 6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 6800 4000 6300
-Connection ~ 4000 6300
-Wire Wire Line
-	4000 7100 4000 7250
-Wire Wire Line
-	4000 7250 3400 7250
-Connection ~ 3400 7250
-Wire Wire Line
-	3400 7250 3400 7100
-Wire Wire Line
-	4000 6300 4000 5650
-Wire Wire Line
-	750  6600 750  5650
 Text Label 9300 1150 1    50   ~ 0
 VM
-Text Label 750  5650 3    50   ~ 0
-VM
-Text Label 4000 5650 3    50   ~ 0
-V_REG_5V
-Text HLabel 4000 5650 1    50   Output ~ 0
-5V_OUT
-Wire Notes Line
-	550  5200 550  7750
-Wire Notes Line
-	550  7750 4600 7750
-Wire Notes Line
-	4600 7750 4600 5200
-Wire Notes Line
-	4600 5200 550  5200
-Text Notes 750  5400 0    50   ~ 0
-5V DC/DC Regulator
-$Comp
-L Regulator_Linear:AMS1117-3.3 U3
-U 1 1 61BD7A7C
-P 5850 6400
-F 0 "U3" H 5850 6642 50  0000 C CNN
-F 1 "AMS1117-3.3" H 5850 6551 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5850 6600 50  0001 C CNN
-F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 5950 6150 50  0001 C CNN
-	1    5850 6400
-	1    0    0    -1  
-$EndComp
-Text Label 5000 5650 3    50   ~ 0
-V_REG_5V
-$Comp
-L Device:C C19
-U 1 1 61BE1426
-P 5250 6700
-F 0 "C19" H 5365 6746 50  0000 L CNN
-F 1 "10uF/25V" H 5365 6655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 6550 50  0001 C CNN
-F 3 "~" H 5250 6700 50  0001 C CNN
-	1    5250 6700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 6400 5250 6400
-Wire Wire Line
-	5000 5650 5000 6400
-Wire Wire Line
-	5250 6550 5250 6400
-Connection ~ 5250 6400
-Wire Wire Line
-	5250 6400 5000 6400
-Wire Wire Line
-	5850 6700 5850 7250
-Wire Wire Line
-	5850 7250 5250 7250
-Wire Wire Line
-	5250 7250 5250 6850
-$Comp
-L power:GND #PWR0114
-U 1 1 61C0B517
-P 5850 7400
-F 0 "#PWR0114" H 5850 7150 50  0001 C CNN
-F 1 "GND" H 5855 7227 50  0000 C CNN
-F 2 "" H 5850 7400 50  0001 C CNN
-F 3 "" H 5850 7400 50  0001 C CNN
-	1    5850 7400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5850 7400 5850 7250
-Connection ~ 5850 7250
-$Comp
-L Device:C C20
-U 1 1 61C1C9D5
-P 6350 6700
-F 0 "C20" H 6465 6746 50  0000 L CNN
-F 1 "10uF/25V" H 6465 6655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6388 6550 50  0001 C CNN
-F 3 "~" H 6350 6700 50  0001 C CNN
-	1    6350 6700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6350 6550 6350 6400
-Wire Wire Line
-	6350 7250 6350 6850
-Wire Wire Line
-	5850 7250 6350 7250
-Wire Wire Line
-	6350 6400 6150 6400
-Wire Wire Line
-	6350 6400 6600 6400
-Wire Wire Line
-	6600 6400 6600 5650
-Connection ~ 6350 6400
-Text Label 6600 5650 3    50   ~ 0
-V_REG_3V3
-Wire Notes Line
-	4650 5200 4650 7750
-Wire Notes Line
-	4650 7750 6950 7750
-Wire Notes Line
-	6950 7750 6950 5200
-Wire Notes Line
-	6950 5200 4650 5200
-Text Notes 4800 5400 0    50   ~ 0
-Optional 3.3V LDO
-Text HLabel 6600 5650 1    50   Output ~ 0
-3V3_OUT
 Text Label 10400 5350 3    50   ~ 0
 VM
 $Comp
@@ -995,41 +701,6 @@ F 3 "" H 10750 6300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C21
-U 1 1 61D2B538
-P 800 6950
-F 0 "C21" H 918 6996 50  0000 L CNN
-F 1 "47uF/100V" H 918 6905 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 838 6800 50  0001 C CNN
-F 3 "~" H 800 6950 50  0001 C CNN
-	1    800  6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	800  7100 800  7200
-Wire Wire Line
-	800  7200 1000 7200
-Wire Wire Line
-	1500 7200 1500 7100
-Wire Wire Line
-	800  6800 800  6600
-Wire Wire Line
-	800  6600 750  6600
-Wire Wire Line
-	1500 6600 1000 6600
-Connection ~ 1500 6600
-Connection ~ 800  6600
-Wire Wire Line
-	1000 6550 1000 6600
-Connection ~ 1000 6600
-Wire Wire Line
-	1000 6600 800  6600
-Wire Wire Line
-	1000 7400 1000 7200
-Connection ~ 1000 7200
-Wire Wire Line
-	1000 7200 1500 7200
-$Comp
 L Connector:TestPoint TP?
 U 1 1 61DEA50A
 P 900 4450
@@ -1042,7 +713,7 @@ AR Path="/61A3F4E8/61A580D2/61DEA50A" Ref="TP?"  Part="1"
 AR Path="/61A3F4E8/61DEA50A" Ref="TP4"  Part="1" 
 F 0 "TP4" V 854 4638 50  0000 L CNN
 F 1 "TestPoint" V 945 4638 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 1100 4450 50  0001 C CNN
+F 2 "xESC2:SolderPadHighCurrent" H 1100 4450 50  0001 C CNN
 F 3 "~" H 1100 4450 50  0001 C CNN
 	1    900  4450
 	1    0    0    -1  
@@ -1060,7 +731,7 @@ AR Path="/61A3F4E8/61A580D2/61DF4EC9" Ref="TP?"  Part="1"
 AR Path="/61A3F4E8/61DF4EC9" Ref="TP5"  Part="1" 
 F 0 "TP5" V 954 4638 50  0000 L CNN
 F 1 "TestPoint" V 1045 4638 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 1200 4450 50  0001 C CNN
+F 2 "xESC2:SolderPadHighCurrent" H 1200 4450 50  0001 C CNN
 F 3 "~" H 1200 4450 50  0001 C CNN
 	1    1000 4450
 	1    0    0    -1  
@@ -1078,7 +749,7 @@ AR Path="/61A3F4E8/61A580D2/61DFF360" Ref="TP?"  Part="1"
 AR Path="/61A3F4E8/61DFF360" Ref="TP6"  Part="1" 
 F 0 "TP6" V 1204 4638 50  0000 L CNN
 F 1 "TestPoint" V 1295 4638 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 1450 4450 50  0001 C CNN
+F 2 "xESC2:SolderPadHighCurrent" H 1450 4450 50  0001 C CNN
 F 3 "~" H 1450 4450 50  0001 C CNN
 	1    1250 4450
 	1    0    0    -1  
@@ -1096,7 +767,7 @@ AR Path="/61A3F4E8/61A580D2/61E098FA" Ref="TP?"  Part="1"
 AR Path="/61A3F4E8/61E098FA" Ref="TP7"  Part="1" 
 F 0 "TP7" V 1304 4638 50  0000 L CNN
 F 1 "TestPoint" V 1395 4638 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 1550 4450 50  0001 C CNN
+F 2 "xESC2:SolderPadHighCurrent" H 1550 4450 50  0001 C CNN
 F 3 "~" H 1550 4450 50  0001 C CNN
 	1    1350 4450
 	1    0    0    -1  

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -123,7 +123,7 @@ AR Path="/61A3F4E8/61A57DD0/61A4F365" Ref="TP2"  Part="1"
 AR Path="/61A3F4E8/61A580D2/61A4F365" Ref="TP3"  Part="1" 
 F 0 "TP3" V 9004 3488 50  0000 L CNN
 F 1 "TestPoint" V 9095 3488 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 9250 3300 50  0001 C CNN
+F 2 "xESC2:SolderPadHighCurrent" H 9250 3300 50  0001 C CNN
 F 3 "~" H 9250 3300 50  0001 C CNN
 	1    9050 3300
 	0    1    1    0   
