@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "xESC BLDC Controller"
+Date "2021-12-01"
+Rev "2.0"
+Comp "Clemens Elflein"
+Comment1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment2 "Licensed under "
 Comment3 ""
 Comment4 ""
 $EndDescr

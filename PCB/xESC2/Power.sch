@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "xESC BLDC Controller"
+Date "2021-12-01"
+Rev "2.0"
+Comp "Clemens Elflein"
+Comment1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment2 "Licensed under "
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -834,74 +834,4 @@ Wire Wire Line
 Connection ~ 6600 3950
 Wire Wire Line
 	6600 3950 6150 3950
-$Comp
-L Device:R R30
-U 1 1 61C1EF32
-P 6300 5300
-F 0 "R30" H 6370 5346 50  0000 L CNN
-F 1 "10k NTC" H 6370 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6230 5300 50  0001 C CNN
-F 3 "~" H 6300 5300 50  0001 C CNN
-	1    6300 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R31
-U 1 1 61C1EF38
-P 6300 5850
-F 0 "R31" H 6370 5896 50  0000 L CNN
-F 1 "10k" H 6370 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6230 5850 50  0001 C CNN
-F 3 "~" H 6300 5850 50  0001 C CNN
-	1    6300 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 5700 6300 5550
-Connection ~ 6300 5550
-Wire Wire Line
-	6300 5550 6300 5450
-Wire Wire Line
-	6300 5150 6300 4950
-Wire Wire Line
-	6300 5550 6650 5550
-Text Label 6300 4950 2    50   ~ 0
-VCCIO
-$Comp
-L power:GND #PWR0133
-U 1 1 61C25A4C
-P 6300 6200
-F 0 "#PWR0133" H 6300 5950 50  0001 C CNN
-F 1 "GND" H 6305 6027 50  0000 C CNN
-F 2 "" H 6300 6200 50  0001 C CNN
-F 3 "" H 6300 6200 50  0001 C CNN
-	1    6300 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 6000 6300 6150
-Text HLabel 6650 5550 2    50   Output ~ 0
-TEMP
-$Comp
-L Device:C C44
-U 1 1 61C2CC0D
-P 5650 5850
-F 0 "C44" H 5765 5896 50  0000 L CNN
-F 1 "100nF/50V" H 5765 5805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 5700 50  0001 C CNN
-F 3 "~" H 5650 5850 50  0001 C CNN
-	1    5650 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 5550 5650 5550
-Wire Wire Line
-	5650 5550 5650 5700
-Wire Wire Line
-	5650 6000 5650 6150
-Wire Wire Line
-	5650 6150 6300 6150
-Connection ~ 6300 6150
-Wire Wire Line
-	6300 6150 6300 6200
 $EndSCHEMATC
