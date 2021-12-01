@@ -462,18 +462,16 @@ Wire Wire Line
 Wire Wire Line
 	1200 3050 2650 3050
 NoConn ~ 2650 3250
-NoConn ~ 2650 3750
-NoConn ~ 2650 4250
 NoConn ~ 2650 4750
 NoConn ~ 4050 3650
 NoConn ~ 2650 4850
 NoConn ~ 2650 4950
 NoConn ~ 4050 3250
-Text HLabel 4050 2750 2    50   Output ~ 0
+Text HLabel 4050 2550 2    50   Output ~ 0
 WH
 Text HLabel 4050 2650 2    50   Output ~ 0
 VH
-Text HLabel 4050 2550 2    50   Output ~ 0
+Text HLabel 4050 2750 2    50   Output ~ 0
 UH
 Text HLabel 4050 4750 2    50   Output ~ 0
 WL
@@ -522,4 +520,35 @@ Text HLabel 2650 4350 0    50   Output ~ 0
 DRV_NCS
 Text HLabel 2650 4450 0    50   Output ~ 0
 DRV_SCK
+Text HLabel 2650 3750 0    50   Input ~ 0
+AN_IN
+Text HLabel 2650 3850 0    50   Input ~ 0
+TEMP_MOTOR
+NoConn ~ 2650 3950
+Text HLabel 2650 4050 0    50   Input ~ 0
+HALL_3
+Text HLabel 2650 4150 0    50   Input ~ 0
+HALL_2
+Text HLabel 2650 4250 0    50   Input ~ 0
+HALL_1
+NoConn ~ 2650 4550
+NoConn ~ 2650 4650
+Text HLabel 4050 2250 2    50   Output ~ 0
+SCK_EXT
+Text HLabel 4050 2350 2    50   Input ~ 0
+MISO_EXT
+Text HLabel 4950 2450 2    50   Output ~ 0
+TX_MOSI_EXT
+Wire Wire Line
+	4950 2450 4700 2450
+Wire Wire Line
+	4050 4450 4700 4450
+Wire Wire Line
+	4700 4450 4700 2450
+Connection ~ 4700 2450
+Wire Wire Line
+	4700 2450 4050 2450
+Text HLabel 4050 4550 2    50   Input ~ 0
+RX_NCS_EXT
+NoConn ~ 4050 4650
 $EndSCHEMATC
