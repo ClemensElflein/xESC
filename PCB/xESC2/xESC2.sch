@@ -1290,4 +1290,53 @@ Wire Wire Line
 Connection ~ 7150 6300
 Wire Wire Line
 	7150 6300 7300 6300
+$Comp
+L Device:R R39
+U 1 1 61BE05DB
+P 5100 6400
+F 0 "R39" H 5170 6446 50  0000 L CNN
+F 1 "22k" H 5170 6355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5030 6400 50  0001 C CNN
+F 3 "~" H 5100 6400 50  0001 C CNN
+	1    5100 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R40
+U 1 1 61BEBE83
+P 5100 7000
+F 0 "R40" H 5170 7046 50  0000 L CNN
+F 1 "1k5" H 5170 6955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5030 7000 50  0001 C CNN
+F 3 "~" H 5100 7000 50  0001 C CNN
+	1    5100 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 7400 5100 7150
+Wire Wire Line
+	5100 7400 4500 7400
+Connection ~ 4500 7400
+Wire Wire Line
+	5100 6850 5100 6650
+Wire Wire Line
+	5100 6250 5100 6100
+Wire Wire Line
+	8550 1550 8550 1200
+Connection ~ 8550 1550
+Text Label 8550 1200 0    50   ~ 0
+VM
+Text Label 5100 6100 0    50   ~ 0
+VM
+Wire Wire Line
+	4550 3900 3850 3900
+Wire Wire Line
+	5100 6650 5750 6650
+Connection ~ 5100 6650
+Wire Wire Line
+	5100 6650 5100 6550
+Text Label 5750 6650 0    50   ~ 0
+V_M_FILTERED
+Text Label 3850 3900 0    50   ~ 0
+V_M_FILTERED
 $EndSCHEMATC
