@@ -1,0 +1,106 @@
+01-09 17:16:56 replicate_layout.action_replicate_layout 313:Plugin executed on: 'win32'
+01-09 17:16:56 replicate_layout.action_replicate_layout 314:Plugin executed with python version: '2.7.18 (default, Apr 20 2020, 16:57:11)  [GCC 9.3.0 64 bit (AMD64)]'
+01-09 17:16:56 replicate_layout.action_replicate_layout 315:KiCad build version: (5.1.10)-1
+01-09 17:16:56 replicate_layout.action_replicate_layout 316:Replicate layout plugin version: 74 started
+01-09 17:16:56 replicate_layout.action_replicate_layout 329:All top level windows titles are:
+kicad (5.1.10)-1 c:\users\clemens\documents\github\xesc\pcb\xesc2\xesc2.pro
+
+eeschema — mosfet.sch [/power/sheet61a57dc9/] — c:\users\clemens\documents\github\xesc\pcb\xesc2
+
+pcbnew — c:\users\clemens\documents\github\xesc\pcb\xesc2\xesc2.kicad_pcb
+
+
+position relative to reference item
+3d viewer
+
+01-09 17:16:56 replicate_layout.action_replicate_layout 330:All top level windows objects are:
+ <wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x31536b0> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x1467810> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x9dd62a0> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0xa28d3e0> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x3d9cc030> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x3c432ae0> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x3c432090> >
+<wx._windows.Dialog; proxy of <Swig Object of type 'wxDialog *' at 0x60e6ec0> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x5f84040> >
+<wx._windows.Frame; proxy of <Swig Object of type 'wxFrame *' at 0x3c42f3e0> >
+01-09 17:16:56 replicate_layout.action_replicate_layout 353:Preparing replicator with Q3 as a reference
+01-09 17:16:56 replicate_layout.replicatelayout 215:getting project hierarchy from schematics
+01-09 17:16:56 replicate_layout.replicatelayout 217:Project hierarchy looks like:
+{u'61A57DD0': [u'sheet61A57DC9', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\MOSFET.sch'], u'61A580D2': [u'sheet61A580CB', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\MOSFET.sch'], u'61A3D6CE': [u'MOSFET', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\MOSFET.sch'], u'61AC26FB': [u'MCU', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\MCU.sch'], u'61A3F4E8': [u'Power', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\Power.sch'], u'61E7227A': [u'VREG', u'C:\\Users\\Clemens\\Documents\\GitHub\\xESC\\PCB\\xESC2\\VREG.sch']}
+01-09 17:16:56 replicate_layout.replicatelayout 225:getting a list of all footprints on board
+01-09 17:16:56 replicate_layout.action_replicate_layout 380:source anchor footprint is u'Q3'
+Located on:[u'Power', u'sheet61A57DC9']
+With filenames:[u'Power.sch', u'MOSFET.sch']
+With sheet_id:[u'Power', u'sheet61A57DC9']
+01-09 17:16:56 replicate_layout.action_replicate_layout 384:Corresponding footprints are 
+[(u'Q5', [u'Power', u'sheet61A580CB']), (u'Q3', [u'Power', u'sheet61A57DC9']), (u'Q1', [u'Power', u'MOSFET'])]
+01-09 17:16:56 replicate_layout.action_replicate_layout 397:Showing dialog
+01-09 17:16:56 replicate_layout.action_replicate_layout 401:Pcbnew position: wx.Point(-8, -8)
+01-09 17:16:56 replicate_layout.action_replicate_layout 407:Display 0: wx.Rect(0, 0, 3840, 2160)
+01-09 17:16:56 replicate_layout.action_replicate_layout 407:Display 1: wx.Rect(-1440, -149, 1440, 2560)
+01-09 17:16:56 replicate_layout.action_replicate_layout 411:Toolbar position: wx.Point(3642, 121)
+01-09 17:16:56 replicate_layout.action_replicate_layout 418:Dialog position: wx.Point(3329, 121)
+01-09 17:16:58 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:u'sheet61A57DC9', file:u'MOSFET.sch'
+01-09 17:16:58 replicate_layout.replicatelayout 256:Source sheet path up to the level:[u'Power', u'sheet61A57DC9']
+01-09 17:16:58 replicate_layout.replicatelayout 260:Footprints on the sheets:
+[u'Q5', u'Q3', u'Q1']
+01-09 17:16:58 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+[u'/61A3F4E8/61A580D2/61A3DBC1', u'/61A3F4E8/61A57DD0/61A3DBC1', u'/61A3F4E8/61A3D6CE/61A3DBC1']
+01-09 17:16:58 replicate_layout.replicatelayout 279:All sheets to replicate:
+[[u'Power', u'sheet61A580CB'], [u'Power', u'sheet61A57DC9'], [u'Power', u'MOSFET']]
+01-09 17:16:58 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[[u'Power', u'MOSFET'], [u'Power', u'sheet61A57DC9'], [u'Power', u'sheet61A580CB']]
+01-09 17:16:58 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[[u'Power', u'MOSFET'], [u'Power', u'sheet61A580CB']]
+01-09 17:17:00 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:u'sheet61A57DC9', file:u'MOSFET.sch'
+01-09 17:17:00 replicate_layout.replicatelayout 256:Source sheet path up to the level:[u'Power', u'sheet61A57DC9']
+01-09 17:17:00 replicate_layout.replicatelayout 260:Footprints on the sheets:
+[u'Q5', u'Q3', u'Q1']
+01-09 17:17:00 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+[u'/61A3F4E8/61A580D2/61A3DBC1', u'/61A3F4E8/61A57DD0/61A3DBC1', u'/61A3F4E8/61A3D6CE/61A3DBC1']
+01-09 17:17:00 replicate_layout.replicatelayout 279:All sheets to replicate:
+[[u'Power', u'sheet61A580CB'], [u'Power', u'sheet61A57DC9'], [u'Power', u'MOSFET']]
+01-09 17:17:00 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[[u'Power', u'MOSFET'], [u'Power', u'sheet61A57DC9'], [u'Power', u'sheet61A580CB']]
+01-09 17:17:00 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[[u'Power', u'MOSFET'], [u'Power', u'sheet61A580CB']]
+01-09 17:17:00 replicate_layout.action_replicate_layout 186:Replicating layout
+01-09 17:17:00 replicate_layout.replicatelayout 1002:Starting replication of sheets: [[u'Power', u'MOSFET'], [u'Power', u'sheet61A580CB']]
+on level: [u'Power', u'sheet61A57DC9']
+with tracks=True, zone=True, text=True, containing=True, remove=False, locked=False
+01-09 17:17:00 root 269:updating GUI message: 'Preparing for replication'
+01-09 17:17:00 root 274:updating GUI with: 0
+01-09 17:17:00 replicate_layout.replicatelayout 556:Getting the list of source footprints
+01-09 17:17:00 replicate_layout.replicatelayout 560:Getting the list of all the remaining footprints
+01-09 17:17:00 replicate_layout.replicatelayout 564:Getting nets local to source footprints
+01-09 17:17:00 replicate_layout.replicatelayout 568:Getting source bounding box
+01-09 17:17:00 root 274:updating GUI with: 37
+01-09 17:17:00 replicate_layout.replicatelayout 572:Getting source tracks
+01-09 17:17:00 replicate_layout.replicatelayout 576:Getting source zones
+01-09 17:17:00 replicate_layout.replicatelayout 580:Getting source text items
+01-09 17:17:00 replicate_layout.replicatelayout 584:Getting source text items
+01-09 17:17:00 root 274:updating GUI with: 100
+01-09 17:17:00 root 269:updating GUI message: 'Replicating footprints'
+01-09 17:17:00 replicate_layout.replicatelayout 590:Replicating footprints
+01-09 17:17:00 replicate_layout.replicatelayout 596:Replicating footprints on sheet [u'Power', u'MOSFET']
+01-09 17:17:00 replicate_layout.replicatelayout 596:Replicating footprints on sheet [u'Power', u'sheet61A580CB']
+01-09 17:17:00 root 274:updating GUI with: 72
+01-09 17:17:00 root 269:updating GUI message: 'Replicating tracks'
+01-09 17:17:00 replicate_layout.replicatelayout 720:Replicating tracks
+01-09 17:17:00 replicate_layout.replicatelayout 726:Replicating tracks on sheet [u'Power', u'MOSFET']
+01-09 17:17:00 replicate_layout.replicatelayout 726:Replicating tracks on sheet [u'Power', u'sheet61A580CB']
+01-09 17:17:00 root 269:updating GUI message: 'Replicating zones'
+01-09 17:17:00 root 274:updating GUI with: 0
+01-09 17:17:00 replicate_layout.replicatelayout 771:Replicating zones
+01-09 17:17:00 replicate_layout.replicatelayout 778:Replicating zones on sheet [u'Power', u'MOSFET']
+01-09 17:17:00 replicate_layout.replicatelayout 778:Replicating zones on sheet [u'Power', u'sheet61A580CB']
+01-09 17:17:00 root 269:updating GUI message: 'Replicating text'
+01-09 17:17:00 replicate_layout.replicatelayout 837:Replicating text
+01-09 17:17:00 replicate_layout.replicatelayout 844:Replicating text on sheet [u'Power', u'MOSFET']
+01-09 17:17:00 replicate_layout.replicatelayout 844:Replicating text on sheet [u'Power', u'sheet61A580CB']
+01-09 17:17:00 root 269:updating GUI message: 'Replicating drawings'
+01-09 17:17:00 replicate_layout.replicatelayout 868:Replicating drawings
+01-09 17:17:00 replicate_layout.replicatelayout 874:Replicating drawings on sheet [u'Power', u'MOSFET']
+01-09 17:17:00 replicate_layout.replicatelayout 874:Replicating drawings on sheet [u'Power', u'sheet61A580CB']
+01-09 17:17:00 replicate_layout.action_replicate_layout 209:Replication complete

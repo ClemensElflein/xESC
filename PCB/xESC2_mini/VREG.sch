@@ -1,0 +1,129 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title "xESC BLDC Controller"
+Date "2021-12-01"
+Rev "2.0"
+Comp "Clemens Elflein"
+Comment1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment2 "Licensed under "
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C20
+U 1 1 61E808D2
+P 6950 3850
+F 0 "C20" H 7065 3896 50  0000 L CNN
+F 1 "10uF/25V" H 7065 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6988 3700 50  0001 C CNN
+F 3 "~" H 6950 3850 50  0001 C CNN
+	1    6950 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2800 6700 3550
+Wire Wire Line
+	6950 3700 6950 3550
+Wire Wire Line
+	6950 3550 6700 3550
+Wire Wire Line
+	7550 4400 7500 4400
+Wire Wire Line
+	6950 4400 6950 4000
+$Comp
+L power:GND #PWR0114
+U 1 1 61E808E0
+P 7550 4550
+F 0 "#PWR0114" H 7550 4300 50  0001 C CNN
+F 1 "GND" H 7555 4377 50  0000 C CNN
+F 2 "" H 7550 4550 50  0001 C CNN
+F 3 "" H 7550 4550 50  0001 C CNN
+	1    7550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4550 7550 4400
+Connection ~ 7550 4400
+$Comp
+L Device:C C21
+U 1 1 61E808E8
+P 8050 3850
+F 0 "C21" H 8165 3896 50  0000 L CNN
+F 1 "10uF/25V" H 8165 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8088 3700 50  0001 C CNN
+F 3 "~" H 8050 3850 50  0001 C CNN
+	1    8050 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3700 8050 3550
+Wire Wire Line
+	8050 4400 8050 4000
+Wire Wire Line
+	7550 4400 8050 4400
+Wire Wire Line
+	8050 3550 8300 3550
+Wire Wire Line
+	8300 3550 8300 2800
+Wire Notes Line
+	6350 2350 6350 4900
+Wire Notes Line
+	6350 4900 8650 4900
+Wire Notes Line
+	8650 4900 8650 2350
+Wire Notes Line
+	8650 2350 6350 2350
+Text Notes 6500 2550 0    50   ~ 0
+Optional 3.3V LDO
+$Comp
+L power:+3.3V #PWR0111
+U 1 1 61DBD9C5
+P 8300 2800
+F 0 "#PWR0111" H 8300 2650 50  0001 C CNN
+F 1 "+3.3V" H 8315 2973 50  0000 C CNN
+F 2 "" H 8300 2800 50  0001 C CNN
+F 3 "" H 8300 2800 50  0001 C CNN
+	1    8300 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 61DBE676
+P 6700 2800
+F 0 "#PWR0112" H 6700 2650 50  0001 C CNN
+F 1 "+5V" H 6715 2973 50  0000 C CNN
+F 2 "" H 6700 2800 50  0001 C CNN
+F 3 "" H 6700 2800 50  0001 C CNN
+	1    6700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:XC6220B331MR U2
+U 1 1 62018DE5
+P 7500 3650
+F 0 "U2" H 7500 4017 50  0000 C CNN
+F 1 "XC6220B331MR" H 7500 3926 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7500 3650 50  0001 C CNN
+F 3 "https://www.torexsemi.com/file/xc6220/XC6220.pdf" H 8250 2650 50  0001 C CNN
+	1    7500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3550 7000 3550
+Connection ~ 6950 3550
+Wire Wire Line
+	8000 3550 8050 3550
+Connection ~ 8050 3550
+Wire Wire Line
+	7500 4050 7500 4400
+Connection ~ 7500 4400
+Wire Wire Line
+	7500 4400 6950 4400
+Wire Wire Line
+	7000 3750 7000 3550
+Connection ~ 7000 3550
+$EndSCHEMATC
