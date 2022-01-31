@@ -1228,6 +1228,8 @@ Text Label 5750 6650 0    50   ~ 0
 V_M_FILTERED
 Text Label 3850 3900 0    50   ~ 0
 V_M_FILTERED
+Text Notes 1150 700  0    197  ~ 39
+TODO: add 5v in
 $Comp
 L Device:Thermistor_NTC TH1
 U 1 1 61E35322
