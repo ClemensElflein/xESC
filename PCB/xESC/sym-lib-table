@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name xESC)(type Legacy)(uri ${KIPRJMOD}/xESC.lib)(options "")(descr ""))
-  (lib (name TMC6100)(type Legacy)(uri ${KIPRJMOD}/lib/TMC6100/TMC6100.lib)(options "")(descr ""))
-)

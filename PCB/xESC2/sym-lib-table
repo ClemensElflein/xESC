@@ -1,5 +1,0 @@
-(sym_lib_table
-  (lib (name 2021-11-28_18-58-59)(type Legacy)(uri ${KIPRJMOD}/libs/TMC6200/2021-11-28_18-58-59.lib)(options "")(descr ""))
-  (lib (name xESC2)(type Legacy)(uri ${KIPRJMOD}/xESC2.lib)(options "")(descr ""))
-  (lib (name U254-051T-4BH83-F1S)(type Legacy)(uri ${KIPRJMOD}/libs/USB/U254-051T-4BH83-F1S.lib)(options "")(descr ""))
-)
