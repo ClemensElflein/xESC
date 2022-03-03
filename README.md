@@ -1,48 +1,68 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-# xESC
+# xESC2
 
-The xESC is an easy to use, low cost electronic speed controller (ESC) design for sensored brushless DC (BLDC) motors. It can be used with hall sensors as well as optical or magnetic encoders. The firmware implements torque and speed control, therefore you can use the ESC for robotics applications where accurate speed control is required.
+The xESC2 is an easy to use, low cost electronic speed controller (ESC) design for brushless DC (BLDC) motors. It can drive BLDC motors in sensored and sensorless modes. The controller supports FOC control mode. The [firmware](https://github.com/clemensElflein/xesc_firmware) is based on the open source VESC firmware and implements torque, speed and position control. The current state of the motor controller (current, voltage, speed, position) can be read back through a serial interface.
 
+This ESC was designed from ground up to be suited for robotics use:
 
-# Hint
-This design is work in progress. Do not use in production!
+- It has pin headers to make it easy to integrate into existing designs.
+- It is small compared to a VESC
+- It is much cheaper than a VESC
+- It is much lower power than a VESC (but enough to drive robots)
 
-
-### PCB Design
-
-#### Front
-
-![xESC front](docs/img/xESC_front.png)
+I also have a customized [ROS driver](https://github.com/clemensElflein/xesc_ros) for this ESC.
 
 
 
-#### Back
+## Comparison
 
-![xESC back](docs/img/xESC_back.png)
+But how does the xESC compare to other brushless ESCs on the market? Is it the right ESC for your current needs?
+
+|                                             | xESC2 mini<br />(this repo) | xESC                            | xESC2                       | VESC 6                               | Cheap Hobby ESCs   |
+| ------------------------------------------- | --------------------------- | ------------------------------- | --------------------------- | ------------------------------------ | ------------------ |
+| **Technical Data**                          |                             |                                 |                             |                                      |                    |
+| **Intended Use**                            | Robotics                    | Robotics                        | Robotics                    | Electromobility                      | RC Cars / Planes   |
+| **Max Current**<br />(continuous)           | 10A / 40V                   | 10A / 40V                       | 10A / 40V                   | >80A / 60V                           | Depends on Model   |
+| **Size**                                    | 50x30 mm                    | 60x30 mm                        | 85x42 mm                    | 75x70mm                              | Depends on Model   |
+| **Supported Firmware**                      | xESC2 firmware (VESC based) | xESC firmware (SimpleFOC based) | xESC2 firmware (VESC based) | VESC firmware                        | /                  |
+| **Open Source**                             | HW+SW                       | HW+SW                           | HW+SW                       | SW                                   | /                  |
+| **Features**                                |                             |                                 |                             |                                      |                    |
+| **Interfaces**                              | USB, UART, CAN, PWM, Analog | UART, PWM                       | USB, UART, CAN, PWM, Analog | USB, UART, CAN, PWM, Analog and more | PWM only           |
+| **Motor Commutation**                       | FOC                         | BLDC                            | FOC                         | FOC                                  | BLDC               |
+| **Control Modes**                           | Current, Position, Speed    | Current                         | Current, Position, Speed    | Current, Position, Speed             | None               |
+| **Sensored**                                | :white_check_mark:          | :white_check_mark:              | :white_check_mark:          | :white_check_mark:                   | Some               |
+| **Feedback Channel**                        | :white_check_mark:          | :white_check_mark:              | :white_check_mark:          | :white_check_mark:                   | :x:                |
+| **Low Cost Design**                         | :white_check_mark:          | :white_check_mark:              | :white_check_mark:          | :x:                                  | :white_check_mark: |
+| **BEC (internal 5V regulator)**             | :x:                         | :white_check_mark:              | :white_check_mark:          | :white_check_mark:                   | :white_check_mark: |
+| **Pin headers for easy connection to PCBs** | :white_check_mark:          | :x:                             | :x:                         | :x:                                  | :x:                |
+| **Status**                                  | Working Prototypes          | Obsolete                        | Working Prototypes          | Mass Production                      | Mass Production    |
 
 
 
 
 
-### Firmware Features
+## PCB Design
 
-The ESC can be configured and controlled via the UART interface and provides live feedback about phase current, speed and motor position. If you don't need the advanced functions, the motor speed can be set via analog input or PWM input. Finally, the analog input can be configured as temperature sensor input.
-
-
-
-The following options can be configured in the firmware:
-
-- PI values for the speed controller
-- Hall Sensor Polarity
-- Overcurrent, Overvoltage, Undervoltage, Overtemperature Thresholds
-- Analog input mode: Auto, Disabled, Temperature
-- PWM input mode: Auto, Disabled
+| Front                                  | Back                                 |
+| -------------------------------------- | ------------------------------------ |
+| ![xESC front](docs/img/xESC_front.png) | ![xESC back](docs/img/xESC_back.png) |
 
 
-# Known Issues
-- The 5V regulator in the TMC6100 gets too when VSS > 12V.
-- There are voltage spikes on the supply voltage. Resistors on the MOSFET gates reduce those. The values are TBD.
+
+## Firmware Features
+
+The xESC2 firmware is based off the current version of the VESC firmware. Therefore it is able to do everything you'd wish your brushless ESC had. Including: FOC, speed control, current limiting, ...
+
+
+
+## Where can I buy one?
+
+The xESC2 mini is officially not for sale (yet), since I don't really have the capabilities to produce larger quantities right now (I'm making some for my own robotics projects at the moment). However if you *really* like to get your hands on them, just message me (e.g. open an issue or something).
+
+You can, of course build your own ESCs (that's kind of the idea to open source it ;-)), but please don't mass produce the design and sell them without my permission.
+
+
 
 
 # License
