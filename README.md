@@ -15,6 +15,12 @@ I also have a customized [ROS driver](https://github.com/clemensElflein/xesc_ros
 
 
 
+![xESC front](docs/img/xESC2_mini.jpg)
+
+
+
+
+
 ## Comparison
 
 But how does the xESC compare to other brushless ESCs on the market? Is it the right ESC for your current needs?
