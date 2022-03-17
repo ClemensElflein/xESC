@@ -19,8 +19,8 @@ I also have a customized [ROS driver](https://github.com/clemensElflein/xesc_ros
 
 
 # To-Do
-[ ] Add an emergency shutdown pin to the design.
-[ ] Add pinout to the silkscreen if enough space
+- [ ] Add an emergency shutdown pin to the design.
+- [ ] Add pinout to the silkscreen if enough space
 
 
 ## Comparison
