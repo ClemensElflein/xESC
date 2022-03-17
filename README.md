@@ -18,7 +18,9 @@ I also have a customized [ROS driver](https://github.com/clemensElflein/xesc_ros
 ![xESC front](docs/img/xESC2_mini.jpg)
 
 
-
+# To-Do
+[ ] Add an emergency shutdown pin to the design.
+[ ] Add pinout to the silkscreen if enough space
 
 
 ## Comparison
