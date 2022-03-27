@@ -1,5 +1,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+## If you want to be notified about updates and availability, star :star: and watch :eyes: this repository!
+
 # xESC2
 
 The xESC2 is an easy to use, low cost electronic speed controller (ESC) design for brushless DC (BLDC) motors. It can drive BLDC motors in sensored and sensorless modes. The controller supports FOC control mode. The [firmware](https://github.com/clemensElflein/xesc_firmware) is based on the open source VESC firmware and implements torque, speed and position control. The current state of the motor controller (current, voltage, speed, position) can be read back through a serial interface.
