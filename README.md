@@ -1,4 +1,8 @@
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/RNYBpwBkZ3)
+
+
+## Join the Discord server for xESC discussion: ![HERE](https://discord.gg/RNYBpwBkZ3)
+
 
 ## If you want to be notified about updates and availability, star :star: and watch :eyes: this repository!
 
