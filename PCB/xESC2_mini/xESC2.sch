@@ -1288,4 +1288,92 @@ Text Label 5800 6100 0    50   ~ 0
 PCB_TEMP
 Text Label 7000 4400 2    50   ~ 0
 PCB_TEMP
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 624F1524
+P 10700 3250
+F 0 "FID1" H 10785 3296 50  0000 L CNN
+F 1 "Fiducial" H 10785 3205 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10700 3250 50  0001 C CNN
+F 3 "~" H 10700 3250 50  0001 C CNN
+	1    10700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID6
+U 1 1 624F2CC8
+P 10700 3450
+F 0 "FID6" H 10785 3496 50  0000 L CNN
+F 1 "Fiducial" H 10785 3405 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10700 3450 50  0001 C CNN
+F 3 "~" H 10700 3450 50  0001 C CNN
+	1    10700 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID7
+U 1 1 624FD30C
+P 10700 3650
+F 0 "FID7" H 10785 3696 50  0000 L CNN
+F 1 "Fiducial" H 10785 3605 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10700 3650 50  0001 C CNN
+F 3 "~" H 10700 3650 50  0001 C CNN
+	1    10700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID8
+U 1 1 62507A8D
+P 10700 3850
+F 0 "FID8" H 10785 3896 50  0000 L CNN
+F 1 "Fiducial" H 10785 3805 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10700 3850 50  0001 C CNN
+F 3 "~" H 10700 3850 50  0001 C CNN
+	1    10700 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 6251351C
+P 10450 3250
+F 0 "FID2" H 10535 3296 50  0000 L CNN
+F 1 "Fiducial" H 10535 3205 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 3250 50  0001 C CNN
+F 3 "~" H 10450 3250 50  0001 C CNN
+	1    10450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 62513522
+P 10450 3450
+F 0 "FID3" H 10535 3496 50  0000 L CNN
+F 1 "Fiducial" H 10535 3405 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 3450 50  0001 C CNN
+F 3 "~" H 10450 3450 50  0001 C CNN
+	1    10450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID4
+U 1 1 62513528
+P 10450 3650
+F 0 "FID4" H 10535 3696 50  0000 L CNN
+F 1 "Fiducial" H 10535 3605 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 3650 50  0001 C CNN
+F 3 "~" H 10450 3650 50  0001 C CNN
+	1    10450 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID5
+U 1 1 6251352E
+P 10450 3850
+F 0 "FID5" H 10535 3896 50  0000 L CNN
+F 1 "Fiducial" H 10535 3805 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.75mm_Mask1.5mm" H 10450 3850 50  0001 C CNN
+F 3 "~" H 10450 3850 50  0001 C CNN
+	1    10450 3850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
