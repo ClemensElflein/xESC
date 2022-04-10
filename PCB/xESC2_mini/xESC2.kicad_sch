@@ -2118,7 +2118,7 @@
     (pin "1" (uuid ac861873-3c34-45f5-ac8d-f67471b5231b))
   )
 
-  (symbol (lib_id "Device:C") (at 36.83 127 0)
+  (symbol (lib_id "Device:C") (at 36.83 127 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061ac0036)
     (property "Reference" "C44" (id 0) (at 39.751 125.8316 0)
@@ -3247,7 +3247,7 @@
     (pin "3" (uuid 5f8403f7-486d-4ea1-802c-51acfb1832ec))
   )
 
-  (symbol (lib_id "Device:R") (at 176.53 139.7 0)
+  (symbol (lib_id "Device:R") (at 176.53 139.7 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061e2e71b)
     (property "Reference" "R37" (id 0) (at 178.308 138.5316 0)
@@ -3275,7 +3275,7 @@
     (pin "2" (uuid c10618cc-df19-44af-8e07-218fc6db8ea7))
   )
 
-  (symbol (lib_id "Device:LED") (at 176.53 153.67 90)
+  (symbol (lib_id "Device:LED") (at 176.53 153.67 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061e2e723)
     (property "Reference" "D4" (id 0) (at 179.5272 152.6794 90)
@@ -3359,7 +3359,7 @@
     (pin "2" (uuid 75dc4e7c-c103-47fb-8422-ea92b632f564))
   )
 
-  (symbol (lib_id "Device:R") (at 185.42 139.7 0)
+  (symbol (lib_id "Device:R") (at 185.42 139.7 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061e39472)
     (property "Reference" "R38" (id 0) (at 187.198 138.5316 0)
@@ -3387,7 +3387,7 @@
     (pin "2" (uuid 5309887c-4763-4f8e-966c-684a34469b1d))
   )
 
-  (symbol (lib_id "Device:LED") (at 185.42 153.67 90)
+  (symbol (lib_id "Device:LED") (at 185.42 153.67 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061e3947a)
     (property "Reference" "D5" (id 0) (at 188.4172 152.6794 90)
@@ -4348,6 +4348,9 @@
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061ac298c"
       (reference "U4") (unit 1) (value "STM32F405RGTx") (footprint "Package_QFP:LQFP-64_10x10mm_P0.5mm")
+    )
+    (path "/00000000-0000-0000-0000-000061ac26fb/084a7543-0873-4c50-8689-dfb8405a6c5d"
+      (reference "U4") (unit 1) (value "RP2040") (footprint "IC57_RP2040")
     )
     (path "/00000000-0000-0000-0000-000061d495a6"
       (reference "U5") (unit 1) (value "SN65HVD232") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")

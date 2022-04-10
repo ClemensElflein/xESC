@@ -2207,7 +2207,7 @@
     (pin "1" (uuid 05c94af5-24d9-4390-a08b-57cd6e358617))
   )
 
-  (symbol (lib_id "Connector:Conn_01x06_Male") (at 21.59 140.97 0)
+  (symbol (lib_id "Connector:Conn_01x06_Male") (at 21.59 140.97 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061f623fb)
     (property "Reference" "J9" (id 0) (at 24.3332 131.2926 0))
@@ -2260,7 +2260,7 @@
     (pin "1" (uuid 1cda7258-ff69-48a6-ba9d-eb3bd9b084e6))
   )
 
-  (symbol (lib_id "Connector:Conn_01x06_Male") (at 21.59 160.02 0)
+  (symbol (lib_id "Connector:Conn_01x06_Male") (at 21.59 160.02 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061f93cda)
     (property "Reference" "J10" (id 0) (at 24.3332 150.3426 0))
