@@ -1,6 +1,8 @@
 (fp_lib_table
-  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/libs/TMC6200/footprints.pretty)(options "")(descr ""))
-  (lib (name xESC2)(type KiCad)(uri ${KIPRJMOD}/xESC2.pretty)(options "")(descr ""))
-  (lib (name USB)(type KiCad)(uri ${KIPRJMOD}/libs/USB)(options "")(descr ""))
-  (lib (name x-tech-logo)(type KiCad)(uri ${KIPRJMOD}/libs/x-tech-logo)(options "")(descr ""))
+  (lib (name "footprints")(type "KiCad")(uri "${KIPRJMOD}/libs/TMC6200/footprints.pretty")(options "")(descr ""))
+  (lib (name "xESC2")(type "KiCad")(uri "${KIPRJMOD}/xESC2.pretty")(options "")(descr ""))
+  (lib (name "USB")(type "KiCad")(uri "${KIPRJMOD}/libs/USB")(options "")(descr ""))
+  (lib (name "x-tech-logo")(type "KiCad")(uri "${KIPRJMOD}/libs/x-tech-logo")(options "")(descr ""))
+  (lib (name "DRV8300")(type "KiCad")(uri "${KIPRJMOD}/libs/DRV8300/DRV8300.pretty")(options "")(descr ""))
+  (lib (name "INA180")(type "KiCad")(uri "${KIPRJMOD}/libs/INA180A3IDBVR/INA180.pretty")(options "")(descr ""))
 )

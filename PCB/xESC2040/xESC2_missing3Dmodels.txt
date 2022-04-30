@@ -1,0 +1,10 @@
+### Missing 3D models - created on 2022-04-30 03:13
+### Printed by checking_3D_models plugin
+Board file: C:\Users\Clemens\Documents\GitHub\xESC\PCB\xESC2040\xESC2.kicad_pcb
+3D missing models written to:
+C:\Users\Clemens\Documents\GitHub\xESC\PCB\xESC2040\xESC2_missing3Dmodels.txt
+-------
+('U2', 'C:/Users/4perr/Documents/openmower/kicad/3d/STEP/IC57_RP2040.step')
+-------
+NUM of 3D missing models:1
+checked extensions ['.stp', '.step', '.stpZ']

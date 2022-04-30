@@ -1,0 +1,23 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# INA180A3IDBVR
+#
+DEF INA180A3IDBVR U 0 40 Y Y 1 L N
+F0 "U" -500 439 50 H V L BNN
+F1 "INA180A3IDBVR" -500 -557 50 H V L BNN
+F2 "SOT95P280X145-5N" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+DRAW
+S -500 -400 500 400 0 0 16 f
+X IN+ 3 -700 100 200 R 40 40 0 0 I 
+X IN- 4 -700 0 200 R 40 40 0 0 I 
+X VS 5 700 300 200 L 40 40 0 0 W 
+X OUT 1 700 100 200 L 40 40 0 0 O 
+X GND 2 700 -300 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library
