@@ -2930,7 +2930,7 @@
       (reference "U5") (unit 1) (value "XC6220B331MR") (footprint "Package_TO_SOT_SMD:SOT-23-5")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/97d6fd31-a505-4e41-ba9d-4e3f08375aa2"
-      (reference "U6") (unit 1) (value "DRV8300DRGER") (footprint "DRV8300:DRV8300DRGER")
+      (reference "U6") (unit 1) (value "DRV8300DRGER") (footprint "DRV8300:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm")
     )
     (path "/d5d37f5b-4bf9-4532-a06e-fdd7971cf83d/a523d7ef-5f7d-4ab4-865c-351d3e69da5e"
       (reference "U7") (unit 1) (value "MCP2515-xST") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")

@@ -1544,7 +1544,7 @@
     (property "Value" "DRV8300DRGER" (id 1) (at 151.13 31.115 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "DRV8300:DRV8300DRGER" (id 2) (at 133.35 40.259 0)
+    (property "Footprint" "DRV8300:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm" (id 2) (at 133.35 40.259 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 133.35 38.735 0)
