@@ -821,7 +821,6 @@
     (uuid f053d67e-5cea-4620-bec6-ec97dab26187)
   )
 
-  (no_connect (at 110.49 100.33) (uuid 04808dfa-a684-49c7-bb1c-460b622d2a16))
   (no_connect (at 171.45 118.11) (uuid 04808dfa-a684-49c7-bb1c-460b622d2a18))
   (no_connect (at 110.49 72.39) (uuid 04808dfa-a684-49c7-bb1c-460b622d2a19))
   (no_connect (at 110.49 74.93) (uuid 04808dfa-a684-49c7-bb1c-460b622d2a1a))
@@ -1257,6 +1256,10 @@
   (hierarchical_label "SWDIO" (shape bidirectional) (at 110.49 128.27 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid bb9cbc5b-36a5-45f2-9c66-8297e5a9b3ff)
+  )
+  (hierarchical_label "CAN_INT" (shape input) (at 110.49 100.33 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid befd62b1-619b-4572-9ca1-684dbc340252)
   )
   (hierarchical_label "CURRENT_SENSE" (shape input) (at 171.45 107.95 0)
     (effects (font (size 1.27 1.27)) (justify left))

@@ -623,7 +623,6 @@
   (no_connect (at 162.56 101.6) (uuid 7978884e-ada4-427e-9d35-775ddff74b63))
   (no_connect (at 162.56 104.14) (uuid 7978884e-ada4-427e-9d35-775ddff74b64))
   (no_connect (at 162.56 106.68) (uuid 7978884e-ada4-427e-9d35-775ddff74b65))
-  (no_connect (at 162.56 93.98) (uuid 7ee64e8c-84e2-403b-8331-0a1dcb7c141f))
   (no_connect (at 193.04 104.14) (uuid 9bfa062a-1f9f-4625-a186-aea007037d72))
 
   (wire (pts (xy 106.68 81.28) (xy 162.56 81.28))
@@ -819,6 +818,10 @@
     (uuid ee4c95d3-7d11-46eb-be0a-cc270f050840)
   )
 
+  (hierarchical_label "INT" (shape output) (at 162.56 93.98 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 00d76577-cf97-4ac9-bd06-d04ace104360)
+  )
   (hierarchical_label "MISO" (shape output) (at 193.04 81.28 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid bfe10c9f-8f33-41c3-b558-4ac2874bdc0a)
