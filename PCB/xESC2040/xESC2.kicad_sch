@@ -977,7 +977,6 @@
     )
   )
 
-
   (junction (at 46.99 130.81) (diameter 0) (color 0 0 0 0)
     (uuid 08a88900-e5e1-416e-9814-7d6139958f83)
   )
@@ -3194,7 +3193,7 @@
       (reference "U2") (unit 1) (value "RP2040") (footprint "xESC2:RP2040")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/1002c8ca-acf5-46f6-982e-cedf5b9b9e24"
-      (reference "U3") (unit 1) (value "W25Q128JVS") (footprint "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm")
+      (reference "U3") (unit 1) (value "W25Q128JVP") (footprint "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/6e53077b-00a7-42fa-bde8-29bc57990250"
       (reference "U4") (unit 1) (value "INA180A3IDBVR") (footprint "INA180:SOT95P280X145-5N")
