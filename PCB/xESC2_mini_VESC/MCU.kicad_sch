@@ -1187,7 +1187,7 @@
     (uuid f876a25f-daa4-42a5-a975-8555180fe7ae)
   )
 
-  (symbol (lib_id "Device:C") (at 53.34 60.96 180)
+  (symbol (lib_id "Device:C") (at 53.34 60.96 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a6c9cc)
     (property "Reference" "C36" (id 0) (at 50.419 62.1284 0)
@@ -1215,7 +1215,7 @@
     (pin "2" (uuid 3d60bf0f-aed1-4299-9e6b-3add2a79ab78))
   )
 
-  (symbol (lib_id "Device:C") (at 170.18 29.21 0)
+  (symbol (lib_id "Device:C") (at 170.18 29.21 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a6df2f)
     (property "Reference" "C40" (id 0) (at 173.101 28.0416 0)
@@ -1243,7 +1243,7 @@
     (pin "2" (uuid d28ac25e-cbbc-48c2-b4b1-938823ed15a7))
   )
 
-  (symbol (lib_id "Device:C") (at 177.8 29.21 0)
+  (symbol (lib_id "Device:C") (at 177.8 29.21 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a6e1b7)
     (property "Reference" "C41" (id 0) (at 180.721 28.0416 0)
@@ -1271,7 +1271,7 @@
     (pin "2" (uuid 7a131816-4e2d-4aa9-b13a-0d654f218117))
   )
 
-  (symbol (lib_id "Device:C") (at 185.42 29.21 0)
+  (symbol (lib_id "Device:C") (at 185.42 29.21 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a6e65e)
     (property "Reference" "C42" (id 0) (at 188.341 28.0416 0)
@@ -1299,7 +1299,7 @@
     (pin "2" (uuid 657a1fa7-a37e-4be0-9265-beec84926b6e))
   )
 
-  (symbol (lib_id "Device:C") (at 191.77 29.21 0)
+  (symbol (lib_id "Device:C") (at 191.77 29.21 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a6e9cb)
     (property "Reference" "C43" (id 0) (at 194.691 28.0416 0)
@@ -1327,7 +1327,7 @@
     (pin "2" (uuid 20067c84-38f2-41d1-8aa4-9b648eebd803))
   )
 
-  (symbol (lib_id "power:+3.3V") (at 181.61 15.24 0)
+  (symbol (lib_id "power:+3.3V") (at 181.61 15.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a71a13)
     (property "Reference" "#PWR0128" (id 0) (at 181.61 19.05 0)
@@ -1359,7 +1359,7 @@
     (pin "1" (uuid 695946cc-dcd5-41bf-aaca-133892912b2b))
   )
 
-  (symbol (lib_id "Device:C") (at 44.45 58.42 180)
+  (symbol (lib_id "Device:C") (at 44.45 58.42 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a7737f)
     (property "Reference" "C35" (id 0) (at 41.529 59.5884 0)
@@ -1403,7 +1403,7 @@
     (pin "1" (uuid b50348be-df14-4d59-88b2-18437463005d))
   )
 
-  (symbol (lib_id "Device:C") (at 161.29 29.21 180)
+  (symbol (lib_id "Device:C") (at 161.29 29.21 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a7b997)
     (property "Reference" "C39" (id 0) (at 158.369 30.3784 0)
@@ -1431,7 +1431,7 @@
     (pin "2" (uuid 898564dc-e1ae-4d1b-ab7f-0e4fe697b04f))
   )
 
-  (symbol (lib_id "Device:C") (at 153.67 29.21 180)
+  (symbol (lib_id "Device:C") (at 153.67 29.21 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a7c449)
     (property "Reference" "C38" (id 0) (at 150.749 30.3784 0)
@@ -1459,7 +1459,7 @@
     (pin "2" (uuid 79b16154-5e66-41c4-97dd-377a9cac6965))
   )
 
-  (symbol (lib_id "Device:C") (at 146.05 29.21 0)
+  (symbol (lib_id "Device:C") (at 146.05 29.21 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a7d515)
     (property "Reference" "C37" (id 0) (at 148.971 28.0416 0)
@@ -1487,7 +1487,7 @@
     (pin "2" (uuid abd0b579-026e-4c72-a52a-a12b1fb509f4))
   )
 
-  (symbol (lib_id "Device:C") (at 39.37 48.26 180)
+  (symbol (lib_id "Device:C") (at 39.37 48.26 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a8999f)
     (property "Reference" "C34" (id 0) (at 36.449 49.4284 0)
@@ -1603,7 +1603,7 @@
     (pin "1" (uuid 434ddf31-8700-47c9-97e7-99962de7560d))
   )
 
-  (symbol (lib_id "power:+3.3V") (at 86.36 19.05 0)
+  (symbol (lib_id "power:+3.3V") (at 86.36 19.05 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061a9f4b2)
     (property "Reference" "#PWR0124" (id 0) (at 86.36 22.86 0)
