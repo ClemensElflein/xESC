@@ -2133,7 +2133,7 @@
     (property "Reference" "C44" (id 0) (at 39.751 125.8316 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" ".1uF/100V" (id 1) (at 39.751 128.143 0)
+    (property "Value" ".1uF/50V" (id 1) (at 39.751 128.143 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 37.7952 130.81 0)
@@ -2142,7 +2142,7 @@
     (property "Datasheet" "~" (id 3) (at 36.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digikey" "490-1331-1-ND" (id 4) (at 36.83 127 0)
+    (property "Digikey" "1276-1935-1-ND" (id 4) (at 36.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Part Number" "CL10B104KC8NNNC" (id 5) (at 36.83 127 0)
@@ -4110,10 +4110,10 @@
       (reference "C5") (unit 1) (value "2.2uF/25V") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a7e7a1"
-      (reference "C6") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C6") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a6a715"
-      (reference "C7") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C7") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4478e"
       (reference "C8") (unit 1) (value "470nF/16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -4176,7 +4176,7 @@
       (reference "C33") (unit 1) (value "15pF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a8999f"
-      (reference "C34") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C34") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a7737f"
       (reference "C35") (unit 1) (value "2.2uF/25V") (footprint "Capacitor_SMD:C_0805_2012Metric")
@@ -4185,7 +4185,7 @@
       (reference "C36") (unit 1) (value "2.2uF/25V") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a7d515"
-      (reference "C37") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C37") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a7c449"
       (reference "C38") (unit 1) (value "2.2uF/25V") (footprint "Capacitor_SMD:C_0805_2012Metric")
@@ -4194,19 +4194,19 @@
       (reference "C39") (unit 1) (value "2.2uF/25V") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6df2f"
-      (reference "C40") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C40") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6e1b7"
-      (reference "C41") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C41") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6e65e"
-      (reference "C42") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C42") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6e9cb"
-      (reference "C43") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C43") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ac0036"
-      (reference "C44") (unit 1) (value ".1uF/100V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C44") (unit 1) (value ".1uF/50V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061b68b12"
       (reference "C45") (unit 1) (value "DNP") (footprint "Capacitor_SMD:C_0603_1608Metric")
