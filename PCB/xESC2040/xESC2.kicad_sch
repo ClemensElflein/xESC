@@ -1503,7 +1503,7 @@
     (property "Datasheet" "~" (id 3) (at 36.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digikey" "490-1331-1-ND" (id 4) (at 36.83 127 0)
+    (property "Digikey" "1276-1935-1-ND" (id 4) (at 36.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Part Number" "CL10B104KC8NNNC" (id 5) (at 36.83 127 0)
@@ -2083,7 +2083,7 @@
     (property "Reference" "D2" (id 0) (at 179.5272 152.6794 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "LED" (id 1) (at 179.5272 154.9908 90)
+    (property "Value" "LED GREEN" (id 1) (at 179.5272 154.9908 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "LED_SMD:LED_0603_1608Metric" (id 2) (at 176.53 153.67 0)
@@ -2195,7 +2195,7 @@
     (property "Reference" "D3" (id 0) (at 188.4172 152.6794 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "LED" (id 1) (at 188.4172 154.9908 90)
+    (property "Value" "LED RED" (id 1) (at 188.4172 154.9908 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "LED_SMD:LED_0603_1608Metric" (id 2) (at 185.42 153.67 0)
@@ -2888,22 +2888,22 @@
       (reference "C19") (unit 1) (value "100nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/b5bb664c-0ca2-4020-8c91-65a02cddeb94"
-      (reference "C20") (unit 1) (value "TODO") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C20") (unit 1) (value ".1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4478e"
-      (reference "C21") (unit 1) (value "TODO") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C21") (unit 1) (value "470nF{slash}16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4b0d8"
-      (reference "C22") (unit 1) (value "TODO") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C22") (unit 1) (value "470nF{slash}16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4bb26"
-      (reference "C23") (unit 1) (value "TODO") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C23") (unit 1) (value "470nF{slash}16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061e7227a/00000000-0000-0000-0000-000061e808d2"
-      (reference "C24") (unit 1) (value "10uF/16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C24") (unit 1) (value "4.7uF{slash}16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061e7227a/6c7a9801-3387-4fa6-ac74-fb6a0114bfa0"
-      (reference "C25") (unit 1) (value "10uF/16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C25") (unit 1) (value "4.7uF{slash}16V") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061a5475a"
       (reference "C26") (unit 1) (value "2.2uF/50V") (footprint "Capacitor_SMD:C_1206_3216Metric")
@@ -2921,10 +2921,10 @@
       (reference "D1") (unit 1) (value "D_Schottky") (footprint "Diode_SMD:D_SOD-123")
     )
     (path "/00000000-0000-0000-0000-000061e2e723"
-      (reference "D2") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
+      (reference "D2") (unit 1) (value "LED GREEN") (footprint "LED_SMD:LED_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061e3947a"
-      (reference "D3") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
+      (reference "D3") (unit 1) (value "LED RED") (footprint "LED_SMD:LED_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00006251351c"
       (reference "FID1") (unit 1) (value "Fiducial") (footprint "Fiducial:Fiducial_0.75mm_Mask1.5mm")
@@ -3047,10 +3047,10 @@
       (reference "R16") (unit 1) (value "2R2") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/363f2f39-147c-4fe7-ae7c-93ceb80426de"
-      (reference "R17") (unit 1) (value "TODO") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R17") (unit 1) (value "DNP") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/c6c90108-6f77-4a49-81b5-720115855806"
-      (reference "R18") (unit 1) (value "33mR") (footprint "Resistor_SMD:R_2512_6332Metric")
+      (reference "R18") (unit 1) (value "3mR") (footprint "Resistor_SMD:R_2512_6332Metric")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061a4c174"
       (reference "R19") (unit 1) (value "2R2") (footprint "Resistor_SMD:R_0603_1608Metric")
@@ -3083,7 +3083,7 @@
       (reference "U3") (unit 1) (value "DRV8300DRGER") (footprint "DRV8300:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm")
     )
     (path "/00000000-0000-0000-0000-000061a3f4e8/6e53077b-00a7-42fa-bde8-29bc57990250"
-      (reference "U4") (unit 1) (value "INA180A3IDBVR") (footprint "INA180:SOT95P280X145-5N")
+      (reference "U4") (unit 1) (value "INA180A4") (footprint "INA180:SOT95P280X145-5N")
     )
     (path "/00000000-0000-0000-0000-000061e7227a/00000000-0000-0000-0000-000062018de5"
       (reference "U5") (unit 1) (value "XC6220B331MR") (footprint "Package_TO_SOT_SMD:SOT-23-5")
@@ -3095,7 +3095,7 @@
       (reference "U7") (unit 1) (value "MCP2515-xST") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
     )
     (path "/00000000-0000-0000-0000-000061ac26fb/cad27c59-62e5-414e-946c-08aafd176309"
-      (reference "Y1") (unit 1) (value "Crystal_GND24") (footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm")
+      (reference "Y1") (unit 1) (value "12MHz") (footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm")
     )
     (path "/d5d37f5b-4bf9-4532-a06e-fdd7971cf83d/2d8aed8e-5480-4471-bae1-c9c35cebe5ca"
       (reference "Y2") (unit 1) (value "Crystal_GND24") (footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm")
