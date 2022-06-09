@@ -488,7 +488,7 @@
     (property "Digikey" "893-1133-1-ND" (id 5) (at 190.5 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C73336" (id 6) (at 190.5 92.71 0)
+    (property "LCSC" "C86534" (id 6) (at 190.5 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Stock_PN" "U-XC6220B331MR" (id 7) (at 190.5 92.71 0)

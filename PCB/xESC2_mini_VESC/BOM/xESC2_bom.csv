@@ -30,7 +30,7 @@ Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
 29,"CAN Bus Transceivers, 3.3V, 1Mbps, SOIC-8",SN65HVD232,U5,SN65HVD232,SOIC-8_3.9x4.9mm_P1.27mm,1,http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf,296-12282-5-ND,SN65HVD232,U-SN65HVD232,,C30530,,,,
 30,"ARM Cortex-M4 MCU, 1024KB flash, 128KB RAM, 168MHz, 1.8-3.6V, 51 GPIO, LQFP-64",STM32F405RGTx,U4,STM32F405RGTx,LQFP-64_10x10mm_P0.5mm,1,http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf,,STM32F405RGTx,U-STM32F405RGTx,,C15742,,,,
 31,,TMC6200-TA,U1,TMC6200-TA,TMC6200-TA,1,,1460-1384-ND,TMC6200-TA,U-TMC6200-TA,,,,,,
-32,"1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5",XC6220B331MR,U2,XC6220B331MR,SOT-23-5,1,https://www.torexsemi.com/file/xc6220/XC6220.pdf,893-1133-1-ND,XC6220B331MR,U-XC6220B331MR,,C73336,,,,
+32,"1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5",XC6220B331MR,U2,XC6220B331MR,SOT-23-5,1,https://www.torexsemi.com/file/xc6220/XC6220.pdf,893-1133-1-ND,XC6220B331MR,U-XC6220B331MR,,C86534,,,,
 33,"Four pin crystal, GND on pins 2 and 4",Crystal_GND24,Y1,Crystal_GND24,Crystal_SMD_3225-4Pin_3.2x2.5mm,1,~,50-ECS-80-12-33-JGN-CT-ND,ECS-80-12-33-JGN-TR,Y-4-SMD-8MhHz,,,,,,
 
 
@@ -45,6 +45,6 @@ Total components:,98
 Schematic Version:,2.0
 Schematic Date:,2021-12-01
 PCB Variant:,default
-BoM Date:,30/05/2022 13:12:57
+BoM Date:,09/06/2022 19:01:49
 Schematic Source:,xESC2.kicad_sch
 KiCad Version:,Eeschema (6.0.1)

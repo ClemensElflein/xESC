@@ -29,7 +29,7 @@ Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
 28,,INA180A3IDBVR,U4,INA180A4,SOT95P280X145-5N,1,,296-47654-1-ND,INA180A3IDBVR,U-INA180A3IDBVR,,,,,,
 29,,RP2040,U1,RP2040,RP2040,1,,2648-SC0914(13)CT-ND,SC0914(13),U-RP2040,,,,,,
 30,"128Mb Serial Flash Memory, Standard/Dual/Quad SPI, SOIC-8",W25Q128JVS,U2,W25Q128JVP,WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm,1,http://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf,W25Q128JVPIMCT-ND,W25Q128JVPIM,U-W25Q128JVPIM,,,,,,
-31,"1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5",XC6220B331MR,U5,XC6220B331MR,SOT-23-5,1,https://www.torexsemi.com/file/xc6220/XC6220.pdf,893-1133-1-ND,XC6220B331MR,U-XC6220B331MR,C73336,,,,,
+31,"1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5",XC6220B331MR,U5,XC6220B331MR,SOT-23-5,1,https://www.torexsemi.com/file/xc6220/XC6220.pdf,893-1133-1-ND,XC6220B331MR,U-XC6220B331MR,C86534,,,,,
 32,"Four pin crystal, GND on pins 2 and 4",Crystal_GND24,Y1,12MHz,Crystal_SMD_3225-4Pin_3.2x2.5mm,1,~,50-ECS-80-12-33-JGN-CT-ND,ECS-80-12-33-JGN-TR,Y-4-SMD-8MhHz,,,,,,
 
 
@@ -44,6 +44,6 @@ Total components:,74
 Schematic Version:,2.0
 Schematic Date:,2021-12-01
 PCB Variant:,default
-BoM Date:,30/05/2022 13:13:15
+BoM Date:,09/06/2022 19:00:18
 Schematic Source:,xESC2.kicad_sch
 KiCad Version:,Eeschema (6.0.1)
