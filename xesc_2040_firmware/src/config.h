@@ -29,6 +29,21 @@
 
 // Hall table drive motor
 /*
+_hall_table_0:=255
+_hall_table_1:=2
+_hall_table_2:=6
+_hall_table_3:=1
+_hall_table_4:=4
+_hall_table_5:=3
+_hall_table_6:=5
+_hall_table_7:=255
+_motor_current_limit:=0.5
+_acceleration:=0.1
+_has_motor_temp:=false
+_min_motor_temp:=0
+_max_motor_temp:=0
+_min_pcb_temp:=0
+_max_pcb_temp:=30
 const uint8_t HALL_TABLE[] = {
     255,
     // 0b001
@@ -45,6 +60,19 @@ const uint8_t HALL_TABLE[] = {
     5,
     255
 };
+
+
+_hall_table_0:=255
+_hall_table_1:=5
+_hall_table_2:=3
+_hall_table_3:=4
+_hall_table_4:=1
+_hall_table_5:=6
+_hall_table_6:=2
+_hall_table_7:=255
+
+
+
 */
 
 
@@ -62,8 +90,8 @@ const uint8_t HALL_TABLE[] = {
 #define HW_LIMIT_CURRENT 1.5
 
 // P and I values for the current control
-#define CURRENT_P 5.0f
-#define CURRENT_I 15.1f
+#define CURRENT_P 50.0f
+#define CURRENT_I 150.1f
 
 
 // Hardware limit for undervoltage and overvoltage.

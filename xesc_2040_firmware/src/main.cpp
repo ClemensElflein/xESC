@@ -29,14 +29,7 @@
 #define WRAP 3299
 
 
-#define FAULT_UNINITIALIZED 0b10
-#define FAULT_WATCHDOG 0b10
-#define FAULT_UNDERVOLTAGE 0b100
-#define FAULT_OVERVOLTAGE 0b1000
-#define FAULT_OVERCURRENT 0b10000
-#define FAULT_OVERTEMP_MOTOR 0b100000
-#define FAULT_OVERTEMP_PCB 0b1000000
-#define FAULT_INVALID_HALL 0b10000000
+
 
 // NTC Termistors
 #define NTC_RES(adc_val) ((4095.0 * 10000.0) / adc_val - 10000.0)
@@ -58,14 +51,18 @@ volatile float duty_setpoint_ramped = 0.0;
 
 // init with invalid hall so we have to update
 volatile uint last_hall = 0xFF;
+volatile uint last_commutation = 0xFF;
 // init with out of range duty, so we have to update
 volatile float last_duty = 1000.0f;
+volatile uint32_t tacho = 0;
 
 Xesc2040StatusPacket status = {0};
 Xesc2040SettingsPacket settings = {0};
+uint8_t hall_table[16];
 bool settings_valid = false;
 
 bool invalid_hall = false;
+bool internal_error = false;
 float error_i = 0;
 
 unsigned long last_current_control_micros = 0;
@@ -82,6 +79,13 @@ PacketSerial packetSerial;
 FastCRC16 CRC16;
 
 void onPacketReceived(const uint8_t *buffer, size_t size);
+
+void init_hall_table(uint8_t *table) {
+	for (int i = 0;i < 8;i++) {
+		hall_table[i] = table[i];
+    hall_table[8+i] = table[7-i];
+	}
+}
 
 void sendMessage(void *message, size_t size)
 {
@@ -112,7 +116,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_UH, 0);
     pwm_set_gpio_level(PIN_WH, 0);
-    pwm_set_gpio_level(PIN_VH, WRAP * duty);
+    pwm_set_gpio_level(PIN_VH, WRAP * abs(duty));
     // gpio_set_mask(0b001 << 8);
     gpio_put_masked(0b111 << 8, 0b001 << 8);
     break;
@@ -124,7 +128,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_UH, 0);
     pwm_set_gpio_level(PIN_VH, 0);
-    pwm_set_gpio_level(PIN_WH, WRAP * duty);
+    pwm_set_gpio_level(PIN_WH, WRAP *  abs(duty));
     // gpio_set_mask(0b001 << 8);
     gpio_put_masked(0b111 << 8, 0b001 << 8);
     break;
@@ -136,7 +140,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_UH, 0);
     pwm_set_gpio_level(PIN_VH, 0);
-    pwm_set_gpio_level(PIN_WH, WRAP * duty);
+    pwm_set_gpio_level(PIN_WH, WRAP *  abs(duty));
     // gpio_set_mask(0b010 << 8);
     gpio_put_masked(0b111 << 8, 0b010 << 8);
     break;
@@ -148,7 +152,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_VH, 0);
     pwm_set_gpio_level(PIN_WH, 0);
-    pwm_set_gpio_level(PIN_UH, WRAP * duty);
+    pwm_set_gpio_level(PIN_UH, WRAP *  abs(duty));
     // gpio_set_mask(0b010 << 8);
 
     gpio_put_masked(0b111 << 8, 0b010 << 8);
@@ -161,7 +165,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_VH, 0);
     pwm_set_gpio_level(PIN_WH, 0);
-    pwm_set_gpio_level(PIN_UH, WRAP * duty);
+    pwm_set_gpio_level(PIN_UH, WRAP *  abs(duty));
     // gpio_set_mask(0b100 << 8);
 
     gpio_put_masked(0b111 << 8, 0b100 << 8);
@@ -174,7 +178,7 @@ void setCommutation(uint8_t step)
     // gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_UH, 0);
     pwm_set_gpio_level(PIN_WH, 0);
-    pwm_set_gpio_level(PIN_VH, WRAP * duty);
+    pwm_set_gpio_level(PIN_VH, WRAP *  abs(duty));
     // gpio_set_mask(0b100 << 8);
 
     gpio_put_masked(0b111 << 8, 0b100 << 8);
@@ -190,14 +194,15 @@ void setCommutation(uint8_t step)
 
 void updateCommutation()
 {
-  // If fault, turn off motor
-  if (status.fault_code || !settings_valid)
-  {
-    setCommutation(255);
-    return;
-  }
+
   uint8_t hall_sensors = (gpio_get_all() >> 22) & 0b111;
-  uint8_t commutation = settings.hall_table[hall_sensors];
+
+  // check, if halls or duty changed. if not, don't update anything
+  if (last_duty == duty && last_hall == hall_sensors)
+    return;
+
+
+  uint8_t commutation = hall_table[hall_sensors + (duty < 0 ? 0 :8)];
   if (commutation < 1 || commutation > 6)
   {
     // Invalid hall table
@@ -210,12 +215,35 @@ void updateCommutation()
     return;
   }
   invalid_hall = false;
-  if (last_duty == duty && last_hall == hall_sensors)
-    return;
+
+
+  // If fault, turn off motor
+  if (status.fault_code || !settings_valid)
+  {
+    setCommutation(255);
+  } else {
+    setCommutation(commutation);
+  }
+
+  
+  
+  if(last_hall != hall_sensors && last_commutation != 0xFF) {
+    // we got a hall tick, check direction and update tacho
+    int8_t diff = (last_commutation-1) - (commutation-1);
+    if(diff < -3) {
+      diff += 6;
+    } if(diff > 3) {
+      diff -= 6;
+    }
+    if(diff >= -3 && diff <= 3) {
+      tacho += diff;
+    } else {
+      internal_error = true;
+    }
+  }
+  last_commutation = commutation;
   last_hall = hall_sensors;
   last_duty = duty;
-
-  setCommutation(commutation);
 }
 
 float readCurrent()
@@ -230,8 +258,10 @@ void setup()
   status.message_type = XESC2040_MSG_TYPE_STATUS;
   status.fw_version_major = 0;
   status.fw_version_minor = 9;
+  tacho=0;
 
   settings_valid = false;
+  last_commutation = 0xFF;
 
   // Setup Pin directions
   pinMode(PIN_UH, OUTPUT);
@@ -245,7 +275,7 @@ void setup()
   pinMode(PIN_LED_GREEN, OUTPUT);
 
   digitalWrite(PIN_LED_RED, HIGH);
-  digitalWrite(PIN_LED_GREEN, HIGH);
+  digitalWrite(PIN_LED_GREEN, LOW);
 
   digitalWrite(PIN_UH, LOW);
   digitalWrite(PIN_VH, LOW);
@@ -292,7 +322,6 @@ void loop1()
   unsigned long now = micros();
   if (now - last_current_control_micros > 500)
   {
-
     float dt = (now - last_current_control_micros) / 1000000.0f;
 
     float error = settings.motor_current_limit - status.current_input;
@@ -377,7 +406,20 @@ void onPacketReceived(const uint8_t *buffer, size_t size)
     // Got control packet
     last_watchdog_millis = millis();
     Xesc2040ControlPacket *packet = (Xesc2040ControlPacket *)buffer;
-    duty_setpoint = constrain(packet->duty_cycle, -1.0, 1.0);
+    duty_setpoint = constrain(packet->duty_cycle, -MAX_DUTY_CYCLE, MAX_DUTY_CYCLE);
+  }
+  break;
+  case XESC2040_MSG_TYPE_SETTINGS:
+  {
+    if (size != sizeof(struct Xesc2040SettingsPacket))
+    {
+      settings_valid = false;
+      return;
+    }
+    Xesc2040SettingsPacket *packet = (Xesc2040SettingsPacket *)buffer;
+    settings = *packet;
+    init_hall_table(settings.hall_table);
+    settings_valid = true;
   }
   break;
 
@@ -422,7 +464,7 @@ void updateFaults()
   }
   // FAULT_OVERTEMP_PCB
   if(status.temperature_pcb > min(HW_LIMIT_PCB_TEMP, settings.max_pcb_temp)) {
-    faults |= FAULT_OVERTEMP_MOTOR;
+    faults |= FAULT_OVERTEMP_PCB;
   }
 
   // FAULT_INVALID_HALL
@@ -432,6 +474,11 @@ void updateFaults()
     faults |= FAULT_INVALID_HALL;
   }
 
+  // FAULT_INTERNAL_ERROR - this should NEVER be set
+  if(internal_error) {
+    faults |= FAULT_INTERNAL_ERROR;
+  }
+
 
   if(faults) {
     // We have faults, set them in the status
@@ -439,8 +486,8 @@ void updateFaults()
     status.fault_code = faults;
     last_fault_millis = millis();
   } else if(faults == 0 && status.fault_code != 0) {
-    // We want to reset faults. Only reset if MIN_FAULT_TIME_MILLIS has passed
-    if(millis() - last_fault_millis > MIN_FAULT_TIME_MILLIS) {
+    // We want to reset faults. Only reset if MIN_FAULT_TIME_MILLIS has passed or if it was watchdog fault only
+    if(status.fault_code == FAULT_WATCHDOG || millis() - last_fault_millis > MIN_FAULT_TIME_MILLIS) {
       digitalWrite(PIN_LED_RED, LOW);
       status.fault_code = 0;
     }
@@ -453,6 +500,8 @@ void loop()
   {
     status.seq++;
     updateFaults();
+    status.duty_cycle = duty;
+    status.tacho = tacho;
     sendMessage(&status, sizeof(status));
 
     last_status_millis = millis();
@@ -479,7 +528,7 @@ void loop()
   switch (analog_round_robin)
   {
   case 0:
-    status.current_input = readCurrent() * 0.001 + status.current_input * 0.999;
+    status.current_input = readCurrent() * 0.0008 + status.current_input * 0.9992;
     break;
   case 1:
     status.voltage_input = readVIN() * 0.001 + status.voltage_input * 0.999;
@@ -489,6 +538,7 @@ void loop()
     break;
   case 3:
     status.temperature_pcb = readPcbTemp() * 0.001 + status.temperature_pcb * 0.999;
+    status.temperature_pcb = error_i;
     break;
 
   default:
