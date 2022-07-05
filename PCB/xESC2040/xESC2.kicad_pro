@@ -488,5 +488,7 @@
       "CAN"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "git_version": "WIP"
+  }
 }

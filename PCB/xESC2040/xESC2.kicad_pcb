@@ -5220,7 +5220,7 @@
   (gr_line (start 278.5 103.9) (end 278.5 132.9) (layer "Edge.Cuts") (width 0.05) (tstamp 28d567f0-48d1-4c95-a0cb-a8a12c39cbbe))
   (gr_line (start 229 132.9) (end 229 103.9) (layer "Edge.Cuts") (width 0.05) (tstamp 813e9b58-e0a0-4d7c-846c-24730cf15af6))
   (gr_line (start 278.5 132.9) (end 229 132.9) (layer "Edge.Cuts") (width 0.05) (tstamp 87ba8cb9-dc95-4e5c-81f3-3c6d0f72e5ad))
-  (gr_text "xESC RP2040\nV1.01" (at 270.025 118.475 270) (layer "B.SilkS") (tstamp 68a99320-95a1-446a-a935-f7e0ec32cfc3)
+  (gr_text "xESC RP2040\n${git_version}" (at 270.025 118.475 270) (layer "B.SilkS") (tstamp 68a99320-95a1-446a-a935-f7e0ec32cfc3)
     (effects (font (size 1 0.9) (thickness 0.15)) (justify mirror))
   )
   (gr_text "USB\nBoot" (at 260.275 131.025) (layer "F.SilkS") (tstamp 9c040984-8776-48df-a703-16236ef2e087)
