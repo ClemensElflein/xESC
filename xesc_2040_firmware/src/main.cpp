@@ -107,6 +107,13 @@ void sendMessage(void *message, size_t size)
 
 void setCommutation(uint8_t step)
 {
+  if(duty == 0.0f) {
+    gpio_put_masked(0b111 << 8, 0b111 << 8);
+    pwm_set_gpio_level(PIN_UH, 0);
+    pwm_set_gpio_level(PIN_VH, 0);
+    pwm_set_gpio_level(PIN_WH, 0);
+    return;
+  }
   switch (step)
   {
   case 1:
@@ -185,10 +192,10 @@ void setCommutation(uint8_t step)
     gpio_put_masked(0b111 << 8, 0b100 << 8);
     break;
   default:
-    gpio_put_masked(0b111 << 8, 0);
     pwm_set_gpio_level(PIN_UH, 0);
     pwm_set_gpio_level(PIN_VH, 0);
     pwm_set_gpio_level(PIN_WH, 0);
+    gpio_put_masked(0b111 << 8, 0b111 << 8);
     break;
   }
 }
@@ -513,7 +520,9 @@ void loop()
   {
     float dt = (float)(millis() - last_ramp_update_millis) / 1000.0f;
     last_ramp_update_millis = millis();
-    if (duty_setpoint != duty_setpoint_ramped)
+    if(status.fault_code) {
+      duty_setpoint_ramped = 0.0;
+    } else if (duty_setpoint != duty_setpoint_ramped)
     {
       if (duty_setpoint > duty_setpoint_ramped)
       {
