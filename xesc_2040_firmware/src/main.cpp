@@ -75,6 +75,7 @@ unsigned long last_fault_millis = 0;
 
 uint8_t analog_round_robin = 0;
 
+SerialPIO pioSerial(3, 4);
 PacketSerial packetSerial;
 FastCRC16 CRC16;
 

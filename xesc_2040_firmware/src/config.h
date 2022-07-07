@@ -1,6 +1,6 @@
 #pragma once
 
-#define PACKET_SERIAL Serial
+#define PACKET_SERIAL pioSerial
 
 #define STATUS_UPDATE_MILLIS 20
 
