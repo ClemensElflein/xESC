@@ -1,3 +1,0 @@
-Can not find model defined with enviroment variable (C:\Users\Clemens\Documents\GitHub\OpenMower\Hardware\OpenMower3d\Mainboard :
-C:/Users/4perr/Documents/openmower/kicad/3d/STEP/IC57_RP2040.step
-[('U2', 'C:/Users/4perr/Documents/openmower/kicad/3d/STEP/IC57_RP2040.step')]

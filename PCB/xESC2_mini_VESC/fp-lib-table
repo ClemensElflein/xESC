@@ -1,6 +1,0 @@
-(fp_lib_table
-  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/libs/TMC6200/footprints.pretty)(options "")(descr ""))
-  (lib (name xESC2)(type KiCad)(uri ${KIPRJMOD}/xESC2.pretty)(options "")(descr ""))
-  (lib (name USB)(type KiCad)(uri ${KIPRJMOD}/libs/USB)(options "")(descr ""))
-  (lib (name x-tech-logo)(type KiCad)(uri ${KIPRJMOD}/libs/x-tech-logo)(options "")(descr ""))
-)
