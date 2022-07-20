@@ -448,5 +448,7 @@
       "sheet61A580CB"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "git_version": "WIP"
+  }
 }
