@@ -3,10 +3,10 @@
 
 ## Join the Discord server for xESC discussion: [HERE](https://discord.gg/jE7QNaSxW7)
 
+## If you want to be notified about updates and availability, star :star: and watch :eyes: this repository!
+
 ### Looking for xESC2040? It was moved to its own repo [HERE](https://github.com/ClemensElflein/xESC2040).
 
-
-## If you want to be notified about updates and availability, star :star: and watch :eyes: this repository!
 
 # xESC2
 
