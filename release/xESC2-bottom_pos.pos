@@ -1,0 +1,54 @@
+### Module positions - created on Wed 20 Jul 2022 16:51:46  ###
+### Printed by KiBot
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref   Val              Package                           PosX       PosY        Rot        Side  
+C4      2.2uF/25V        C_0805_2012Metric                 246.0000   -126.7000   0.0000     bottom
+C5      2.2uF/25V        C_0805_2012Metric                 249.8000   -126.7000   180.0000   bottom
+C6      .1uF/50V         C_0603_1608Metric                 249.6500   -128.7000   0.0000     bottom
+C7      .1uF/50V         C_0603_1608Metric                 237.8000   -121.4000   180.0000   bottom
+C8      470nF/16V        C_0603_1608Metric                 253.8000   -126.4000   -90.0000   bottom
+C9      470nF/16V        C_0603_1608Metric                 253.8000   -118.4000   -90.0000   bottom
+C10     470nF/16V        C_0603_1608Metric                 253.8000   -110.4000   90.0000    bottom
+C11     22nF/100V        C_0603_1608Metric                 245.2000   -110.4500   0.0000     bottom
+C12     100nF/100V       C_0805_2012Metric                 249.0000   -110.6000   180.0000   bottom
+C13     100nF/100V       C_0805_2012Metric                 242.5000   -110.3000   90.0000    bottom
+C14     100nF/100V       C_0805_2012Metric                 249.0000   -108.6000   0.0000     bottom
+C20     10uF/25V         C_1206_3216Metric                 235.2000   -111.3000   180.0000   bottom
+C21     10uF/25V         C_1206_3216Metric                 235.2000   -108.9000   180.0000   bottom
+C24     1nF/100V         C_0603_1608Metric                 259.9000   -124.4000   0.0000     bottom
+C25     1nF/100V         C_0603_1608Metric                 259.9000   -116.4000   0.0000     bottom
+C26     1nF/100V         C_0603_1608Metric                 259.9000   -112.4000   0.0000     bottom
+R1      2R2              R_0603_1608Metric                 256.2000   -126.4000   180.0000   bottom
+R2      2R2              R_0603_1608Metric                 256.2000   -128.4000   180.0000   bottom
+R3      33mR             R_2512_6332Metric                 268.1375   -126.4000   180.0000   bottom
+R4      10R              R_0603_1608Metric                 256.2000   -124.4000   180.0000   bottom
+R5      2R2              R_0603_1608Metric                 256.2000   -118.4000   180.0000   bottom
+R6      2R2              R_0603_1608Metric                 256.2000   -120.4000   180.0000   bottom
+R7      33mR             R_2512_6332Metric                 268.1375   -118.4000   180.0000   bottom
+R8      10R              R_0603_1608Metric                 256.2000   -116.4000   180.0000   bottom
+R9      2R2              R_0603_1608Metric                 256.2000   -110.4000   180.0000   bottom
+R10     2R2              R_0603_1608Metric                 256.2000   -108.4000   180.0000   bottom
+R11     33mR             R_2512_6332Metric                 268.1000   -110.4000   180.0000   bottom
+R12     10R              R_0603_1608Metric                 256.2000   -112.4000   180.0000   bottom
+R14     10k              R_0603_1608Metric                 249.6500   -130.7000   0.0000     bottom
+R15     10k              R_0603_1608Metric                 246.1500   -130.7000   0.0000     bottom
+R17     1k5              R_0603_1608Metric                 242.7000   -125.2500   0.0000     bottom
+R18     2k2              R_0603_1608Metric                 242.7000   -126.8500   180.0000   bottom
+R19     1k5              R_0603_1608Metric                 239.2000   -125.2500   0.0000     bottom
+R20     2k2              R_0603_1608Metric                 239.2000   -126.8500   180.0000   bottom
+R21     1k5              R_0603_1608Metric                 235.7000   -125.2500   0.0000     bottom
+R22     2k2              R_0603_1608Metric                 235.7000   -126.8500   180.0000   bottom
+R23     22k              R_0603_1608Metric                 263.0000   -126.4000   -90.0000   bottom
+R24     1k5              R_0603_1608Metric                 259.9000   -128.4000   180.0000   bottom
+R25     22k              R_0603_1608Metric                 263.0000   -119.6000   -90.0000   bottom
+R26     1k5              R_0603_1608Metric                 259.9000   -120.4000   180.0000   bottom
+R27     22k              R_0603_1608Metric                 263.0000   -109.0000   90.0000    bottom
+R28     1k5              R_0603_1608Metric                 259.9000   -108.4000   180.0000   bottom
+R29     10k              R_0603_1608Metric                 245.2000   -108.7000   0.0000     bottom
+R36     120R             R_0603_1608Metric                 234.5000   -121.4000   180.0000   bottom
+R41     10k              R_0603_1608Metric                 263.0000   -112.0000   90.0000    bottom
+TH1     Thermistor_NTC   R_0603_1608Metric                 263.0000   -116.6000   90.0000    bottom
+U2      XC6220B331MR     SOT-23-5                          239.6000   -110.2000   180.0000   bottom
+U5      SN65HVD232       SOIC-8_3.9x4.9mm_P1.27mm          236.0000   -116.4000   90.0000    bottom
+## End
