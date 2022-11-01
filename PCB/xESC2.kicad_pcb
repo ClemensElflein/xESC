@@ -4841,7 +4841,7 @@
     (property "Sheetname" "Power")
     (property "Stock_PN" "U-TMC6200-TA")
     (path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a416bf")
-    (attr through_hole)
+    (attr smd)
     (fp_text reference "U1" (at 0 0 270) (layer "B.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp d97dcf02-d895-481e-8065-9bdd45ddb88c)
@@ -5304,6 +5304,11 @@
       (net 8 "/Power/HSU") (pinfunction "HSU") (pintype "output") (tstamp 912e884d-4d61-461a-b195-86a6a7cf193f))
     (pad "EPAD" smd rect locked (at 0 0 90) (size 5.0038 5.0038) (layers "B.Cu" "B.Mask")
       (net 2 "GND") (pinfunction "EPAD") (pintype "unspecified") (tstamp 98206766-f559-4f3b-9655-9dec1d010b41))
+    (model "${KICAD6_3DMODEL_DIR}/Package_QFP.3dshapes/TQFP-48-1EP_7x7mm_P0.5mm_EP3.5x3.5mm.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "B.Cu")
