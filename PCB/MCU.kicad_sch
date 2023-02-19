@@ -1649,7 +1649,7 @@
     (property "Part Number" "STM32F405RGTx" (id 4) (at 85.09 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C15742 " (id 5) (at 85.09 85.09 0)
+    (property "LCSC" "C15742" (id 5) (at 85.09 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Stock_PN" "U-STM32F405RGTx" (id 6) (at 85.09 85.09 0)
