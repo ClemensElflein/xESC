@@ -29,9 +29,16 @@ extern "C"
 #define PIN_VOLTS_V PA1
 #define PIN_VOLTS_W PA0
 
+#define PIN_CURRENT_U PC2
+#define PIN_CURRENT_V PC1
+#define PIN_CURRENT_W PC0
+
+
 void setup()
 {
     SerialUSB.begin();
+
+    delay(2000);
 
     pinMode(PIN_UH, OUTPUT);
     pinMode(PIN_VH, OUTPUT);
@@ -183,6 +190,38 @@ bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts)
     return voltage < 0.5 && voltage2 > 9;
 }
 
+bool test_current(uint32_t pin_p1_h,uint32_t pin_p1_l,uint32_t pin_p2_h,uint32_t pin_p2_l, uint32_t pin_current_p1, uint32_t pin_current_p2) {
+    uint32_t no_current_value_p1 = analogRead(pin_current_p1);
+    uint32_t no_current_value_p2 = analogRead(pin_current_p2);
+    
+    // enable current
+    digitalWrite(pin_p1_h, HIGH);
+    digitalWrite(pin_p1_l, LOW);
+    digitalWrite(pin_p2_h, LOW);
+    digitalWrite(pin_p2_l, HIGH);
+
+    delay(100);
+    uint32_t current_value_p1 = analogRead(pin_current_p1);
+    uint32_t current_value_p2 = analogRead(pin_current_p2);
+
+    // disable current
+    digitalWrite(pin_p1_h, LOW);
+    digitalWrite(pin_p1_l, LOW);
+    digitalWrite(pin_p2_h, LOW);
+    digitalWrite(pin_p2_l, LOW);
+
+    Serial.print("CURRENT_PHASE1:");
+    Serial.print(no_current_value_p1);
+    Serial.print(",\t");
+    Serial.println(current_value_p1);
+    Serial.print("CURRENT_PHASE2:");
+    Serial.print(no_current_value_p2);
+    Serial.print(",\t");
+    Serial.println(current_value_p2);
+    
+    return true;
+}
+
 void loop()
 {
     // disable phases to be sure
@@ -254,6 +293,9 @@ void loop()
     SerialUSB.println();
     SerialUSB.println();
 
+    test_current(PIN_UH, PIN_UL, PIN_VH, PIN_VL, PIN_CURRENT_U, PIN_CURRENT_V);
+
+    return;
 
     SerialUSB.println("TESTING PHASE U:");
     if (testPhase(PIN_UH, PIN_UL, PIN_VOLTS_U))
