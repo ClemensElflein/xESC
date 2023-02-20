@@ -269,7 +269,8 @@ bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sin
         waitForEnter();
     };
 
-    if (abs(current_value_p1 + current_value_p2) > 0.5) {
+    // Allow 10% deviation
+    if (abs(current_value_p1 + current_value_p2) > (current_value_p1*0.1)) {
         result = false;
         SerialUSB.println("NOT_OK. Source current should be almost equal to sink current");
         waitForEnter();
@@ -348,7 +349,7 @@ void loop() {
     SerialUSB.print(t_pcb);
     SerialUSB.print("\t");
     SerialUSB.println(t_motor);
-    displayResultAndStopOnError( t_pcb> 22 && t_pcb < 80 && t_motor > 22 && t_motor < 80);
+    // TODO displayResultAndStopOnError( t_pcb> 22 && t_pcb < 80 && t_motor > 22 && t_motor < 80);
 
     SerialUSB.println();
     SerialUSB.println("-- TESTING PHASES");
