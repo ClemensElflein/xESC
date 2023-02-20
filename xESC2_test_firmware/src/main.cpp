@@ -1,7 +1,13 @@
 /* #####
 # Direct flash command
-C:\Users\PVeretennikovs\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s C:\Users\PVeretennikovs\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "program {.pio\build\genericSTM32F405RG\firmware.elf}  verify reset; shutdown;"
-#### */
+ ~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "program {.pio\build\genericSTM32F405RG\firmware.elf}  verify reset; shutdown;"
+
+# Drive flash
+~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Drive_config.bin 0x08008000 verify reset; shutdown;"
+
+# Mower flash
+~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Mower_config.bin 0x08008000 verify reset; shutdown;"
+ #### */
 
 #include <Arduino.h>
 extern "C"
@@ -15,9 +21,9 @@ extern "C"
 #define ADC_VOLTS(ch) ((float)analogRead(ch) / 1024.0 * V_REG)
 #define GET_INPUT_VOLTAGE() (ADC_VOLTS(PC3) * ((VIN_R1 + VIN_R2) / VIN_R2))
 #define GET_PHASE_VOLTAGE(ch) (ADC_VOLTS(ch) * ((VIN_R1 + VIN_R2) / VIN_R2))
-#define GET_PHASE_CURRENT(ch) ((CURRENT_SENSE_ZERO_VALUE - (float)analogRead(ch)) * ((I_R1+I_R2)/I_R2) / R_SHUNT * V_REG/1024.0 / TMC_DEFAULT_GAIN)
+#define GET_PHASE_CURRENT(ch) ((zeroCurrentValue[ch - PC0] - (float)analogRead(ch)) * ((I_R1+I_R2)/I_R2) / R_SHUNT * V_REG/1024.0 / TMC_DEFAULT_GAIN)
 
-#define CURRENT_SENSE_ZERO_VALUE 455.0
+//#define CURRENT_SENSE_ZERO_VALUE 455.0
 #define I_R1 1.5
 #define I_R2 2.2
 #define R_SHUNT 0.033
@@ -36,6 +42,21 @@ extern "C"
 #define PIN_VL PB14
 #define PIN_WL PB13
 
+// Motor NTC beta value
+#define PCB_NTC_BETA 3380.0
+#define MOTOR_NTC_BETA 3380.0
+
+// NTC Thermistors
+#define NTC_RES(adc_val) ((4095.0 * 10000.0) / adc_val - 10000.0)
+#define NTC_TEMP(adc_val) (1.0 / ((logf(NTC_RES(adc_val) / 10000.0) / PCB_NTC_BETA) + (1.0 / 298.15)) - 273.15)
+
+#define NTC_RES_MOTOR(adc_val) (10000.0 / ((4095.0 / (float)adc_val) - 1.0)) // Motor temp sensor on low side
+#define NTC_TEMP_MOTOR(adc_val) (1.0 / ((logf(NTC_RES_MOTOR(adc_val) / 10000.0) / MOTOR_NTC_BETA) + (1.0 / 298.15)) - 273.15)
+#define PIN_TEMP_PCB PA3
+#define PIN_TEMP_MOTOR PC4
+
+#define PIN_FAULT_ON_HIGH PB7
+
 #define PIN_VOLTS_U PA2
 #define PIN_VOLTS_V PA1
 #define PIN_VOLTS_W PA0
@@ -44,6 +65,7 @@ extern "C"
 #define PIN_CURRENT_V PC1
 #define PIN_CURRENT_W PC0
 
+uint32_t zeroCurrentValue[3];
 
 void setup() {
     SerialUSB.begin();
@@ -80,6 +102,16 @@ void setup() {
         digitalWrite(PB0, LOW);
         delay(100);
     }
+}
+
+float readMotorTemp()
+{
+    return NTC_TEMP_MOTOR((float)analogRead(PIN_TEMP_MOTOR));
+}
+
+float readPcbTemp()
+{
+    return NTC_TEMP((float)analogRead(PIN_TEMP_PCB));
 }
 
 void spiDelay() {
@@ -196,7 +228,7 @@ bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sin
     digitalWrite(pin_sink_h, LOW);
     digitalWrite(pin_sink_l, HIGH);
 
-    delay(100);
+    delay(5);
     float current_value_p1 = GET_PHASE_CURRENT(pin_current_source);
     float current_value_p2 = GET_PHASE_CURRENT(pin_current_sink);
 
@@ -219,7 +251,7 @@ bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sin
 
     bool result = true;
 
-    if (abs(no_current_value_p1) > 0.5 || abs(no_current_value_p2) > 0.5) {
+    if (abs(no_current_value_p1) > 0.1 || abs(no_current_value_p2) > 0.1) {
         result = false;
         SerialUSB.println("NOT OK. Inactive current should be close to zero.");
         waitForEnter();
@@ -237,15 +269,14 @@ bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sin
         waitForEnter();
     };
 
-    if (current_value_p1 < 3) {
-        result = false;
-        SerialUSB.println("NOT_OK. We expect source current to be at least 3A. Maybe PSU limits the current?");
-        waitForEnter();
-    };
-
-    if (abs(current_value_p1 + current_value_p2) > 1) {
+    if (abs(current_value_p1 + current_value_p2) > 0.5) {
         result = false;
         SerialUSB.println("NOT_OK. Source current should be almost equal to sink current");
+        waitForEnter();
+    }
+
+    if (digitalRead(PIN_FAULT_ON_HIGH)) {
+        SerialUSB.println("Fault pin is HIGH. Something went wrong.");
         waitForEnter();
     }
 
@@ -311,6 +342,15 @@ void loop() {
     tmc6200_writeInt(0, TMC6200_SHORT_CONF, (1UL << TMC6200_DISABLE_S2G_SHIFT) | (1UL << TMC6200_DISABLE_S2VS_SHIFT));
 
     SerialUSB.println();
+    SerialUSB.print("-- TESTING PCB/MOTOR TEMPERATURES: ");
+    float t_pcb = readPcbTemp();
+    float t_motor = readMotorTemp();
+    SerialUSB.print(t_pcb);
+    SerialUSB.print("\t");
+    SerialUSB.println(t_motor);
+    displayResultAndStopOnError( t_pcb> 22 && t_pcb < 80 && t_motor > 22 && t_motor < 80);
+
+    SerialUSB.println();
     SerialUSB.println("-- TESTING PHASES");
 
     SerialUSB.print("TESTING PHASE U: ");
@@ -328,8 +368,19 @@ void loop() {
             testPhase(PIN_WH, PIN_WL, PIN_VOLTS_W)
     );
 
+    SerialUSB.println("-- SAVING ZERO CURRENT OFFSETS");
+    zeroCurrentValue[PIN_CURRENT_U - PC0] = analogRead(PIN_CURRENT_U);
+    zeroCurrentValue[PIN_CURRENT_V- PC0] = analogRead(PIN_CURRENT_V);
+    zeroCurrentValue[PIN_CURRENT_W - PC0] = analogRead(PIN_CURRENT_W);
+
+    SerialUSB.print(zeroCurrentValue[0]);
+    SerialUSB.print("\t");
+    SerialUSB.print(zeroCurrentValue[1]);
+    SerialUSB.print("\t");
+    SerialUSB.println(zeroCurrentValue[2]);
+
     SerialUSB.println("-- TESTING CURRENTS");
-    delay(1000);
+
     SerialUSB.print("TESTING CURRENT U->V: ");
     displayResultAndStopOnError(
             test_current(PIN_UH, PIN_UL,
