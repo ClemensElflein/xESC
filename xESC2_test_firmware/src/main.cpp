@@ -1,5 +1,9 @@
+/* #####
+# Direct flash command
+C:\Users\PVeretennikovs\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s C:\Users\PVeretennikovs\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "program {.pio\build\genericSTM32F405RG\firmware.elf}  verify reset; shutdown;"
+#### */
+
 #include <Arduino.h>
-// #include <SoftwareSpiMaster.h>
 extern "C"
 {
 #include <tmc/ic/TMC6200/TMC6200.h>
@@ -11,6 +15,13 @@ extern "C"
 #define ADC_VOLTS(ch) ((float)analogRead(ch) / 1024.0 * V_REG)
 #define GET_INPUT_VOLTAGE() (ADC_VOLTS(PC3) * ((VIN_R1 + VIN_R2) / VIN_R2))
 #define GET_PHASE_VOLTAGE(ch) (ADC_VOLTS(ch) * ((VIN_R1 + VIN_R2) / VIN_R2))
+#define GET_PHASE_CURRENT(ch) ((CURRENT_SENSE_ZERO_VALUE - (float)analogRead(ch)) * ((I_R1+I_R2)/I_R2) / R_SHUNT * V_REG/1024.0 / TMC_DEFAULT_GAIN)
+
+#define CURRENT_SENSE_ZERO_VALUE 455.0
+#define I_R1 1.5
+#define I_R2 2.2
+#define R_SHUNT 0.033
+#define TMC_DEFAULT_GAIN 5.0
 
 #define PIN_TMC_MISO PB3
 #define PIN_TMC_MOSI PB4
@@ -34,11 +45,9 @@ extern "C"
 #define PIN_CURRENT_W PC0
 
 
-void setup()
-{
+void setup() {
     SerialUSB.begin();
-
-    delay(2000);
+    delay(1000);
 
     pinMode(PIN_UH, OUTPUT);
     pinMode(PIN_VH, OUTPUT);
@@ -65,29 +74,23 @@ void setup()
 
     pinMode(PB0, OUTPUT);
 
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         digitalWrite(PB0, HIGH);
         delay(100);
         digitalWrite(PB0, LOW);
         delay(100);
     }
-
-    // spi.begin(PIN_TMC_SCK, PIN_TMC_MOSI, PIN_TMC_MISO);
 }
 
-void spiDelay()
-{
+void spiDelay() {
     delay(1);
 }
 
-uint8_t transfer(uint8_t value)
-{
+uint8_t transfer(uint8_t value) {
     uint8_t readValue = 0;
 
-    for (uint8_t i = 0; i < 8; ++i)
-    {
-        digitalWrite(PIN_TMC_MOSI, (bool)(value >> 7));
+    for (uint8_t i = 0; i < 8; ++i) {
+        digitalWrite(PIN_TMC_MOSI, (bool) (value >> 7));
 
         value <<= 1;
 
@@ -97,13 +100,10 @@ uint8_t transfer(uint8_t value)
 
         digitalWrite(PIN_TMC_SCK, HIGH);
         readValue <<= 1;
-        if (digitalRead(PIN_TMC_MISO))
-        {
+        if (digitalRead(PIN_TMC_MISO)) {
             digitalWrite(PB0, HIGH);
             readValue |= 1;
-        }
-        else
-        {
+        } else {
             digitalWrite(PB0, LOW);
         }
         spiDelay();
@@ -111,23 +111,17 @@ uint8_t transfer(uint8_t value)
     return readValue;
 }
 
-void waitForEnter(bool dots = false)
-{
+void waitForEnter(bool dots = false) {
     SerialUSB.println("Press enter to continue");
-    while (1)
-    {
-        if (dots)
-        {
+    while (1) {
+        if (dots) {
             SerialUSB.print(".");
         }
         unsigned long started = millis();
-        while (millis() - started < 1000 && !SerialUSB.available())
-        {
+        while (millis() - started < 1000 && !SerialUSB.available()) {
         }
-        if (SerialUSB.available())
-        {
-            while (SerialUSB.available())
-            {
+        if (SerialUSB.available()) {
+            while (SerialUSB.available()) {
                 SerialUSB.read();
             }
             break;
@@ -135,14 +129,18 @@ void waitForEnter(bool dots = false)
     }
 }
 
-bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts)
-{
-    // digitalWrite(PIN_TMC_ENABLE, HIGH);
+void displayResultAndStopOnError(bool result) {
+    if (result) {
+        SerialUSB.println("--> OK");
+    } else {
+        SerialUSB.println("--> NOT OK!!!");
+        waitForEnter();
+    }
+}
 
-    SerialUSB.println("setting phase low");
+bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts) {
     digitalWrite(pin_h, LOW);
     digitalWrite(pin_l, HIGH);
-    unsigned long start = millis();
     delay(100);
 
     {
@@ -154,10 +152,9 @@ bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts)
     }
 
     float voltage = GET_PHASE_VOLTAGE(pin_volts);
-    SerialUSB.print("Phase voltage: ");
+    SerialUSB.print("Phase set low,  voltage: ");
     SerialUSB.print(voltage);
     SerialUSB.println("V.");
-    SerialUSB.println("setting phase high");
     digitalWrite(pin_l, LOW);
     digitalWrite(pin_h, HIGH);
     delay(100);
@@ -170,10 +167,9 @@ bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts)
     }
 
     float voltage2 = GET_PHASE_VOLTAGE(pin_volts);
-    SerialUSB.print("Phase voltage: ");
+    SerialUSB.print("Phase set high, voltage: ");
     SerialUSB.print(voltage2);
     SerialUSB.println("V.");
-    
 
     digitalWrite(pin_l, LOW);
     digitalWrite(pin_h, LOW);
@@ -190,40 +186,73 @@ bool testPhase(uint32_t pin_h, uint32_t pin_l, uint32_t pin_volts)
     return voltage < 0.5 && voltage2 > 9;
 }
 
-bool test_current(uint32_t pin_p1_h,uint32_t pin_p1_l,uint32_t pin_p2_h,uint32_t pin_p2_l, uint32_t pin_current_p1, uint32_t pin_current_p2) {
-    uint32_t no_current_value_p1 = analogRead(pin_current_p1);
-    uint32_t no_current_value_p2 = analogRead(pin_current_p2);
-    
+bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sink_h, uint32_t pin_sink_l, uint32_t pin_current_source, uint32_t pin_current_sink) {
+    float no_current_value_p1 = GET_PHASE_CURRENT(pin_current_source);
+    float no_current_value_p2 = GET_PHASE_CURRENT(pin_current_sink);
+
     // enable current
-    digitalWrite(pin_p1_h, HIGH);
-    digitalWrite(pin_p1_l, LOW);
-    digitalWrite(pin_p2_h, LOW);
-    digitalWrite(pin_p2_l, HIGH);
+    digitalWrite(pin_source_h, HIGH);
+    digitalWrite(pin_source_l, LOW);
+    digitalWrite(pin_sink_h, LOW);
+    digitalWrite(pin_sink_l, HIGH);
 
     delay(100);
-    uint32_t current_value_p1 = analogRead(pin_current_p1);
-    uint32_t current_value_p2 = analogRead(pin_current_p2);
+    float current_value_p1 = GET_PHASE_CURRENT(pin_current_source);
+    float current_value_p2 = GET_PHASE_CURRENT(pin_current_sink);
 
     // disable current
-    digitalWrite(pin_p1_h, LOW);
-    digitalWrite(pin_p1_l, LOW);
-    digitalWrite(pin_p2_h, LOW);
-    digitalWrite(pin_p2_l, LOW);
+    digitalWrite(pin_source_h, LOW);
+    digitalWrite(pin_source_l, LOW);
+    digitalWrite(pin_sink_h, LOW);
+    digitalWrite(pin_sink_l, LOW);
 
-    Serial.print("CURRENT_PHASE1:");
-    Serial.print(no_current_value_p1);
-    Serial.print(",\t");
-    Serial.println(current_value_p1);
-    Serial.print("CURRENT_PHASE2:");
-    Serial.print(no_current_value_p2);
-    Serial.print(",\t");
-    Serial.println(current_value_p2);
-    
-    return true;
+    SerialUSB.print("CURRENT_SOURCE: ");
+    SerialUSB.print(no_current_value_p1);
+    SerialUSB.print("A,\t");
+    SerialUSB.print(current_value_p1);
+    SerialUSB.println("A");
+    SerialUSB.print("CURRENT_SINK: ");
+    SerialUSB.print(no_current_value_p2);
+    SerialUSB.print("A,\t");
+    SerialUSB.print(current_value_p2);
+    SerialUSB.println("A");
+
+    bool result = true;
+
+    if (abs(no_current_value_p1) > 0.5 || abs(no_current_value_p2) > 0.5) {
+        result = false;
+        SerialUSB.println("NOT OK. Inactive current should be close to zero.");
+        waitForEnter();
+    };
+
+    if (current_value_p1 < 0 || current_value_p2 > 0) {
+        result = false;
+        SerialUSB.println("NOT OK. Current(s) flow in incorrect direction");
+        waitForEnter();
+    };
+
+    if (current_value_p1 < 3) {
+        result = false;
+        SerialUSB.println("NOT_OK. We expect source current to be at least 3A. Maybe PSU limits the current?");
+        waitForEnter();
+    };
+
+    if (current_value_p1 < 3) {
+        result = false;
+        SerialUSB.println("NOT_OK. We expect source current to be at least 3A. Maybe PSU limits the current?");
+        waitForEnter();
+    };
+
+    if (abs(current_value_p1 + current_value_p2) > 1) {
+        result = false;
+        SerialUSB.println("NOT_OK. Source current should be almost equal to sink current");
+        waitForEnter();
+    }
+
+    return result;
 }
 
-void loop()
-{
+void loop() {
     // disable phases to be sure
     digitalWrite(PIN_UH, LOW);
     digitalWrite(PIN_VH, LOW);
@@ -241,12 +270,9 @@ void loop()
     SerialUSB.print("VIN = ");
     SerialUSB.print(vin);
     SerialUSB.println(" V.");
-    if (vin > 10.0)
-    {
+    if (vin > 10.0) {
         SerialUSB.println("--> OK (> 10.0V)");
-    }
-    else
-    {
+    } else {
         SerialUSB.println("--> NOT OK!!! (<= 10.0V)");
         waitForEnter();
         return;
@@ -266,12 +292,9 @@ void loop()
     SerialUSB.print("IC version: 0x");
     SerialUSB.println(ic_version, HEX);
     SerialUSB.println("(expected value = 0x10)");
-    if (ic_version == 0x10)
-    {
+    if (ic_version == 0x10) {
         SerialUSB.println("--> OK");
-    }
-    else
-    {
+    } else {
         SerialUSB.println("--> NOT OK!!!");
         waitForEnter();
         return;
@@ -282,65 +305,84 @@ void loop()
 
     tmc6200_writeInt(0, TMC6200_GCONF,
                      (0UL << TMC6200_DISABLE_SHIFT) |
-                         (0UL << TMC6200_SINGLELINE_SHIFT) |
-                         (1UL << TMC6200_FAULTDIRECT_SHIFT));
+                     (0UL << TMC6200_SINGLELINE_SHIFT) |
+                     (1UL << TMC6200_FAULTDIRECT_SHIFT));
     tmc6200_writeInt(0, TMC6200_GSTAT, 0xFFFF);
     tmc6200_writeInt(0, TMC6200_SHORT_CONF, (1UL << TMC6200_DISABLE_S2G_SHIFT) | (1UL << TMC6200_DISABLE_S2VS_SHIFT));
 
     SerialUSB.println();
-    SerialUSB.println();
-    SerialUSB.println("TESTING PHASES");
-    SerialUSB.println();
-    SerialUSB.println();
+    SerialUSB.println("-- TESTING PHASES");
 
-    test_current(PIN_UH, PIN_UL, PIN_VH, PIN_VL, PIN_CURRENT_U, PIN_CURRENT_V);
+    SerialUSB.print("TESTING PHASE U: ");
+    displayResultAndStopOnError(
+            testPhase(PIN_UH, PIN_UL, PIN_VOLTS_U)
+    );
 
-    return;
+    SerialUSB.print("TESTING PHASE V: ");
+    displayResultAndStopOnError(
+            testPhase(PIN_VH, PIN_VL, PIN_VOLTS_V)
+    );
 
-    SerialUSB.println("TESTING PHASE U:");
-    if (testPhase(PIN_UH, PIN_UL, PIN_VOLTS_U))
-    {
-        SerialUSB.println("--> OK");
-    }
-    else
-    {
-        SerialUSB.println("--> NOT OK!!!");
-    }
+    SerialUSB.print("TESTING PHASE W: ");
+    displayResultAndStopOnError(
+            testPhase(PIN_WH, PIN_WL, PIN_VOLTS_W)
+    );
 
-    SerialUSB.println("TESTING PHASE V:");
-    if (testPhase(PIN_VH, PIN_VL, PIN_VOLTS_V))
-    {
-        SerialUSB.println("--> OK");
-    }
-    else
-    {
-        SerialUSB.println("--> NOT OK!!!");
-    }
+    SerialUSB.println("-- TESTING CURRENTS");
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT U->V: ");
+    displayResultAndStopOnError(
+            test_current(PIN_UH, PIN_UL,
+                         PIN_VH, PIN_VL,
+                         PIN_CURRENT_U, PIN_CURRENT_V)
+    );
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT V->W: ");
+    displayResultAndStopOnError(
+            test_current(PIN_VH, PIN_VL,
+                         PIN_WH, PIN_WL,
+                         PIN_CURRENT_V, PIN_CURRENT_W)
+    );
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT W->U: ");
+    displayResultAndStopOnError(
+            test_current(PIN_WH, PIN_WL,
+                         PIN_UH, PIN_UL,
+                         PIN_CURRENT_W, PIN_CURRENT_U)
+    );
 
-    SerialUSB.println("TESTING PHASE W:");
-
-    if (testPhase(PIN_WH, PIN_WL, PIN_VOLTS_W))
-    {
-        SerialUSB.println("--> OK");
-    }
-    else
-    {
-        SerialUSB.println("--> NOT OK!!!");
-    }
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT V->U: ");
+    displayResultAndStopOnError(
+            test_current(PIN_VH, PIN_VL,
+                         PIN_UH, PIN_UL,
+                         PIN_CURRENT_V, PIN_CURRENT_U)
+    );
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT W->V: ");
+    displayResultAndStopOnError(
+            test_current(PIN_WH, PIN_WL,
+                         PIN_VH, PIN_VL,
+                         PIN_CURRENT_W, PIN_CURRENT_V)
+    );
+    delay(1000);
+    SerialUSB.print("TESTING CURRENT U->W: ");
+    displayResultAndStopOnError(
+            test_current(PIN_UH, PIN_UL,
+                         PIN_WH, PIN_WL,
+                         PIN_CURRENT_U, PIN_CURRENT_W)
+    );
 }
 
-extern "C"
-{
-    uint8_t tmc6200_readwriteByte(uint8_t motor, uint8_t data, uint8_t lastTransfer)
-    {
-        digitalWrite(PIN_TMC_NCS, LOW);
-        spiDelay();
-        uint8_t rx = transfer(data);
+extern "C" {
+uint8_t tmc6200_readwriteByte(uint8_t motor, uint8_t data, uint8_t lastTransfer) {
+    digitalWrite(PIN_TMC_NCS, LOW);
+    spiDelay();
+    uint8_t rx = transfer(data);
 
-        if (lastTransfer)
-        {
-            digitalWrite(PIN_TMC_NCS, HIGH);
-        }
-        return rx;
+    if (lastTransfer) {
+        digitalWrite(PIN_TMC_NCS, HIGH);
     }
+    return rx;
+}
 }
