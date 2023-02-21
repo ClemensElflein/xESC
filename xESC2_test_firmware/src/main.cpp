@@ -1,15 +1,15 @@
 /* #####
 # Direct flash command
- ~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "program {.pio\build\genericSTM32F405RG\firmware.elf}  verify reset; shutdown;"
+ ~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s ~\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "program {.pio\build\genericSTM32F405RG\firmware.elf}  verify reset; shutdown;"
 
-# Drive flash
-~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Drive_config.bin 0x08008000 verify reset; shutdown;"
 
-# Mower flash
-~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s $HOME\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Mower_config.bin 0x08008000 verify reset; shutdown;"
+~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s ~\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Drive_config.bin 0x08008000 verify reset; shutdown;"
+
+~\.platformio\packages\tool-openocd\bin\openocd.exe -d2 -s ~\.platformio\packages\tool-openocd/scripts -f interface/stlink.cfg -c "transport select hla_swd" -f target/stm32f4x.cfg -c "init; halt; stm32f2x mass_erase 0; stm32f2x mass_erase 1; program Bootloader.bin verify 0x08000000; program Firmware_with_Mower_config.bin 0x08008000 verify reset; shutdown;"
  #### */
 
 #include <Arduino.h>
+
 extern "C"
 {
 #include <tmc/ic/TMC6200/TMC6200.h>
@@ -23,7 +23,6 @@ extern "C"
 #define GET_PHASE_VOLTAGE(ch) (ADC_VOLTS(ch) * ((VIN_R1 + VIN_R2) / VIN_R2))
 #define GET_PHASE_CURRENT(ch) ((zeroCurrentValue[ch - PC0] - (float)analogRead(ch)) * ((I_R1+I_R2)/I_R2) / R_SHUNT * V_REG/1024.0 / TMC_DEFAULT_GAIN)
 
-//#define CURRENT_SENSE_ZERO_VALUE 455.0
 #define I_R1 1.5
 #define I_R2 2.2
 #define R_SHUNT 0.033
@@ -47,10 +46,10 @@ extern "C"
 #define MOTOR_NTC_BETA 3380.0
 
 // NTC Thermistors
-#define NTC_RES(adc_val) ((4095.0 * 10000.0) / adc_val - 10000.0)
+#define NTC_RES(adc_val) ((1024.0 * 10000.0) / adc_val - 10000.0)
 #define NTC_TEMP(adc_val) (1.0 / ((logf(NTC_RES(adc_val) / 10000.0) / PCB_NTC_BETA) + (1.0 / 298.15)) - 273.15)
 
-#define NTC_RES_MOTOR(adc_val) (10000.0 / ((4095.0 / (float)adc_val) - 1.0)) // Motor temp sensor on low side
+#define NTC_RES_MOTOR(adc_val) (10000.0 / ((1024.0 / (float)adc_val) - 1.0)) // Motor temp sensor on low side
 #define NTC_TEMP_MOTOR(adc_val) (1.0 / ((logf(NTC_RES_MOTOR(adc_val) / 10000.0) / MOTOR_NTC_BETA) + (1.0 / 298.15)) - 273.15)
 #define PIN_TEMP_PCB PA3
 #define PIN_TEMP_MOTOR PC4
@@ -104,14 +103,12 @@ void setup() {
     }
 }
 
-float readMotorTemp()
-{
-    return NTC_TEMP_MOTOR((float)analogRead(PIN_TEMP_MOTOR));
+float readMotorTemp() {
+    return NTC_TEMP_MOTOR((float) analogRead(PIN_TEMP_MOTOR));
 }
 
-float readPcbTemp()
-{
-    return NTC_TEMP((float)analogRead(PIN_TEMP_PCB));
+float readPcbTemp() {
+    return NTC_TEMP((float) analogRead(PIN_TEMP_PCB));
 }
 
 void spiDelay() {
@@ -270,7 +267,7 @@ bool test_current(uint32_t pin_source_h, uint32_t pin_source_l, uint32_t pin_sin
     };
 
     // Allow 10% deviation
-    if (abs(current_value_p1 + current_value_p2) > (current_value_p1*0.1)) {
+    if (abs(current_value_p1 + current_value_p2) > (current_value_p1 * 0.1)) {
         result = false;
         SerialUSB.println("NOT_OK. Source current should be almost equal to sink current");
         waitForEnter();
@@ -348,8 +345,8 @@ void loop() {
     float t_motor = readMotorTemp();
     SerialUSB.print(t_pcb);
     SerialUSB.print("\t");
-    SerialUSB.println(t_motor);
-    // TODO displayResultAndStopOnError( t_pcb> 22 && t_pcb < 80 && t_motor > 22 && t_motor < 80);
+    SerialUSB.print(t_motor);
+    displayResultAndStopOnError(t_pcb > 22 && t_pcb < 80 && t_motor > 22 && t_motor < 80);
 
     SerialUSB.println();
     SerialUSB.println("-- TESTING PHASES");
@@ -371,7 +368,7 @@ void loop() {
 
     SerialUSB.println("-- SAVING ZERO CURRENT OFFSETS");
     zeroCurrentValue[PIN_CURRENT_U - PC0] = analogRead(PIN_CURRENT_U);
-    zeroCurrentValue[PIN_CURRENT_V- PC0] = analogRead(PIN_CURRENT_V);
+    zeroCurrentValue[PIN_CURRENT_V - PC0] = analogRead(PIN_CURRENT_V);
     zeroCurrentValue[PIN_CURRENT_W - PC0] = analogRead(PIN_CURRENT_W);
 
     SerialUSB.print(zeroCurrentValue[0]);
