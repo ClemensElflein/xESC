@@ -24,3 +24,6 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+PCB/.kibot_3d_model_cache
+PCB/xESC2.kicad_pro-bak
