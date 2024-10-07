@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*"
+env:
+  BOARD_NAME: "xESC"
 
 jobs:
   tagged-release:
@@ -13,17 +15,25 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: INTI-CMNB/KiBot@v2_k7
+      - uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: PCB/xESC2.kibot.yaml
           board: PCB/xESC2.kicad_pcb
-          skip: run_drc,run_erc
+      - name: 'Fix permissions on release/'
+        run: sudo chmod 0777 release
+      # Zip the release directory and include the tag (version) in the filename
+      - name: Compress release directory into a versioned ZIP file
+        run: zip -r "release-${{ env.BOARD_NAME }}-${GITHUB_REF_NAME}.zip" release/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: "release-${{ env.BOARD_NAME }}-${{ github.ref_name }}"  # Use the tag as the artifact name
+          path: release
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: release/*
+          files: "release-${{ env.BOARD_NAME }}-${{ github.ref_name }}.zip"
 
       - name: Deploy release
         uses: peaceiris/actions-gh-pages@v3

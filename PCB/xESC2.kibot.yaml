@@ -6,7 +6,7 @@ import:
   
 preflight:
   run_erc: false
-  run_drc: false
+  run_drc: true
   set_text_variables:
     - name: 'git_version'
       # Replace n.m.i with n.m."x"
