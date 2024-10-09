@@ -2098,7 +2098,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2uF/50V"
+		(property "Value" "10uF/50V"
 			(at 193.421 59.563 0)
 			(effects
 				(font
@@ -2161,7 +2161,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C50254"
+		(property "LCSC" "C13585"
 			(at 190.5 58.42 0)
 			(effects
 				(font
@@ -2170,7 +2170,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C50254"
+		(property "JLC" "C13585"
 			(at 190.5 58.42 0)
 			(effects
 				(font
