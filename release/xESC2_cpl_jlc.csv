@@ -1,7 +1,7 @@
 Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
-"C1","2.2uF/50V","C_1206_3216Metric",254.0000,-126.4000,90.0000,top
-"C2","2.2uF/50V","C_1206_3216Metric",254.0000,-118.4000,90.0000,top
-"C3","2.2uF/50V","C_1206_3216Metric",254.0000,-110.4000,90.0000,top
+"C1","10uF/50V","C_1206_3216Metric",254.0000,-126.4000,90.0000,top
+"C2","10uF/50V","C_1206_3216Metric",254.0000,-118.4000,90.0000,top
+"C3","10uF/50V","C_1206_3216Metric",254.0000,-110.4000,90.0000,top
 "C4","2.2uF/25V","C_0805_2012Metric",246.0000,-126.7000,0.0000,bottom
 "C5","2.2uF/25V","C_0805_2012Metric",249.8000,-126.7000,180.0000,bottom
 "C6",".1uF/50V","C_0603_1608Metric",249.6500,-128.7000,0.0000,bottom
@@ -13,8 +13,8 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "C12","100nF/100V","C_0805_2012Metric",249.0000,-110.6000,180.0000,bottom
 "C13","100nF/100V","C_0805_2012Metric",242.5000,-110.3000,270.0000,bottom
 "C14","100nF/100V","C_0805_2012Metric",249.0000,-108.6000,0.0000,bottom
-"C20","10uF/25V","C_1206_3216Metric",235.2000,-111.3000,180.0000,bottom
-"C21","10uF/25V","C_1206_3216Metric",235.2000,-108.9000,180.0000,bottom
+"C20","10uF/50V","C_1206_3216Metric",235.2000,-111.3000,180.0000,bottom
+"C21","10uF/50V","C_1206_3216Metric",235.2000,-108.9000,180.0000,bottom
 "C24","1nF/100V","C_0603_1608Metric",259.9000,-124.4000,0.0000,bottom
 "C25","1nF/100V","C_0603_1608Metric",259.9000,-116.4000,0.0000,bottom
 "C26","1nF/100V","C_0603_1608Metric",259.9000,-112.4000,0.0000,bottom
@@ -36,6 +36,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "D4","LED Green","LED_0603_1608Metric",251.4000,-128.9000,270.0000,top
 "D5","LED Red","LED_0603_1608Metric",247.8400,-131.7600,180.0000,top
 "J1","Conn_01x06_Male","PinHeader_1x06_P2.54mm_Vertical",238.6800,-105.7000,90.0000,bottom
+"J2","USB_B_Micro","USB_Micro-B_Wuerth_614105150721_Vertical",231.2200,-124.0250,270.0000,top
 "J3","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",231.0600,-108.2400,180.0000,bottom
 "J4","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",231.0600,-131.1000,90.0000,bottom
 "J5","Conn_01x03_Male","PinHeader_1x03_P2.54mm_Vertical",231.0600,-105.7000,90.0000,bottom
@@ -44,7 +45,6 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "J8","Conn_02x02_Counter_Clockwise","PinHeader_2x02_P2.54mm_Vertical",274.2400,-112.0500,0.0000,bottom
 "J9","Conn_01x06_Male","PinHeader_1x06_P2.54mm_Vertical",264.0800,-105.7000,90.0000,bottom
 "J10","Conn_01x06_Male","PinHeader_1x06_P2.54mm_Vertical",264.0800,-131.1000,90.0000,bottom
-"Je","USB_B_Micro","USB_Micro-B_Wuerth_614105150721_Vertical",231.2200,-124.0250,-90.0000,top
 "Q1","BSC026N08NS5","TDSON-8-1",259.0000,-126.4000,90.0000,top
 "Q2","BSC026N08NS5","TDSON-8-1",268.0000,-126.4000,90.0000,top
 "Q3","BSC026N08NS5","TDSON-8-1",259.0000,-118.4000,90.0000,top
