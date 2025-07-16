@@ -36,7 +36,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "D4","LED Green","LED_0603_1608Metric",251.4000,-128.9000,270.0000,top
 "D5","LED Red","LED_0603_1608Metric",247.8400,-131.7600,180.0000,top
 "J1","Conn_01x06_Male","PinHeader_1x06_P2.54mm_Vertical",238.6800,-105.7000,90.0000,bottom
-"J2","USB_B_Micro","USB_Micro-B_Wuerth_614105150721_Vertical",231.2200,-124.0250,270.0000,top
+"J2","USB_B_Micro","USB_Micro",231.2200,-124.0250,270.0000,top
 "J3","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",231.0600,-108.2400,180.0000,bottom
 "J4","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",231.0600,-131.1000,90.0000,bottom
 "J5","Conn_01x03_Male","PinHeader_1x03_P2.54mm_Vertical",231.0600,-105.7000,90.0000,bottom
