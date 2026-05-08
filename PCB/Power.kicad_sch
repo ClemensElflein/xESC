@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "2bf395ab-44e1-442f-8cc3-ce5b2994af77")
 	(paper "A4")
 	(title_block
@@ -82,18 +82,6 @@
 			(symbol "TMC6200-TA_1_1"
 				(polyline
 					(pts
-						(xy 7.62 -66.04) (xy 53.34 -66.04)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 7.62 5.08) (xy 7.62 -66.04)
 					)
 					(stroke
@@ -106,7 +94,7 @@
 				)
 				(polyline
 					(pts
-						(xy 53.34 -66.04) (xy 53.34 5.08)
+						(xy 7.62 -66.04) (xy 53.34 -66.04)
 					)
 					(stroke
 						(width 0.127)
@@ -128,6 +116,18 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 53.34 -66.04) (xy 53.34 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin unspecified line
 					(at 0 0 0)
 					(length 7.62)
@@ -139,6 +139,150 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 0 -2.54 0)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -5.08 0)
+					(length 7.62)
+					(name "LSW"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -7.62 0)
+					(length 7.62)
+					(name "LSV"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -10.16 0)
+					(length 7.62)
+					(name "LSU"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -12.7 0)
+					(length 7.62)
+					(name "12VOUT"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -15.24 0)
+					(length 7.62)
+					(name "5VOUT"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 0)
+					(length 7.62)
+					(name "GNDA"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -20.32 0)
+					(length 7.62)
+					(name "CURU"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -326,24 +470,6 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 0 -2.54 0)
-					(length 7.62)
-					(name "NC"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at 0 -48.26 0)
 					(length 7.62)
@@ -434,17 +560,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at 60.96 -60.96 180)
+				(pin unspecified line
+					(at 60.96 0 180)
 					(length 7.62)
-					(name "SPE"
+					(name "EPAD"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "25"
+					(number "EPAD"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -453,160 +579,16 @@
 					)
 				)
 				(pin output line
-					(at 60.96 -58.42 180)
+					(at 60.96 -2.54 180)
 					(length 7.62)
-					(name "FAULT"
+					(name "HSU"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "26"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 60.96 -55.88 180)
-					(length 7.62)
-					(name "DRV_EN"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 60.96 -53.34 180)
-					(length 7.62)
-					(name "NC"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 60.96 -50.8 180)
-					(length 7.62)
-					(name "VSA"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 0 -5.08 0)
-					(length 7.62)
-					(name "LSW"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 60.96 -48.26 180)
-					(length 7.62)
-					(name "CPO"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "30"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 60.96 -45.72 180)
-					(length 7.62)
-					(name "NC"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "31"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 60.96 -43.18 180)
-					(length 7.62)
-					(name "CPI"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "32"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 60.96 -40.64 180)
-					(length 7.62)
-					(name "VS"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "33"
+					(number "48"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -615,34 +597,16 @@
 					)
 				)
 				(pin unspecified line
-					(at 60.96 -38.1 180)
+					(at 60.96 -5.08 180)
 					(length 7.62)
-					(name "VCP"
+					(name "U"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "34"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 60.96 -35.56 180)
-					(length 7.62)
-					(name "NC"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "35"
+					(number "47"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -651,178 +615,16 @@
 					)
 				)
 				(pin unspecified line
-					(at 60.96 -33.02 180)
+					(at 60.96 -7.62 180)
 					(length 7.62)
-					(name "CW"
+					(name "USENSE"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "36"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 60.96 -30.48 180)
-					(length 7.62)
-					(name "HSW"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 60.96 -27.94 180)
-					(length 7.62)
-					(name "W"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 60.96 -25.4 180)
-					(length 7.62)
-					(name "WSENSE"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 0 -7.62 0)
-					(length 7.62)
-					(name "LSV"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 60.96 -22.86 180)
-					(length 7.62)
-					(name "NC"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 60.96 -20.32 180)
-					(length 7.62)
-					(name "VSENSE"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "41"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 60.96 -17.78 180)
-					(length 7.62)
-					(name "V"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 60.96 -15.24 180)
-					(length 7.62)
-					(name "HSV"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 60.96 -12.7 180)
-					(length 7.62)
-					(name "CV"
-						(effects
-							(font
-								(size 1.4986 1.4986)
-							)
-						)
-					)
-					(number "44"
+					(number "46"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -849,16 +651,34 @@
 					)
 				)
 				(pin unspecified line
-					(at 60.96 -7.62 180)
+					(at 60.96 -12.7 180)
 					(length 7.62)
-					(name "USENSE"
+					(name "CV"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "46"
+					(number "44"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 60.96 -15.24 180)
+					(length 7.62)
+					(name "HSV"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "43"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -867,16 +687,88 @@
 					)
 				)
 				(pin unspecified line
-					(at 60.96 -5.08 180)
+					(at 60.96 -17.78 180)
 					(length 7.62)
-					(name "U"
+					(name "V"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "47"
+					(number "42"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -20.32 180)
+					(length 7.62)
+					(name "VSENSE"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 60.96 -22.86 180)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -25.4 180)
+					(length 7.62)
+					(name "WSENSE"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -27.94 180)
+					(length 7.62)
+					(name "W"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "38"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -885,16 +777,16 @@
 					)
 				)
 				(pin output line
-					(at 60.96 -2.54 180)
+					(at 60.96 -30.48 180)
 					(length 7.62)
-					(name "HSU"
+					(name "HSW"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "48"
+					(number "37"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -902,17 +794,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 0 -10.16 0)
+				(pin unspecified line
+					(at 60.96 -33.02 180)
 					(length 7.62)
-					(name "LSU"
+					(name "CW"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "5"
+					(number "36"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -920,17 +812,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 0 -12.7 0)
+				(pin no_connect line
+					(at 60.96 -35.56 180)
 					(length 7.62)
-					(name "12VOUT"
+					(name "NC"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "6"
+					(number "35"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -938,17 +830,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 0 -15.24 0)
+				(pin unspecified line
+					(at 60.96 -38.1 180)
 					(length 7.62)
-					(name "5VOUT"
+					(name "VCP"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "7"
+					(number "34"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -957,16 +849,52 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -17.78 0)
+					(at 60.96 -40.64 180)
 					(length 7.62)
-					(name "GNDA"
+					(name "VS"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "8"
+					(number "33"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 60.96 -43.18 180)
+					(length 7.62)
+					(name "CPI"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 60.96 -45.72 180)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "31"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -975,16 +903,16 @@
 					)
 				)
 				(pin output line
-					(at 0 -20.32 0)
+					(at 60.96 -48.26 180)
 					(length 7.62)
-					(name "CURU"
+					(name "CPO"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "9"
+					(number "30"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -992,17 +920,89 @@
 						)
 					)
 				)
-				(pin unspecified line
-					(at 60.96 0 180)
+				(pin power_in line
+					(at 60.96 -50.8 180)
 					(length 7.62)
-					(name "EPAD"
+					(name "VSA"
 						(effects
 							(font
 								(size 1.4986 1.4986)
 							)
 						)
 					)
-					(number "EPAD"
+					(number "29"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 60.96 -53.34 180)
+					(length 7.62)
+					(name "NC"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 60.96 -55.88 180)
+					(length 7.62)
+					(name "DRV_EN"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 60.96 -58.42 180)
+					(length 7.62)
+					(name "FAULT"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 60.96 -60.96 180)
+					(length 7.62)
+					(name "SPE"
+						(effects
+							(font
+								(size 1.4986 1.4986)
+							)
+						)
+					)
+					(number "25"
 						(effects
 							(font
 								(size 1.4986 1.4986)
@@ -1011,10 +1011,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:Conn_01x06_Male"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1080,45 +1083,75 @@
 				)
 			)
 			(symbol "Conn_01x06_Male_1_1"
-				(polyline
-					(pts
-						(xy 1.27 -7.62) (xy 0.8636 -7.62)
-					)
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 0.8636 -5.08)
-					)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy 0.8636 0)
+						(xy 1.27 5.08) (xy 0.8636 5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -1142,7 +1175,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 5.08) (xy 0.8636 5.08)
+						(xy 1.27 0) (xy 0.8636 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -1152,70 +1185,40 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -7.493)
-					(end 0 -7.747)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -4.953)
-					(end 0 -5.207)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -1327,9 +1330,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -1402,7 +1408,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -1414,7 +1420,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -1463,11 +1469,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1535,10 +1546,22 @@
 			(symbol "LED_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1559,7 +1582,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+						(xy -1.27 -1.27) (xy -1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1571,22 +1594,10 @@
 				)
 				(polyline
 					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
 					)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1632,9 +1643,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -1753,6 +1767,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -1830,7 +1845,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1842,7 +1857,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1856,7 +1871,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -1873,6 +1889,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -1952,7 +1969,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1969,6 +1987,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -3629,7 +3648,6 @@
 	)
 	(label "VCCIO"
 		(at 153.67 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3640,7 +3658,6 @@
 	)
 	(label "VOFS"
 		(at 43.18 54.61 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3651,7 +3668,6 @@
 	)
 	(label "LSU"
 		(at 57.15 36.83 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3662,7 +3678,6 @@
 	)
 	(label "DRV_V"
 		(at 229.87 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3673,7 +3688,6 @@
 	)
 	(label "VCCIO"
 		(at 201.93 125.73 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3684,7 +3698,6 @@
 	)
 	(label "HSV"
 		(at 176.53 41.91 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3695,7 +3708,6 @@
 	)
 	(label "HSW"
 		(at 229.87 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3706,7 +3718,6 @@
 	)
 	(label "HSU"
 		(at 229.87 44.45 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3717,7 +3728,6 @@
 	)
 	(label "VM"
 		(at 34.29 137.16 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3728,7 +3738,6 @@
 	)
 	(label "CU"
 		(at 232.41 135.89 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3739,7 +3748,6 @@
 	)
 	(label "DRV_V"
 		(at 237.49 162.56 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3750,7 +3758,6 @@
 	)
 	(label "CW"
 		(at 176.53 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3761,7 +3768,6 @@
 	)
 	(label "LSW"
 		(at 57.15 31.75 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3772,7 +3778,6 @@
 	)
 	(label "HSU"
 		(at 176.53 29.21 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3783,7 +3788,6 @@
 	)
 	(label "LSU"
 		(at 229.87 46.99 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3794,7 +3798,6 @@
 	)
 	(label "VM"
 		(at 236.22 29.21 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3805,7 +3808,6 @@
 	)
 	(label "LSV"
 		(at 57.15 34.29 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3816,7 +3818,6 @@
 	)
 	(label "DRV_U"
 		(at 176.53 31.75 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3827,7 +3828,6 @@
 	)
 	(label "DRV_V"
 		(at 176.53 44.45 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3838,7 +3838,6 @@
 	)
 	(label "LSV"
 		(at 229.87 78.74 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3849,7 +3848,6 @@
 	)
 	(label "SENSE_W"
 		(at 176.53 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3860,7 +3858,6 @@
 	)
 	(label "5VOUT"
 		(at 210.82 125.73 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3871,7 +3868,6 @@
 	)
 	(label "HSV"
 		(at 229.87 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3882,7 +3878,6 @@
 	)
 	(label "CV"
 		(at 237.49 135.89 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3893,7 +3888,6 @@
 	)
 	(label "LSW"
 		(at 229.87 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3904,7 +3898,6 @@
 	)
 	(label "HSW"
 		(at 176.53 57.15 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3915,7 +3908,6 @@
 	)
 	(label "VCCIO"
 		(at 59.69 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3926,7 +3918,6 @@
 	)
 	(label "CW"
 		(at 242.57 135.89 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3937,7 +3928,6 @@
 	)
 	(label "DRV_U"
 		(at 229.87 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3948,7 +3938,6 @@
 	)
 	(label "CV"
 		(at 176.53 39.37 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3959,7 +3948,6 @@
 	)
 	(label "CU"
 		(at 57.15 26.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3970,7 +3958,6 @@
 	)
 	(label "DRV_W"
 		(at 176.53 54.61 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3981,7 +3968,6 @@
 	)
 	(label "VM"
 		(at 34.29 156.21 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3992,7 +3978,6 @@
 	)
 	(label "SENSE_U"
 		(at 229.87 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4003,7 +3988,6 @@
 	)
 	(label "SENSE_U"
 		(at 176.53 34.29 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4014,7 +3998,6 @@
 	)
 	(label "VOFS"
 		(at 220.98 140.97 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4025,7 +4008,6 @@
 	)
 	(label "DRV_W"
 		(at 242.57 162.56 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4036,7 +4018,6 @@
 	)
 	(label "DRV_W"
 		(at 229.87 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4047,7 +4028,6 @@
 	)
 	(label "SENSE_W"
 		(at 229.87 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4058,7 +4038,6 @@
 	)
 	(label "5VOUT"
 		(at 57.15 41.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4069,7 +4048,6 @@
 	)
 	(label "FAULT"
 		(at 185.42 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4080,7 +4058,6 @@
 	)
 	(label "FAULT"
 		(at 148.59 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4091,7 +4068,6 @@
 	)
 	(label "SENSE_V"
 		(at 229.87 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4102,7 +4078,6 @@
 	)
 	(label "SENSE_V"
 		(at 176.53 46.99 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4113,7 +4088,6 @@
 	)
 	(label "DRV_U"
 		(at 232.41 162.56 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4125,7 +4099,6 @@
 	(hierarchical_label "MOSI"
 		(shape input)
 		(at 25.4 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4137,7 +4110,6 @@
 	(hierarchical_label "PHASE_U"
 		(shape output)
 		(at 229.87 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4149,7 +4121,6 @@
 	(hierarchical_label "SCK"
 		(shape input)
 		(at 25.4 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4161,7 +4132,6 @@
 	(hierarchical_label "UL"
 		(shape input)
 		(at 25.4 69.85 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4173,7 +4143,6 @@
 	(hierarchical_label "WL"
 		(shape input)
 		(at 25.4 82.55 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4185,7 +4154,6 @@
 	(hierarchical_label "VM"
 		(shape output)
 		(at 236.22 22.86 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4197,7 +4165,6 @@
 	(hierarchical_label "PHASE_V"
 		(shape output)
 		(at 229.87 87.63 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4209,7 +4176,6 @@
 	(hierarchical_label "VCCIO"
 		(shape input)
 		(at 25.4 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4221,7 +4187,6 @@
 	(hierarchical_label "FAULT"
 		(shape output)
 		(at 160.02 85.09 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4233,7 +4198,6 @@
 	(hierarchical_label "DRV_ENABLE"
 		(shape input)
 		(at 168.91 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4245,7 +4209,6 @@
 	(hierarchical_label "PHASE_W"
 		(shape output)
 		(at 229.87 119.38 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4257,7 +4220,6 @@
 	(hierarchical_label "CURW_5V"
 		(shape output)
 		(at 25.4 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4269,7 +4231,6 @@
 	(hierarchical_label "CURV_5V"
 		(shape output)
 		(at 25.4 49.53 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4281,7 +4242,6 @@
 	(hierarchical_label "VL"
 		(shape input)
 		(at 25.4 77.47 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4293,7 +4253,6 @@
 	(hierarchical_label "WH"
 		(shape input)
 		(at 25.4 80.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4305,7 +4264,6 @@
 	(hierarchical_label "VH"
 		(shape input)
 		(at 25.4 74.93 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4317,7 +4275,6 @@
 	(hierarchical_label "CURU_5V"
 		(shape output)
 		(at 25.4 46.99 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4329,7 +4286,6 @@
 	(hierarchical_label "NCS"
 		(shape input)
 		(at 25.4 57.15 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4341,7 +4297,6 @@
 	(hierarchical_label "UH"
 		(shape input)
 		(at 25.4 67.31 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4353,7 +4308,6 @@
 	(hierarchical_label "MISO"
 		(shape output)
 		(at 25.4 64.77 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7307,6 +7261,10 @@
 	(sheet
 		(at 252.73 36.83)
 		(size 13.97 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -7336,53 +7294,53 @@
 		)
 		(pin "VM" input
 			(at 252.73 41.91 180)
+			(uuid "298ae890-ed2c-4287-9d68-42108332ab84")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "298ae890-ed2c-4287-9d68-42108332ab84")
 		)
 		(pin "HS" input
 			(at 252.73 44.45 180)
+			(uuid "3ed2f9c3-1d45-4c27-a184-e595183c96c2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "3ed2f9c3-1d45-4c27-a184-e595183c96c2")
 		)
 		(pin "LS" input
 			(at 252.73 46.99 180)
+			(uuid "907c24fa-37c4-4c4d-a4b8-1fcf1a0f1099")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "907c24fa-37c4-4c4d-a4b8-1fcf1a0f1099")
 		)
 		(pin "SENSE" output
 			(at 252.73 53.34 180)
+			(uuid "e25fad77-0a37-4836-8476-849b61098e9d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e25fad77-0a37-4836-8476-849b61098e9d")
 		)
 		(pin "DRV" output
 			(at 252.73 55.88 180)
+			(uuid "f996a56a-0d99-4391-9078-9e8bed717960")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "f996a56a-0d99-4391-9078-9e8bed717960")
 		)
 		(instances
 			(project "xESC2"
@@ -7395,6 +7353,10 @@
 	(sheet
 		(at 252.73 68.58)
 		(size 13.97 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -7424,53 +7386,53 @@
 		)
 		(pin "VM" input
 			(at 252.73 73.66 180)
+			(uuid "bb0f7fbc-f6cb-4805-b735-f9ce94c8fd27")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "bb0f7fbc-f6cb-4805-b735-f9ce94c8fd27")
 		)
 		(pin "HS" input
 			(at 252.73 76.2 180)
+			(uuid "40e4c8e4-ced2-46d0-aa2b-5282eb7c7888")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "40e4c8e4-ced2-46d0-aa2b-5282eb7c7888")
 		)
 		(pin "LS" input
 			(at 252.73 78.74 180)
+			(uuid "33f9003b-cbe2-4dc7-9288-a0db021e45b1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "33f9003b-cbe2-4dc7-9288-a0db021e45b1")
 		)
 		(pin "SENSE" output
 			(at 252.73 85.09 180)
+			(uuid "0608391e-b202-4612-a73b-a670d65cd261")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "0608391e-b202-4612-a73b-a670d65cd261")
 		)
 		(pin "DRV" output
 			(at 252.73 87.63 180)
+			(uuid "d8d72014-a5d3-48df-95a7-29bc1ec9135c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d8d72014-a5d3-48df-95a7-29bc1ec9135c")
 		)
 		(instances
 			(project "xESC2"
@@ -7483,6 +7445,10 @@
 	(sheet
 		(at 252.73 100.33)
 		(size 13.97 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -7512,53 +7478,53 @@
 		)
 		(pin "VM" input
 			(at 252.73 105.41 180)
+			(uuid "fd6c9792-9fbd-461e-8c10-40765aa8fc1a")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "fd6c9792-9fbd-461e-8c10-40765aa8fc1a")
 		)
 		(pin "HS" input
 			(at 252.73 107.95 180)
+			(uuid "4dc172c9-8d82-488c-a618-cabc47686492")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "4dc172c9-8d82-488c-a618-cabc47686492")
 		)
 		(pin "LS" input
 			(at 252.73 110.49 180)
+			(uuid "94644b12-8e8f-4fb1-ba7e-f33b4b619430")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "94644b12-8e8f-4fb1-ba7e-f33b4b619430")
 		)
 		(pin "SENSE" output
 			(at 252.73 116.84 180)
+			(uuid "bf0512ad-01d9-4538-aaf9-f6048fc190c0")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "bf0512ad-01d9-4538-aaf9-f6048fc190c0")
 		)
 		(pin "DRV" output
 			(at 252.73 119.38 180)
+			(uuid "d91794a8-bbbe-4d73-8ff6-7e544fd69f1d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "d91794a8-bbbe-4d73-8ff6-7e544fd69f1d")
 		)
 		(instances
 			(project "xESC2"
