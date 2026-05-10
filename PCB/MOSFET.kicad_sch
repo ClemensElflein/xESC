@@ -1286,7 +1286,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BSC026N08NS5"
+		(property "Value" "BSC0702LS"
 			(at 179.1716 72.263 0)
 			(effects
 				(font
@@ -1306,7 +1306,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BSC026N08NS5-DS-v02_01-EN.pdf?fileId=5546d4624ad04ef9014ae2eace7629e0"
+		(property "Datasheet" ""
 			(at 173.99 71.12 90)
 			(effects
 				(font
@@ -1325,7 +1325,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "BSC026N08NS5"
+		(property "Part Number" "BSC0702LS"
 			(at 173.99 71.12 0)
 			(effects
 				(font
@@ -1334,34 +1334,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "BSC026N08NS5ATMA1CT-ND"
-			(at 173.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C919592"
-			(at 173.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Stock_PN" "Q-BSC026N08NS5"
-			(at 173.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C919592"
+		(property "JLC" "C501503"
 			(at 173.99 71.12 0)
 			(effects
 				(font
@@ -1420,7 +1393,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BSC026N08NS5"
+		(property "Value" "BSC0702LS"
 			(at 179.1716 97.663 0)
 			(effects
 				(font
@@ -1440,7 +1413,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-BSC026N08NS5-DS-v02_01-EN.pdf?fileId=5546d4624ad04ef9014ae2eace7629e0"
+		(property "Datasheet" ""
 			(at 173.99 96.52 90)
 			(effects
 				(font
@@ -1459,7 +1432,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "BSC026N08NS5"
+		(property "Part Number" "BSC0702LS"
 			(at 173.99 96.52 0)
 			(effects
 				(font
@@ -1468,34 +1441,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "BSC026N08NS5ATMA1CT-ND"
-			(at 173.99 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C919592"
-			(at 173.99 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Stock_PN" "Q-BSC026N08NS5"
-			(at 173.99 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C919592"
+		(property "JLC" "C501503"
 			(at 173.99 96.52 0)
 			(effects
 				(font
