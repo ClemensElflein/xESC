@@ -5,9 +5,9 @@
 	(uuid "2bf395ab-44e1-442f-8cc3-ce5b2994af77")
 	(paper "A4")
 	(title_block
-		(title "xESC BLDC Controller")
-		(date "2021-12-01")
-		(rev "2.0")
+		(title "xESC2-power BLDC Controller")
+		(date "2026-05-11")
+		(rev "v1.0")
 		(company "Clemens Elflein")
 		(comment 1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.")
 		(comment 2 "Licensed under ")

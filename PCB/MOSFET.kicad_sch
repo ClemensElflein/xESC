@@ -5,9 +5,9 @@
 	(uuid "1a8cf039-c899-42a0-8865-cbcc8bf265a8")
 	(paper "A4")
 	(title_block
-		(title "xESC BLDC Controller")
-		(date "2021-12-01")
-		(rev "2.0")
+		(title "xESC2-power BLDC Controller")
+		(date "2026-05-11")
+		(rev "v1.0")
 		(company "Clemens Elflein")
 		(comment 1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.")
 		(comment 2 "Licensed under ")
@@ -911,6 +911,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TARGETED:\n---------\n9A Constant,\n11A Stall,\n27A Peak\n= 3m Ohm, gain 10, BSC0702"
+		(exclude_from_sim no)
+		(at 230.632 33.02 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "01f895ba-a1a9-4d01-876a-7d65bdc72e2a")
+	)
 	(junction
 		(at 176.53 83.82)
 		(diameter 0)
@@ -1499,7 +1510,7 @@
 				)
 			)
 		)
-		(property "Value" "33mR"
+		(property "Value" "3mR"
 			(at 195.58 80.8736 90)
 			(effects
 				(font
@@ -1525,7 +1536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3W 3mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
 			(at 195.58 83.82 0)
 			(effects
 				(font
@@ -1534,7 +1545,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2903495"
+		(property "Part Number" "HoYLR2512-3W-3mR-1%"
 			(at 195.58 83.82 0)
 			(effects
 				(font
@@ -1543,34 +1554,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-2512-.033-3W-5%"
-			(at 195.58 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "ARP2512GJR033"
-			(at 195.58 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey" "738-CSM2512FT33L0CT-ND"
-			(at 195.58 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C2903495"
+		(property "JLC" "C5375459"
 			(at 195.58 83.82 0)
 			(effects
 				(font

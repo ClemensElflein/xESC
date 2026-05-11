@@ -5,9 +5,9 @@
 	(uuid "f1d82565-2f45-4436-9c4d-3203604bc842")
 	(paper "A4")
 	(title_block
-		(title "xESC BLDC Controller")
-		(date "2021-12-01")
-		(rev "2.0")
+		(title "xESC2-power BLDC Controller")
+		(date "2026-05-11")
+		(rev "v1.0")
 		(company "Clemens Elflein")
 		(comment 1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.")
 		(comment 2 "Licensed under ")
@@ -7451,9 +7451,9 @@
 		(at 85.09 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-000061b8d4cb")
 		(property "Reference" "J3"
 			(at 87.8332 30.9626 0)
@@ -10189,7 +10189,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED Green"
+		(property "Value" "LED White"
 			(at 179.5272 154.9908 90)
 			(effects
 				(font
@@ -10225,7 +10225,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "LED-603-GREEN"
+		(property "Part Number" "KT-0603W"
 			(at 176.53 153.67 0)
 			(effects
 				(font
@@ -10234,34 +10234,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "160-1446-1-ND"
-			(at 176.53 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "LTST-C191KGKT"
-			(at 176.53 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C72043"
-			(at 176.53 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C72043"
+		(property "JLC" "C2290"
 			(at 176.53 153.67 0)
 			(effects
 				(font
