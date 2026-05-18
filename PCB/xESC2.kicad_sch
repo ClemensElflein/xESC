@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "xESC2-power BLDC Controller")
-		(date "2026-05-11")
-		(rev "v1.0")
+		(date "2026-05-18")
+		(rev "v2.0")
 		(company "Clemens Elflein")
 		(comment 1 "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.")
 		(comment 2 "Licensed under ")
@@ -867,7 +867,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "USB*"
+			(property "ki_fp_filters" "USB*Micro*B*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2239,10 +2239,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "LED_1"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_1_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2291,7 +2469,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2342,8 +2520,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3V3"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2363,8 +2540,12 @@
 		)
 		(symbol "power:+5V"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2413,7 +2594,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2464,8 +2645,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+5V"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2485,8 +2665,12 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2535,7 +2719,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2562,8 +2746,233 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 					(hide yes)
-					(name "GND"
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:Vdrive"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "Vdrive"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"Vdrive\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Vdrive_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Vdrive_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2805,7 +3214,7 @@
 		(uuid "ee7c474d-26bd-49ed-8865-7ece23e0f97e")
 	)
 	(junction
-		(at 181.61 160.02)
+		(at 199.39 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f36d7bfa-167d-4069-a5cc-0d267792a564")
@@ -2922,7 +3331,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 160.02) (xy 185.42 160.02)
+			(xy 199.39 153.67) (xy 203.2 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3002,7 +3411,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 123.19) (xy 115.57 123.19)
+			(xy 95.25 123.19) (xy 115.57 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3262,16 +3671,6 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 39.37) (xy 217.17 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a40b986-b6b6-46ff-9aac-26c8d6e64fba")
-	)
-	(wire
-		(pts
 			(xy 41.91 111.76) (xy 41.91 115.57)
 		)
 		(stroke
@@ -3282,7 +3681,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 149.86) (xy 176.53 143.51)
+			(xy 194.31 143.51) (xy 194.31 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3322,7 +3721,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 135.89) (xy 176.53 128.27)
+			(xy 194.31 134.62) (xy 194.31 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3332,7 +3731,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 118.11) (xy 115.57 118.11)
+			(xy 95.25 118.11) (xy 115.57 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3399,16 +3798,6 @@
 			(type default)
 		)
 		(uuid "51394ff4-ddef-4cd4-847d-e672eb801b9f")
-	)
-	(wire
-		(pts
-			(xy 217.17 39.37) (xy 223.52 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52857a4b-da0e-4182-9b7c-2af05a75ae66")
 	)
 	(wire
 		(pts
@@ -3592,7 +3981,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 160.02) (xy 181.61 160.02)
+			(xy 194.31 153.67) (xy 199.39 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3682,7 +4071,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 135.89) (xy 185.42 128.27)
+			(xy 203.2 134.62) (xy 203.2 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3862,7 +4251,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 157.48) (xy 176.53 160.02)
+			(xy 194.31 151.13) (xy 194.31 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4032,7 +4421,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 158.75) (xy 129.54 154.94)
+			(xy 129.54 158.75) (xy 129.54 157.48)
 		)
 		(stroke
 			(width 0)
@@ -4059,6 +4448,16 @@
 			(type default)
 		)
 		(uuid "9e397423-34cd-4c8e-a791-736a9e7bc49e")
+	)
+	(wire
+		(pts
+			(xy 270.51 148.59) (xy 270.51 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1b8370b-9226-4f49-b8ca-615d9d65ca8a")
 	)
 	(wire
 		(pts
@@ -4112,7 +4511,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 128.27) (xy 105.41 132.08)
+			(xy 99.06 128.27) (xy 99.06 132.08)
 		)
 		(stroke
 			(width 0)
@@ -4172,7 +4571,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 157.48) (xy 185.42 160.02)
+			(xy 203.2 151.13) (xy 203.2 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4392,7 +4791,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 125.73) (xy 102.87 125.73)
+			(xy 115.57 125.73) (xy 95.25 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4442,6 +4841,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 140.97) (xy 266.7 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf63d747-55f2-4f11-b8f9-809fc1f34e79")
+	)
+	(wire
+		(pts
 			(xy 52.07 120.65) (xy 57.15 120.65)
 		)
 		(stroke
@@ -4472,7 +4881,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 149.86) (xy 185.42 143.51)
+			(xy 203.2 143.51) (xy 203.2 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4632,7 +5041,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 120.65) (xy 102.87 120.65)
+			(xy 115.57 120.65) (xy 95.25 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4642,7 +5051,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 128.27) (xy 105.41 128.27)
+			(xy 95.25 128.27) (xy 99.06 128.27)
 		)
 		(stroke
 			(width 0)
@@ -4692,7 +5101,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 163.83) (xy 181.61 160.02)
+			(xy 199.39 157.48) (xy 199.39 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4820,7 +5229,7 @@
 		)
 		(uuid "0ad44a3b-48cc-440f-a67f-0541436eadd5")
 	)
-	(label "LED_GREEN"
+	(label "LED_WHITE"
 		(at 97.79 71.12 0)
 		(effects
 			(font
@@ -4831,7 +5240,7 @@
 		(uuid "0b2ce600-1599-4dce-bb9b-35c59b8a330d")
 	)
 	(label "LED_RED"
-		(at 185.42 128.27 90)
+		(at 203.2 132.08 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4920,18 +5329,8 @@
 		)
 		(uuid "2fda5822-7632-4e07-b46b-f6f23d21968b")
 	)
-	(label "VM"
-		(at 129.54 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "32d45800-fc5c-450e-a7a6-c2c9fe5d35b2")
-	)
-	(label "LED_GREEN"
-		(at 176.53 128.27 90)
+	(label "LED_WHITE"
+		(at 194.31 132.08 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5089,16 +5488,6 @@
 			(justify left bottom)
 		)
 		(uuid "a7318f74-931d-4cf5-b506-e2d02cd5c058")
-	)
-	(label "VM"
-		(at 217.17 30.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bab9a0fd-9606-41e5-b9dd-d37446a1b523")
 	)
 	(label "PHASE_W_FILTERED"
 		(at 64.77 172.72 0)
@@ -5389,7 +5778,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 31.75 90.17 0)
 			(effects
 				(font
@@ -5454,7 +5843,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 31.75 135.89 0)
 			(effects
 				(font
@@ -5485,7 +5874,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061ac0036")
 		(property "Reference" "C44"
-			(at 39.751 125.8316 0)
+			(at 33.02 132.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5493,8 +5882,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF/50V"
-			(at 39.751 128.143 0)
+		(property "Value" "100nF/16V"
+			(at 33.02 134.8994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5502,7 +5891,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 37.7952 130.81 0)
 			(effects
 				(font
@@ -5529,7 +5918,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1276-1935-1-ND"
+		(property "Digikey" ""
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -5538,7 +5927,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "CL10B104KC8NNNC"
+		(property "Part Number" ""
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -5547,7 +5936,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "C-603-.1uF-100V-X7R"
+		(property "Stock_PN" ""
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -5556,7 +5945,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C14663"
+		(property "JLC" "C1525"
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -5565,7 +5954,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" ""
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -5616,7 +6005,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 35.052 107.95 90)
 			(effects
 				(font
@@ -5643,7 +6032,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-10.0KHRCT-ND"
+		(property "Digikey" ""
 			(at 36.83 107.95 0)
 			(effects
 				(font
@@ -5652,7 +6041,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-0710KL"
+		(property "Part Number" ""
 			(at 36.83 107.95 0)
 			(effects
 				(font
@@ -5661,7 +6050,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-10K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 36.83 107.95 0)
 			(effects
 				(font
@@ -5670,7 +6059,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C25804"
+		(property "JLC" "C25744"
 			(at 36.83 107.95 0)
 			(effects
 				(font
@@ -5679,7 +6068,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 36.83 107.95 0)
 			(effects
 				(font
@@ -5747,7 +6136,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 36.83 90.17 0)
 			(effects
 				(font
@@ -5909,7 +6298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 24.892 177.8 90)
 			(effects
 				(font
@@ -5936,7 +6325,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 26.67 177.8 0)
 			(effects
 				(font
@@ -5945,7 +6334,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 26.67 177.8 0)
 			(effects
 				(font
@@ -5954,7 +6343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 26.67 177.8 0)
 			(effects
 				(font
@@ -5963,7 +6352,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 26.67 177.8 0)
 			(effects
 				(font
@@ -5972,7 +6361,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 26.67 177.8 0)
 			(effects
 				(font
@@ -6137,7 +6526,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 36.322 177.8 90)
 			(effects
 				(font
@@ -6164,7 +6553,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 38.1 177.8 0)
 			(effects
 				(font
@@ -6173,7 +6562,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 38.1 177.8 0)
 			(effects
 				(font
@@ -6182,7 +6571,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 38.1 177.8 0)
 			(effects
 				(font
@@ -6191,7 +6580,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 38.1 177.8 0)
 			(effects
 				(font
@@ -6200,7 +6589,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 38.1 177.8 0)
 			(effects
 				(font
@@ -6365,7 +6754,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 46.482 177.8 90)
 			(effects
 				(font
@@ -6392,7 +6781,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 48.26 177.8 0)
 			(effects
 				(font
@@ -6401,7 +6790,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 48.26 177.8 0)
 			(effects
 				(font
@@ -6410,7 +6799,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 48.26 177.8 0)
 			(effects
 				(font
@@ -6419,7 +6808,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 48.26 177.8 0)
 			(effects
 				(font
@@ -6428,7 +6817,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 48.26 177.8 0)
 			(effects
 				(font
@@ -6496,7 +6885,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 38.1 191.77 0)
 			(effects
 				(font
@@ -6561,7 +6950,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 214.63 45.72 0)
 			(effects
 				(font
@@ -6609,7 +6998,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 40.132 107.95 90)
 			(effects
 				(font
@@ -6636,7 +7025,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6645,7 +7034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6654,7 +7043,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6663,7 +7052,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6672,7 +7061,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -6723,7 +7112,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 45.212 107.95 90)
 			(effects
 				(font
@@ -6750,7 +7139,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 46.99 107.95 0)
 			(effects
 				(font
@@ -6759,7 +7148,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 46.99 107.95 0)
 			(effects
 				(font
@@ -6768,7 +7157,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 46.99 107.95 0)
 			(effects
 				(font
@@ -6777,7 +7166,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 46.99 107.95 0)
 			(effects
 				(font
@@ -6786,7 +7175,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 46.99 107.95 0)
 			(effects
 				(font
@@ -6837,7 +7226,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 50.292 107.95 90)
 			(effects
 				(font
@@ -6864,7 +7253,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-2.20KHRCT-ND"
+		(property "Digikey" ""
 			(at 52.07 107.95 0)
 			(effects
 				(font
@@ -6873,7 +7262,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-072K2L"
+		(property "Part Number" ""
 			(at 52.07 107.95 0)
 			(effects
 				(font
@@ -6882,7 +7271,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-2.2K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 52.07 107.95 0)
 			(effects
 				(font
@@ -6891,7 +7280,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C4190"
+		(property "JLC" "C25879"
 			(at 52.07 107.95 0)
 			(effects
 				(font
@@ -6900,7 +7289,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" ""
 			(at 52.07 107.95 0)
 			(effects
 				(font
@@ -6934,7 +7323,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b5ed85")
 		(property "Reference" "C47"
-			(at 54.991 125.8316 0)
+			(at 52.832 122.4026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6943,7 +7332,7 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 54.991 128.143 0)
+			(at 52.832 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6951,7 +7340,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 53.0352 130.81 0)
 			(effects
 				(font
@@ -7021,7 +7410,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b63c43")
 		(property "Reference" "C46"
-			(at 49.911 125.8316 0)
+			(at 47.752 122.4026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7030,7 +7419,7 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 49.911 128.143 0)
+			(at 47.752 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7038,7 +7427,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 47.9552 130.81 0)
 			(effects
 				(font
@@ -7108,7 +7497,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b68b12")
 		(property "Reference" "C45"
-			(at 44.831 125.8316 0)
+			(at 42.418 122.4026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7117,7 +7506,7 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 44.831 128.143 0)
+			(at 42.418 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7125,7 +7514,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 42.8752 130.81 0)
 			(effects
 				(font
@@ -7602,7 +7991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 95.25 27.94 0)
 			(effects
 				(font
@@ -8351,7 +8740,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 99.06 191.77 0)
 			(effects
 				(font
@@ -8677,7 +9066,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 95.25 49.53 0)
 			(effects
 				(font
@@ -8970,7 +9359,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 48.26 22.86 0)
 			(effects
 				(font
@@ -9132,7 +9521,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 40.64 44.958 90)
 			(effects
 				(font
@@ -9159,7 +9548,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "RMCF0603FT22R0CT-ND"
+		(property "Digikey" ""
 			(at 40.64 43.18 0)
 			(effects
 				(font
@@ -9168,7 +9557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RMCF0603FT22R0"
+		(property "Part Number" ""
 			(at 40.64 43.18 0)
 			(effects
 				(font
@@ -9177,7 +9566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-22-.1W-1%"
+		(property "Stock_PN" ""
 			(at 40.64 43.18 0)
 			(effects
 				(font
@@ -9186,7 +9575,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C23345"
+		(property "JLC" "C25092"
 			(at 40.64 43.18 0)
 			(effects
 				(font
@@ -9195,7 +9584,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C23345"
+		(property "LCSC" ""
 			(at 40.64 43.18 0)
 			(effects
 				(font
@@ -9246,7 +9635,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 40.64 47.498 90)
 			(effects
 				(font
@@ -9273,7 +9662,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "RMCF0603FT22R0CT-ND"
+		(property "Digikey" ""
 			(at 40.64 45.72 0)
 			(effects
 				(font
@@ -9282,7 +9671,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RMCF0603FT22R0"
+		(property "Part Number" ""
 			(at 40.64 45.72 0)
 			(effects
 				(font
@@ -9291,7 +9680,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-22-.1W-1%"
+		(property "Stock_PN" ""
 			(at 40.64 45.72 0)
 			(effects
 				(font
@@ -9300,7 +9689,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C23345"
+		(property "JLC" "C25092"
 			(at 40.64 45.72 0)
 			(effects
 				(font
@@ -9309,7 +9698,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C23345"
+		(property "LCSC" ""
 			(at 40.64 45.72 0)
 			(effects
 				(font
@@ -9377,7 +9766,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 48.26 59.69 0)
 			(effects
 				(font
@@ -9400,7 +9789,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x05_Male")
-		(at 97.79 123.19 0)
+		(at 90.17 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9408,7 +9797,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d00ad0")
 		(property "Reference" "J4"
-			(at 100.5332 113.5126 0)
+			(at 92.9132 113.5126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9416,7 +9805,7 @@
 			)
 		)
 		(property "Value" "Conn_01x05_Male"
-			(at 100.5332 115.824 0)
+			(at 92.9132 115.824 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9424,7 +9813,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9433,7 +9822,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9442,7 +9831,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9451,7 +9840,7 @@
 			)
 		)
 		(property "LCSC" "C2935911"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9460,7 +9849,7 @@
 			)
 		)
 		(property "Part Number" "DZ254R-11-05-63"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9469,7 +9858,7 @@
 			)
 		)
 		(property "Stock_PN" "J-TH-1x5-.1"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9478,7 +9867,7 @@
 			)
 		)
 		(property "JLC" "C2935911"
-			(at 97.79 123.19 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9512,7 +9901,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 105.41 132.08 0)
+		(at 99.06 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9520,7 +9909,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d2f1bc")
 		(property "Reference" "#PWR0140"
-			(at 105.41 138.43 0)
+			(at 99.06 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9529,7 +9918,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 105.537 136.4742 0)
+			(at 99.187 136.4742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9537,7 +9926,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 105.41 132.08 0)
+			(at 99.06 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9546,7 +9935,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 132.08 0)
+			(at 99.06 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9554,8 +9943,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 105.41 132.08 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 99.06 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9749,7 +10138,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 72.39 99.06 0)
 			(effects
 				(font
@@ -9814,7 +10203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 72.39 71.12 0)
 			(effects
 				(font
@@ -9862,7 +10251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 92.202 83.82 90)
 			(effects
 				(font
@@ -9889,7 +10278,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "RMCF0603FT120RCT-ND"
+		(property "Part Number" ""
 			(at 93.98 83.82 0)
 			(effects
 				(font
@@ -9898,34 +10287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RMCF0603FT120R"
-			(at 93.98 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Stock_PN" "R-603-120-.1W-1%"
-			(at 93.98 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C22787"
-			(at 93.98 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C22787"
+		(property "JLC" "C25079"
 			(at 93.98 83.82 0)
 			(effects
 				(font
@@ -10059,7 +10421,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 176.53 139.7 0)
+		(at 194.31 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10067,7 +10429,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061e2e71b")
 		(property "Reference" "R37"
-			(at 178.308 138.5316 0)
+			(at 196.088 137.2616 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10075,8 +10437,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150R"
-			(at 178.308 140.843 0)
+		(property "Value" "220R"
+			(at 196.088 139.573 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10084,8 +10446,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 174.752 139.7 90)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 192.532 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10094,7 +10456,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 176.53 139.7 0)
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10103,7 +10465,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 176.53 139.7 0)
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10111,8 +10473,8 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-150HRCT-ND"
-			(at 176.53 139.7 0)
+		(property "Digikey" ""
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10120,8 +10482,8 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-07150RL"
-			(at 176.53 139.7 0)
+		(property "Part Number" "0402WGF2200TCE"
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10129,8 +10491,8 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-150-.1W-1%"
-			(at 176.53 139.7 0)
+		(property "Stock_PN" ""
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10138,8 +10500,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C22808"
-			(at 176.53 139.7 0)
+		(property "JLC" "C25091"
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10147,8 +10509,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22808"
-			(at 176.53 139.7 0)
+		(property "LCSC" ""
+			(at 194.31 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10173,7 +10535,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 176.53 153.67 90)
+		(at 194.31 147.32 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10181,25 +10543,25 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061e2e723")
 		(property "Reference" "D4"
-			(at 179.5272 152.6794 90)
+			(at 192.024 148.6154 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "LED White"
-			(at 179.5272 154.9908 90)
+			(at 192.024 146.304 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 176.53 153.67 0)
+			(at 194.31 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10208,7 +10570,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 176.53 153.67 0)
+			(at 194.31 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10217,7 +10579,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 176.53 153.67 0)
+			(at 194.31 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10226,7 +10588,7 @@
 			)
 		)
 		(property "Part Number" "KT-0603W"
-			(at 176.53 153.67 0)
+			(at 194.31 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10235,7 +10597,7 @@
 			)
 		)
 		(property "JLC" "C2290"
-			(at 176.53 153.67 0)
+			(at 194.31 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10399,7 +10761,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 160.782 162.56 90)
 			(effects
 				(font
@@ -10426,7 +10788,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-10.0KHRCT-ND"
+		(property "Digikey" ""
 			(at 162.56 162.56 0)
 			(effects
 				(font
@@ -10435,7 +10797,7 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-0710KL"
+		(property "Part Number" ""
 			(at 162.56 162.56 0)
 			(effects
 				(font
@@ -10444,7 +10806,7 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-10K-.1W-1%"
+		(property "Stock_PN" ""
 			(at 162.56 162.56 0)
 			(effects
 				(font
@@ -10453,7 +10815,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C25804"
+		(property "JLC" "C25744"
 			(at 162.56 162.56 0)
 			(effects
 				(font
@@ -10462,7 +10824,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" ""
 			(at 162.56 162.56 0)
 			(effects
 				(font
@@ -10488,7 +10850,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 185.42 139.7 0)
+		(at 203.2 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10496,7 +10858,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061e39472")
 		(property "Reference" "R38"
-			(at 187.198 138.5316 0)
+			(at 204.978 137.2616 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10504,8 +10866,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150R"
-			(at 187.198 140.843 0)
+		(property "Value" "220R"
+			(at 204.978 139.573 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10513,8 +10875,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 183.642 139.7 90)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 201.422 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10523,7 +10885,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 185.42 139.7 0)
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10532,7 +10894,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 185.42 139.7 0)
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10540,8 +10902,8 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "311-150HRCT-ND"
-			(at 185.42 139.7 0)
+		(property "Digikey" ""
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10549,8 +10911,8 @@
 				(hide yes)
 			)
 		)
-		(property "Part Number" "RC0603FR-07150RL"
-			(at 185.42 139.7 0)
+		(property "Part Number" "0402WGF2200TCE"
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10558,8 +10920,8 @@
 				(hide yes)
 			)
 		)
-		(property "Stock_PN" "R-603-150-.1W-1%"
-			(at 185.42 139.7 0)
+		(property "Stock_PN" ""
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10567,8 +10929,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C22808"
-			(at 185.42 139.7 0)
+		(property "JLC" "C25091"
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10576,8 +10938,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22808"
-			(at 185.42 139.7 0)
+		(property "LCSC" ""
+			(at 203.2 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10601,8 +10963,9 @@
 		)
 	)
 	(symbol
+		(lib_name "LED_1")
 		(lib_id "Device:LED")
-		(at 185.42 153.67 90)
+		(at 203.2 147.32 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10610,7 +10973,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061e3947a")
 		(property "Reference" "D5"
-			(at 188.4172 152.6794 90)
+			(at 206.1972 146.3294 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10619,7 +10982,7 @@
 			)
 		)
 		(property "Value" "LED Red"
-			(at 188.4172 154.9908 90)
+			(at 206.1972 148.6408 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10628,7 +10991,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10637,7 +11000,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10646,7 +11009,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10655,7 +11018,7 @@
 			)
 		)
 		(property "Stock_PN" "LED-603-RED"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10664,7 +11027,7 @@
 			)
 		)
 		(property "Digikey" "160-1447-1-ND"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10673,7 +11036,7 @@
 			)
 		)
 		(property "Part Number" "LTST-C191KRKT"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10682,7 +11045,7 @@
 			)
 		)
 		(property "JLC" "C2286"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10691,7 +11054,7 @@
 			)
 		)
 		(property "LCSC" "C2286"
-			(at 185.42 153.67 0)
+			(at 203.2 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10716,7 +11079,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 163.83 0)
+		(at 199.39 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10724,7 +11087,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061e4fc2a")
 		(property "Reference" "#PWR0143"
-			(at 181.61 170.18 0)
+			(at 199.39 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10733,7 +11096,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.737 168.2242 0)
+			(at 199.517 161.8742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10741,7 +11104,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 163.83 0)
+			(at 199.39 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10750,7 +11113,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 163.83 0)
+			(at 199.39 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10758,8 +11121,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 181.61 163.83 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 199.39 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10823,7 +11186,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 162.56 172.72 0)
 			(effects
 				(font
@@ -10888,7 +11251,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 162.56 139.7 0)
 			(effects
 				(font
@@ -10904,6 +11267,72 @@
 			(project "xESC2"
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
 					(reference "#PWR0122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Vdrive")
+		(at 266.7 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "35f5fe50-1bad-4331-a053-2c2b4768ec19")
+		(property "Reference" "#PWR015"
+			(at 266.7 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VM"
+			(at 266.7 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+VM\""
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9f748f8-a7d8-4dfb-b8a5-93cb85f07aaa")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10996,6 +11425,267 @@
 			(project "xESC2"
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Vdrive")
+		(at 129.54 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c424b48-264d-4fa2-b888-aa660d71261e")
+		(property "Reference" "#PWR017"
+			(at 129.54 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VM"
+			(at 129.54 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+VM\""
+			(at 129.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46e7d5cd-d327-4bab-af9b-5f7da79fbafa")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 266.7 149.86 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5826cc6-3f6d-426c-8a59-e0e3ae8e10c0")
+		(property "Reference" "#FLG03"
+			(at 266.7 151.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 266.7 158.496 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 266.7 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7312979e-95b3-4599-9e55-a471a1b68989")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 270.51 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d751dab0-9d3b-4312-aa5c-185abb575db3")
+		(property "Reference" "#PWR01"
+			(at 270.51 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 270.764 143.002 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 270.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7e07ef8-b286-4ca8-9569-f4cb39994f93")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 270.51 149.86 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2628c95-a0b3-4caa-bea3-4c58f2daa2c9")
+		(property "Reference" "#FLG01"
+			(at 270.51 151.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 270.256 158.496 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 270.51 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 270.51 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c29c63d4-08e4-4d39-9f0f-4076fe24f920")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -11188,16 +11878,6 @@
 		(pin "VCCIO" input
 			(at 223.52 46.99 180)
 			(uuid "c629dfaa-37af-4767-afa6-bfe5d03347b7")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "VM" output
-			(at 223.52 39.37 180)
-			(uuid "1df358eb-2ddc-4a98-9831-a0ea91eb1ae5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11457,7 +12137,7 @@
 				(justify left)
 			)
 		)
-		(pin "LED_GREEN" output
+		(pin "LED_WHITE" output
 			(at 115.57 71.12 180)
 			(uuid "a3c90ad5-e9e8-4e0f-bc14-cbf1102c3fa2")
 			(effects
