@@ -1,17 +1,40 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  erc-drc-checks:
+  kibot:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: PCB/xESC2.kibot.yaml
           board: PCB/xESC2.kicad_pcb
+          schema: PCB/xESC2.kicad_sch
           verbose: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kibot-outputs
+          path: release/
+
+      - name: Generate diffs vs main
+        if: github.event_name == 'pull_request'
+        uses: INTI-CMNB/KiBot@v2_k8
+        with:
+          config: PCB/xESC2-diff.kibot.yaml
+          board: PCB/xESC2.kicad_pcb
+          schema: PCB/xESC2.kicad_sch
+          verbose: 1
+
+      - name: Upload diffs
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: kibot-diffs
+          path: diff/
