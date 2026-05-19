@@ -59,7 +59,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "missing_courtyard|259000000|114500000|13f1e2aa-c9e7-4b9c-b74f-60c4a1b0a5c4|00000000-0000-0000-0000-000000000000",
+          "No courtyard is fine for text"
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
