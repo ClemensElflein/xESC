@@ -87,12 +87,19 @@ jobs:
             const repo      = context.repo.repo;
             const baseUrl   = `https://${owner}.github.io/${repo}/ci-diffs/pr-${prNumber}`;
 
-            function imageList(subdir) {
+            function isCopperSilkEdge(f) {
+              return /_Cu\.|Silk|Edge/i.test(f);
+            }
+
+            function imageList(subdir, title, filterFn) {
               const dir = path.join(diffsPath, subdir);
-              if (!fs.existsSync(dir)) return '_No changes._';
-              const pngs = fs.readdirSync(dir).filter(f => f.endsWith('.png')).sort();
-              if (pngs.length === 0) return '_No changes._';
-              return pngs.map(f => `![${f}](${baseUrl}/${subdir}/${encodeURIComponent(f)})`).join('\n\n');
+              const noChanges = `<details>\n<summary>${title}</summary>\n\n_No changes._\n\n</details>`;
+              if (!fs.existsSync(dir)) return noChanges;
+              let pngs = fs.readdirSync(dir).filter(f => f.endsWith('.png')).sort();
+              if (filterFn) pngs = pngs.filter(filterFn);
+              if (pngs.length === 0) return noChanges;
+              const images = pngs.map(f => `![${f}](${baseUrl}/${subdir}/${encodeURIComponent(f)})`).join('\n\n');
+              return `<details>\n<summary>${title}</summary>\n\n${images}\n\n</details>`;
             }
 
             let bomSection = '_No BOM changes._';
@@ -109,13 +116,13 @@ jobs:
               '## KiBot Diff vs `main`',
               '',
               '### Schematic diff',
-              imageList('sch'),
+              imageList('sch', 'Show schematic diff'),
               '',
               '### PCB diff (with copper fills)',
-              imageList('pcb'),
+              imageList('pcb', 'Show PCB diff (with copper fills)', isCopperSilkEdge),
               '',
               '### PCB diff (without copper fills)',
-              imageList('pcb_no_fills'),
+              imageList('pcb_no_fills', 'Show PCB diff (without copper fills)', isCopperSilkEdge),
               '',
               '---',
               '',
