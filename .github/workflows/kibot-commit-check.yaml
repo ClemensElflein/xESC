@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: INTI-CMNB/KiBot@v2_k8
+      - uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: PCB/xESC2.kibot.yaml
           board: PCB/xESC2.kicad_pcb
@@ -25,7 +25,7 @@ jobs:
 
       - name: Generate diffs vs main
         if: github.event_name == 'pull_request'
-        uses: INTI-CMNB/KiBot@v2_k8
+        uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: PCB/xESC2-diff.kibot.yaml
           board: PCB/xESC2.kicad_pcb
