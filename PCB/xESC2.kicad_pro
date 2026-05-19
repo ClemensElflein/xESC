@@ -765,6 +765,6 @@
     ]
   ],
   "text_variables": {
-    "git_version": ""
+    "git_version": "v0.0.0"
   }
 }

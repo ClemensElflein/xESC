@@ -76,7 +76,7 @@
 			(outputdirectory "GERBER")
 		)
 	)
-	(property "git_version" "")
+	(property "git_version" "v0.0.0")
 	(net 0 "")
 	(net 1 "GND")
 	(net 2 "Net-(U1-CPO)")
@@ -36411,7 +36411,7 @@
 		(layer "Edge.Cuts")
 		(uuid "f05b568c-3cda-4ab7-9c10-f0547d0b9540")
 	)
-	(gr_text "xESC2-power v2.0"
+	(gr_text "xESC2 ${git_version}"
 		(at 259 122.25 0)
 		(layer "F.SilkS")
 		(uuid "695e32f9-b02e-410b-b911-cbdab843ccfd")
