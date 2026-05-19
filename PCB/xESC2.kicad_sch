@@ -3256,7 +3256,7 @@
 		(uuid "69e71455-f786-4ff5-8b82-859aa1c7dfb8")
 	)
 	(junction
-		(at 10.16 170.18)
+		(at 19.05 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c2566e2-fadf-4ea2-9a9c-94fcf09da14f")
@@ -3268,7 +3268,7 @@
 		(uuid "73698208-9e99-4bd2-b03d-e10016d07945")
 	)
 	(junction
-		(at 5.08 167.64)
+		(at 13.97 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b941dd6-a320-42b9-a1e5-8cacc974e25a")
@@ -3376,7 +3376,7 @@
 		(uuid "df55cdfa-dcd7-4eb2-9bdb-85c8707e8426")
 	)
 	(junction
-		(at 10.16 156.21)
+		(at 19.05 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7f04e1a-c488-4e30-8309-ff6a5add6492")
@@ -3394,7 +3394,7 @@
 		(uuid "ee7c474d-26bd-49ed-8865-7ece23e0f97e")
 	)
 	(junction
-		(at 15.24 172.72)
+		(at 24.13 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0196f5c-76a1-4230-8f04-5c185f7dedf6")
@@ -3497,7 +3497,7 @@
 	)
 	(wire
 		(pts
-			(xy 15.24 163.83) (xy 15.24 172.72)
+			(xy 24.13 166.37) (xy 24.13 175.26)
 		)
 		(stroke
 			(width 0)
@@ -3747,7 +3747,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 152.4) (xy 48.26 158.75)
+			(xy 57.15 154.94) (xy 57.15 161.29)
 		)
 		(stroke
 			(width 0)
@@ -3807,7 +3807,7 @@
 	)
 	(wire
 		(pts
-			(xy 10.16 170.18) (xy -6.35 170.18)
+			(xy 19.05 172.72) (xy 2.54 172.72)
 		)
 		(stroke
 			(width 0)
@@ -3867,7 +3867,7 @@
 	)
 	(wire
 		(pts
-			(xy 10.16 153.67) (xy 10.16 156.21)
+			(xy 19.05 156.21) (xy 19.05 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4067,7 +4067,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 172.72) (xy 15.24 172.72)
+			(xy 57.15 175.26) (xy 24.13 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4127,7 +4127,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 166.37) (xy 38.1 170.18)
+			(xy 46.99 168.91) (xy 46.99 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4387,7 +4387,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 166.37) (xy 26.67 167.64)
+			(xy 35.56 168.91) (xy 35.56 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4397,7 +4397,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 167.64) (xy 5.08 167.64)
+			(xy 35.56 170.18) (xy 13.97 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4517,7 +4517,7 @@
 	)
 	(wire
 		(pts
-			(xy 5.08 163.83) (xy 5.08 167.64)
+			(xy 13.97 166.37) (xy 13.97 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4537,7 +4537,7 @@
 	)
 	(wire
 		(pts
-			(xy 10.16 156.21) (xy 15.24 156.21)
+			(xy 19.05 158.75) (xy 24.13 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4597,7 +4597,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 149.86) (xy 38.1 158.75)
+			(xy 46.99 152.4) (xy 46.99 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4697,7 +4697,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 166.37) (xy 48.26 172.72)
+			(xy 57.15 168.91) (xy 57.15 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4707,7 +4707,7 @@
 	)
 	(wire
 		(pts
-			(xy 5.08 156.21) (xy 10.16 156.21)
+			(xy 13.97 158.75) (xy 19.05 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4717,7 +4717,7 @@
 	)
 	(wire
 		(pts
-			(xy 15.24 172.72) (xy -6.35 172.72)
+			(xy 24.13 175.26) (xy 2.54 175.26)
 		)
 		(stroke
 			(width 0)
@@ -4787,7 +4787,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 147.32) (xy 26.67 158.75)
+			(xy 35.56 149.86) (xy 35.56 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4877,7 +4877,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 170.18) (xy 10.16 170.18)
+			(xy 46.99 172.72) (xy 19.05 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4977,7 +4977,7 @@
 	)
 	(wire
 		(pts
-			(xy 5.08 167.64) (xy -6.35 167.64)
+			(xy 13.97 170.18) (xy 2.54 170.18)
 		)
 		(stroke
 			(width 0)
@@ -5137,7 +5137,7 @@
 	)
 	(wire
 		(pts
-			(xy 10.16 163.83) (xy 10.16 170.18)
+			(xy 19.05 166.37) (xy 19.05 172.72)
 		)
 		(stroke
 			(width 0)
@@ -5296,7 +5296,7 @@
 		(uuid "0987ad8c-550b-4e78-a536-6eb165e8523e")
 	)
 	(label "CUR_U"
-		(at -6.35 167.64 0)
+		(at 2.54 170.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5376,7 +5376,7 @@
 		(uuid "12c3e949-264a-4691-8414-cfc5547a0c9f")
 	)
 	(label "CUR_V"
-		(at -6.35 170.18 0)
+		(at 2.54 172.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5435,8 +5435,8 @@
 		)
 		(uuid "348a8c93-f9ca-47bc-bb66-47698fd2ff1b")
 	)
-	(label "CURU_5V"
-		(at 26.67 147.32 0)
+	(label "CURU_RAW"
+		(at 35.56 149.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5465,8 +5465,8 @@
 		)
 		(uuid "465d8417-1509-4894-9642-7b29a7bb78c9")
 	)
-	(label "CURW_5V"
-		(at 48.26 152.4 0)
+	(label "CURW_RAW"
+		(at 57.15 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5495,7 +5495,7 @@
 		)
 		(uuid "57f0421f-3182-45ac-9e15-58a61c1c4ca6")
 	)
-	(label "CURW_5V"
+	(label "CURW_RAW"
 		(at 200.66 95.25 0)
 		(effects
 			(font
@@ -5535,7 +5535,7 @@
 		)
 		(uuid "6d011a38-f58f-40c5-bb71-f7e76e74bfba")
 	)
-	(label "CURU_5V"
+	(label "CURU_RAW"
 		(at 200.66 90.17 0)
 		(effects
 			(font
@@ -5546,7 +5546,7 @@
 		(uuid "7fc08243-5052-4499-a768-f184f51f05fc")
 	)
 	(label "CUR_W"
-		(at -6.35 172.72 0)
+		(at 2.54 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5655,8 +5655,8 @@
 		)
 		(uuid "ebb49639-3a91-4b95-a882-5cbaceb3ca22")
 	)
-	(label "CURV_5V"
-		(at 38.1 149.86 0)
+	(label "CURV_RAW"
+		(at 46.99 152.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5695,7 +5695,7 @@
 		)
 		(uuid "fd11e21e-094a-41d2-84a9-bb2db81678fa")
 	)
-	(label "CURV_5V"
+	(label "CURV_RAW"
 		(at 200.66 92.71 0)
 		(effects
 			(font
@@ -6228,7 +6228,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 26.67 162.56 0)
+		(at 35.56 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6236,7 +6236,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b0324e")
 		(property "Reference" "R17"
-			(at 28.448 161.3916 0)
+			(at 37.338 163.9316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6245,7 +6245,7 @@
 			)
 		)
 		(property "Value" "1k5"
-			(at 28.448 163.703 0)
+			(at 37.338 166.243 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6254,7 +6254,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 24.892 162.56 90)
+			(at 33.782 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6263,7 +6263,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6272,7 +6272,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6281,7 +6281,7 @@
 			)
 		)
 		(property "Digikey" ""
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6290,7 +6290,7 @@
 			)
 		)
 		(property "Part Number" ""
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6299,7 +6299,7 @@
 			)
 		)
 		(property "Stock_PN" ""
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6308,7 +6308,7 @@
 			)
 		)
 		(property "JLC" "C25867"
-			(at 26.67 162.56 0)
+			(at 35.56 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6333,7 +6333,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 38.1 162.56 0)
+		(at 46.99 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6341,7 +6341,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b06d1c")
 		(property "Reference" "R19"
-			(at 39.878 161.3916 0)
+			(at 48.768 163.9316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6350,7 +6350,7 @@
 			)
 		)
 		(property "Value" "1k5"
-			(at 39.878 163.703 0)
+			(at 48.768 166.243 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6359,7 +6359,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 36.322 162.56 90)
+			(at 45.212 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6368,7 +6368,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6377,7 +6377,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6386,7 +6386,7 @@
 			)
 		)
 		(property "Digikey" ""
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6395,7 +6395,7 @@
 			)
 		)
 		(property "Part Number" ""
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6404,7 +6404,7 @@
 			)
 		)
 		(property "Stock_PN" ""
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6413,7 +6413,7 @@
 			)
 		)
 		(property "JLC" "C25867"
-			(at 38.1 162.56 0)
+			(at 46.99 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6438,7 +6438,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 162.56 0)
+		(at 57.15 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6446,7 +6446,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b0752a")
 		(property "Reference" "R21"
-			(at 50.038 161.3916 0)
+			(at 58.928 163.9316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6455,7 +6455,7 @@
 			)
 		)
 		(property "Value" "1k5"
-			(at 50.038 163.703 0)
+			(at 58.928 166.243 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6464,7 +6464,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 46.482 162.56 90)
+			(at 55.372 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6473,7 +6473,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6482,7 +6482,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6491,7 +6491,7 @@
 			)
 		)
 		(property "Digikey" ""
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6500,7 +6500,7 @@
 			)
 		)
 		(property "Part Number" ""
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6509,7 +6509,7 @@
 			)
 		)
 		(property "Stock_PN" ""
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6518,7 +6518,7 @@
 			)
 		)
 		(property "JLC" "C25867"
-			(at 48.26 162.56 0)
+			(at 57.15 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10441,16 +10441,15 @@
 	)
 	(symbol
 		(lib_id "Diode:SD103ATW")
-		(at 15.24 160.02 270)
+		(at 24.13 162.56 270)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2ceb0f66-96ef-43ad-a7de-cf1aed11bd53")
 		(property "Reference" "D6"
-			(at 17.78 158.4324 90)
+			(at 24.384 166.116 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10459,7 +10458,7 @@
 			)
 		)
 		(property "Value" "SD103ATW"
-			(at 17.78 160.9724 90)
+			(at 24.384 168.656 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10468,7 +10467,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 10.16 160.02 0)
+			(at 19.05 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10477,7 +10476,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30374.pdf"
-			(at 15.24 160.02 0)
+			(at 24.13 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10486,7 +10485,7 @@
 			)
 		)
 		(property "Description" "Schottky Barrier Diode Array, SOT-363"
-			(at 15.24 160.02 0)
+			(at 24.13 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10523,16 +10522,15 @@
 	)
 	(symbol
 		(lib_id "Diode:SD103ATW")
-		(at 10.16 160.02 270)
+		(at 19.05 162.56 270)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3012dbc9-f431-4a0c-9d53-dc7adbdee6f2")
 		(property "Reference" "D6"
-			(at 12.7 158.4324 90)
+			(at 20.066 154.686 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10541,7 +10539,7 @@
 			)
 		)
 		(property "Value" "SD103ATW"
-			(at 12.7 160.9724 90)
+			(at 20.066 157.226 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10550,7 +10548,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 5.08 160.02 0)
+			(at 13.97 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10559,7 +10557,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30374.pdf"
-			(at 10.16 160.02 0)
+			(at 19.05 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10568,7 +10566,7 @@
 			)
 		)
 		(property "Description" "Schottky Barrier Diode Array, SOT-363"
-			(at 10.16 160.02 0)
+			(at 19.05 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10671,16 +10669,15 @@
 	)
 	(symbol
 		(lib_id "Diode:SD103ATW")
-		(at 5.08 160.02 270)
+		(at 13.97 162.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3bf17832-e167-4792-b561-64ca8b1dea6b")
 		(property "Reference" "D6"
-			(at 7.62 158.4324 90)
+			(at 6.604 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10689,7 +10686,7 @@
 			)
 		)
 		(property "Value" "SD103ATW"
-			(at 7.62 160.9724 90)
+			(at 6.604 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10698,7 +10695,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 0 160.02 0)
+			(at 8.89 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10707,7 +10704,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30374.pdf"
-			(at 5.08 160.02 0)
+			(at 13.97 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10716,7 +10713,7 @@
 			)
 		)
 		(property "Description" "Schottky Barrier Diode Array, SOT-363"
-			(at 5.08 160.02 0)
+			(at 13.97 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11041,7 +11038,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 10.16 153.67 0)
+		(at 19.05 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11049,7 +11046,7 @@
 		(dnp no)
 		(uuid "d9feaf43-368d-4685-a9c7-4682b14158d4")
 		(property "Reference" "#PWR024"
-			(at 10.16 157.48 0)
+			(at 19.05 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11058,7 +11055,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 10.541 149.2758 0)
+			(at 19.431 151.8158 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11066,7 +11063,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 10.16 153.67 0)
+			(at 19.05 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11075,7 +11072,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 10.16 153.67 0)
+			(at 19.05 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11084,7 +11081,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 10.16 153.67 0)
+			(at 19.05 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11323,36 +11320,6 @@
 				(justify left)
 			)
 		)
-		(pin "CURU_5V" output
-			(at 223.52 90.17 180)
-			(uuid "096ff2b1-571b-4774-b509-d1b50bd5194f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "CURV_5V" output
-			(at 223.52 92.71 180)
-			(uuid "25e63e01-878d-416f-af19-56fa559ae097")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "CURW_5V" output
-			(at 223.52 95.25 180)
-			(uuid "a4163f01-49ec-46f4-a048-e6905dd1fb28")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "VCCIO" input
 			(at 223.52 46.99 180)
 			(uuid "c629dfaa-37af-4767-afa6-bfe5d03347b7")
@@ -11386,6 +11353,36 @@
 		(pin "PHASE_W" output
 			(at 223.52 107.95 180)
 			(uuid "e7bb84ee-4eae-4f73-86cb-b64b3f5a898a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CURU_RAW" output
+			(at 223.52 90.17 180)
+			(uuid "e05ffe8c-07fd-4f3c-bf24-a689af461afd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CURV_RAW" output
+			(at 223.52 92.71 180)
+			(uuid "1a9b87ea-7321-4049-8ab0-9f8e28805ab5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CURW_RAW" output
+			(at 223.52 95.25 180)
+			(uuid "b26a3fd1-3a3d-47a7-a7fc-aa6becd99c55")
 			(effects
 				(font
 					(size 1.27 1.27)

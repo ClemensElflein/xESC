@@ -4063,7 +4063,7 @@
 		)
 		(uuid "a3a2394f-4ce8-4c99-8711-065e1e535725")
 	)
-	(hierarchical_label "CURW_5V"
+	(hierarchical_label "CURW_RAW"
 		(shape output)
 		(at 76.2 52.07 180)
 		(effects
@@ -4074,7 +4074,7 @@
 		)
 		(uuid "a701eee3-e31a-417e-adbc-69fc0d7e1542")
 	)
-	(hierarchical_label "CURV_5V"
+	(hierarchical_label "CURV_RAW"
 		(shape output)
 		(at 76.2 49.53 180)
 		(effects
@@ -4118,7 +4118,7 @@
 		)
 		(uuid "cf4040bc-8e18-4b32-a80a-2158de9d05d7")
 	)
-	(hierarchical_label "CURU_5V"
+	(hierarchical_label "CURU_RAW"
 		(shape output)
 		(at 76.2 46.99 180)
 		(effects
