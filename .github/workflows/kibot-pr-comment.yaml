@@ -33,13 +33,58 @@ jobs:
 
       - name: Post diff comment on PR
         uses: actions/github-script@v7
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
             const fs = require('fs');
+            const path = require('path');
+
             const prNumber = parseInt(fs.readFileSync('pr-meta/pr-number.txt', 'utf8').trim(), 10);
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.event.workflow_run.id }}`;
+            const uploadsUrl = `https://uploads.github.com/repos/${context.repo.owner}/${context.repo.repo}/issues/${prNumber}/attachments`;
 
-            let bomSection = '\n\n**BOM diff:** no changes vs `main`.';
+            // Upload a PNG and return its hosted URL, or null on failure.
+            async function uploadImage(filePath) {
+              try {
+                const data = fs.readFileSync(filePath);
+                const res = await fetch(uploadsUrl, {
+                  method: 'POST',
+                  headers: {
+                    Authorization: `token ${process.env.GH_TOKEN}`,
+                    'Content-Type': 'image/png',
+                  },
+                  body: data,
+                });
+                if (!res.ok) return null;
+                return (await res.json()).url;
+              } catch (e) {
+                return null;
+              }
+            }
+
+            // Upload all PNGs and group into schematic / PCB sections.
+            const pngFiles = fs.existsSync('diffs')
+              ? fs.readdirSync('diffs').filter(f => f.endsWith('.png')).sort()
+              : [];
+
+            let schSection = '';
+            let pcbSection = '';
+            for (const file of pngFiles) {
+              const url = await uploadImage(path.join('diffs', file));
+              if (!url) continue;
+              const md = `\n![${file}](${url})`;
+              if (file.toLowerCase().includes('sch')) schSection += md;
+              else                                     pcbSection += md;
+            }
+
+            let imageSection = '';
+            if (schSection) imageSection += `\n\n### Schematic${schSection}`;
+            if (pcbSection) imageSection += `\n\n### PCB${pcbSection}`;
+            if (!imageSection) imageSection = `\n\nNo visual diffs — see **[artifacts](${runUrl})** if the diff generation failed.`;
+
+            // BOM diff
+            let bomSection = '\n\n**BOM:** no changes vs `main`.';
             try {
               const bomDiff = fs.readFileSync('diffs/bom_diff.txt', 'utf8').trim();
               if (bomDiff) {
@@ -51,8 +96,7 @@ jobs:
             const body = [
               marker,
               '## KiBot Diff vs `main`',
-              '',
-              `Schematic and PCB diffs (PDF) are available in the **[workflow artifacts](${runUrl})** — download \`kibot-diffs\` from the Artifacts section.`,
+              imageSection,
               bomSection,
             ].join('\n');
 

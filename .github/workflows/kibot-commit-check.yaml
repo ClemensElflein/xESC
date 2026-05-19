@@ -46,9 +46,42 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           find main-bom -name "bom.csv" | head -1 | xargs -I{} cp {} diff/bom_main.csv
-          { head -1 diff/bom_current.csv; tail -n +2 diff/bom_current.csv | sort; } > diff/bom_current_sorted.csv
-          { head -1 diff/bom_main.csv;    tail -n +2 diff/bom_main.csv    | sort; } > diff/bom_main_sorted.csv
-          diff diff/bom_main_sorted.csv diff/bom_current_sorted.csv > diff/bom_diff.txt || true
+          python3 - <<'EOF'
+          import csv, re
+
+          def natural_key(s):
+              return [int(c) if c.isdigit() else c.lower() for c in re.split(r'(\d+)', s)]
+
+          def expand_and_sort(path):
+              with open(path, newline='') as f:
+                  rows = list(csv.reader(f))
+              header, body = rows[0], rows[1:]
+              # kibom prepends a sequential row-number column — strip it if present
+              if body and body[0][0].strip().isdigit():
+                  header, body = header[1:], [r[1:] for r in body]
+              # Find the Designator column
+              des_col = next((i for i, h in enumerate(header)
+                              if 'designator' in h.lower() or 'reference' in h.lower()), 1)
+              # Expand each group row into one row per designator
+              expanded = []
+              for row in body:
+                  for ref in [r.strip() for r in row[des_col].split(',')]:
+                      expanded.append(row[:des_col] + [ref] + row[des_col+1:])
+              expanded.sort(key=lambda r: natural_key(r[des_col]))
+              return header, expanded
+
+          def write(path, header, body):
+              with open(path, 'w', newline='') as f:
+                  w = csv.writer(f)
+                  w.writerow(header)
+                  w.writerows(body)
+
+          h, b = expand_and_sort('diff/bom_main.csv')
+          write('diff/bom_main_sorted.csv', h, b)
+          h, b = expand_and_sort('diff/bom_current.csv')
+          write('diff/bom_current_sorted.csv', h, b)
+          EOF
+          diff -u diff/bom_main_sorted.csv diff/bom_current_sorted.csv > diff/bom_diff.txt || true
 
       - name: Generate diffs vs main
         if: github.event_name == 'pull_request'
@@ -58,6 +91,15 @@ jobs:
           board: PCB/xESC2.kicad_pcb
           schema: PCB/xESC2.kicad_sch
           verbose: 1
+
+      - name: Convert PDF diffs to PNG
+        if: github.event_name == 'pull_request'
+        run: |
+          sudo apt-get install -y poppler-utils -qq
+          shopt -s nullglob
+          for pdf in diff/*.pdf; do
+            pdftoppm -r 150 -png "$pdf" "${pdf%.pdf}"
+          done
 
       - name: Upload diffs
         if: github.event_name == 'pull_request'
