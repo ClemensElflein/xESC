@@ -2014,15 +2014,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22939"
-			(at 153.67 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "8a749989-39f5-4e56-b3e2-05dc175fafdd")
 		)
@@ -2126,15 +2117,6 @@
 			)
 		)
 		(property "JLC" "C22939"
-			(at 153.67 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C22939"
 			(at 153.67 96.52 0)
 			(effects
 				(font
@@ -2248,15 +2230,6 @@
 			)
 		)
 		(property "JLC" "C22859"
-			(at 205.74 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C22859"
 			(at 205.74 101.6 0)
 			(effects
 				(font
@@ -2434,15 +2407,6 @@
 			)
 		)
 		(property "Stock_PN" "C-1206-2.2uF-50V-X7R"
-			(at 190.5 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C13585"
 			(at 190.5 58.42 0)
 			(effects
 				(font
@@ -2646,15 +2610,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C153291"
-			(at 218.44 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "1d40d765-c173-4b16-9633-48499e40783b")
 		)
@@ -2795,15 +2750,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C124362"
 			(at 236.22 83.82 0)
 			(effects
 				(font

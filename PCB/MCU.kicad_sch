@@ -3496,15 +3496,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
-			(at 53.34 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "1595af76-fbc1-488c-a445-2a85e813fcaa")
 		)
@@ -3602,15 +3593,6 @@
 			)
 		)
 		(property "JLC" "C1525"
-			(at 218.44 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
 			(at 218.44 38.1 0)
 			(effects
 				(font
@@ -3898,15 +3880,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
-			(at 255.27 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "31476c52-21e0-4b78-b5b3-f6e0efc129b3")
 		)
@@ -4134,15 +4107,6 @@
 			)
 		)
 		(property "JLC" "C23630"
-			(at 44.45 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
 			(at 44.45 58.42 0)
 			(effects
 				(font
@@ -4495,15 +4459,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
-			(at 181.61 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "e3030141-1b4b-4de7-843f-50c522ee8030")
 		)
@@ -4601,15 +4556,6 @@
 			)
 		)
 		(property "JLC" "C1525"
-			(at 39.37 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
 			(at 39.37 48.26 0)
 			(effects
 				(font
@@ -5129,15 +5075,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C15742"
-			(at 85.09 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Stock_PN" "U-STM32F405RGTx"
 			(at 85.09 85.09 0)
 			(effects
@@ -5439,15 +5376,6 @@
 			)
 		)
 		(property "JLC" "C2682775"
-			(at 25.4 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2682775"
 			(at 25.4 77.47 0)
 			(effects
 				(font

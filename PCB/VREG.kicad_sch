@@ -2364,15 +2364,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C51118"
-			(at 190.5 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Stock_PN" "U-XC6220B331MR"
 			(at 190.5 92.71 0)
 			(effects
@@ -2585,15 +2576,6 @@
 			)
 		)
 		(property "JLC" "C28233"
-			(at 44.45 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C28233"
 			(at 44.45 96.52 0)
 			(effects
 				(font
@@ -3168,8 +3150,8 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "FNR4030S680MT"
-			(at 101.6 110.49 0)
+		(property "JLC" "C167892"
+			(at 101.6 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3177,8 +3159,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C167892"
-			(at 101.6 113.03 0)
+		(property "Part Number" "FNR4030S680MT"
+			(at 101.6 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3329,8 +3311,8 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LMR51606XDBVR"
-			(at 72.39 113.03 0)
+		(property "JLC" "C21260865"
+			(at 72.39 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3338,8 +3320,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C21260865"
-			(at 72.39 115.57 0)
+		(property "Part Number" "LMR51606XDBVR"
+			(at 72.39 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
