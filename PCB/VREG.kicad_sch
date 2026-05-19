@@ -2127,6 +2127,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 170.18 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a110d974-b796-42dc-85cc-c2f8c32cdafd")
 		)
@@ -2279,6 +2288,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 204.47 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6431f281-50ca-4637-a5e4-7d415294667a")
 		)
@@ -2382,6 +2400,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 190.5 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fcfcf9de-da88-4d1f-851c-bc4477644e6e")
 		)
@@ -2462,6 +2489,15 @@
 			)
 		)
 		(property "JLC" "C25744"
+			(at 110.49 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
 			(at 110.49 109.22 0)
 			(effects
 				(font
@@ -2584,6 +2620,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 44.45 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "61f15128-ee02-49d2-b62b-6e1375ea894d")
 		)
@@ -2663,6 +2708,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 127 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1e30e316-dac1-49a7-92da-f8715028dff1")
 		)
@@ -2735,6 +2789,15 @@
 		)
 		(property "JLC" "C270645"
 			(at 110.49 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 110.49 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3168,6 +3231,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 101.6 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "21a6e855-5a3d-425a-bcf0-34e9d0e111bb")
 		)
@@ -3321,6 +3393,15 @@
 			)
 		)
 		(property "Part Number" "LMR51606XDBVR"
+			(at 72.39 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
 			(at 72.39 95.25 0)
 			(effects
 				(font
@@ -3494,6 +3575,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 27.94 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "032de817-540d-43a6-ac1a-e70f48ecb613")
 		)
@@ -3563,6 +3653,15 @@
 			)
 		)
 		(property "JLC" "C1525"
+			(at 87.63 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
 			(at 87.63 92.71 90)
 			(effects
 				(font

@@ -268,6 +268,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9d8f9968-7ee4-44fc-abe3-80b8f6811017")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a8fc92")
 		(sheetname "/MCU/")
@@ -487,6 +500,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1705816e-4540-4bfd-ab65-05fab2f6e236")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5abc649c-3525-41fe-8e23-8f301a010a38")
 			(effects
 				(font
 					(size 1 1)
@@ -746,6 +772,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8eca70bf-728d-42f5-8893-d7dd051368b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a8999f")
 		(sheetname "/MCU/")
@@ -998,6 +1037,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9abb82b5-4078-49cb-bcf0-fa1158b2b7c7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a7737f")
 		(sheetname "/MCU/")
@@ -1217,6 +1269,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "38472d90-f6e0-4893-8bd4-91a4f259051c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9634d764-9498-4571-b365-5809b64fc99d")
 			(effects
 				(font
 					(size 1 1)
@@ -1476,6 +1541,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "483d5342-af4b-4cdb-8882-d216846c3dab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6df2f")
 		(sheetname "/MCU/")
@@ -1695,6 +1773,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "992d1089-91e6-4831-a3b7-f96b426ce28f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d8686971-d64c-4b8e-bbf9-b4fcc84ace91")
 			(effects
 				(font
 					(size 1 1)
@@ -1928,6 +2019,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75461a53-2297-49c7-a5ac-0a60587a10c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6e65e")
 		(sheetname "/MCU/")
@@ -2147,6 +2251,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5115da02-8eb3-4455-b348-5967139a4f05")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "76af5c25-6506-4bc7-9506-f44f9cac3bda")
 			(effects
 				(font
 					(size 1 1)
@@ -2406,6 +2523,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "95b4a58b-2718-4e64-8af9-37ed7f99ae9d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061c72611")
 		(sheetname "/Power/")
@@ -2657,6 +2787,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "98fb897a-a896-43e0-8c79-817213cfe0fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061c8533f")
 		(sheetname "/Power/")
@@ -2888,6 +3031,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1410648c-2577-400e-8524-ec79cc950a7a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d1488ca2-a018-467a-8aea-35d8b5c46c3e")
 			(effects
 				(font
 					(size 1 1)
@@ -3150,6 +3306,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dccd06e6-41b5-4480-9d33-1f21ab021106")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0062d3c0-1fbd-470c-a077-6b4a01baf5b1")
 			(effects
 				(font
 					(size 1 1)
@@ -3420,6 +3589,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "13c83770-da9d-403f-8f44-ff7ae3713b59")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061e2e71b")
 		(sheetname "/")
@@ -3665,6 +3847,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dda8a947-ad96-495c-ac75-15c9debcb6c1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5748a2f0-d5e7-46cc-8fbd-7a58bac342ee")
 			(effects
 				(font
 					(size 1 1)
@@ -3923,6 +4118,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "469add18-10ec-4286-8754-7d4d80c2ce60")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061be05db")
 		(sheetname "/")
@@ -4174,6 +4382,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45db759a-8d76-46fc-912c-48223439d683")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061bebe83")
 		(sheetname "/")
@@ -4406,6 +4627,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "08f93e0f-c28a-45f8-8230-334f9602bb6d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b0517c5-5426-4a3f-b85c-b6180ae8c520")
 			(effects
 				(font
 					(size 1 1)
@@ -5555,6 +5789,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "553d0464-8bf0-403d-8df4-bf498ea8404f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061a5475a")
 		(sheetname "/Power/MOSFET/")
@@ -5795,6 +6042,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1a32ca42-9df6-420c-8a6d-4ff1092e3ccd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061a5475a")
 		(sheetname "/Power/sheet61A57DC9/")
@@ -5999,12 +6259,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ecf604ca-0559-43b2-85b1-70b7fe363542")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51723124-23db-46ea-8626-39b55ef5ae20")
 			(effects
 				(font
 					(size 1 1)
@@ -6382,12 +6655,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cf8fdc8c-d184-4ba6-a6fc-59c2e5fbedcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "81f46948-f81b-4210-be14-a33421989a5f")
 			(effects
 				(font
 					(size 1 1)
@@ -6765,12 +7051,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "754eefd0-9d7d-493d-b5fa-d0f92e7470f9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9939ba06-6de1-4689-9681-b1165e31bd58")
 			(effects
 				(font
 					(size 1 1)
@@ -7184,6 +7483,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "21609a2d-b285-48c2-803f-b03bc99155d2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/00000000-0000-0000-0000-000061c3dd58")
 		(sheetname "/")
@@ -7505,6 +7817,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c69f8313-b034-4fb6-8155-fcdaec01ceb9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061c6a0dc")
 		(sheetname "/")
@@ -7757,6 +8082,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "77d8ba85-d900-4bba-937d-370a22975f3e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061c6a0e2")
 		(sheetname "/")
@@ -7972,12 +8310,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "063d65b8-9fcd-4bfa-bca1-a0ee9d164985")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cab42f96-273e-4af2-ab83-3eea2384a87f")
 			(effects
 				(font
 					(size 1 1)
@@ -8355,12 +8706,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "924df21a-2dc3-4c32-b7e5-6c78599ff5fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b7178e5b-fab6-4fe1-9aeb-9e3ece7d4bc8")
 			(effects
 				(font
 					(size 1 1)
@@ -8738,12 +9102,25 @@
 				)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f2751a0c-544f-42e8-95b3-ca0b14d07b48")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" "C501503"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dcb26053-8b3e-48a5-a7b8-26131b596867")
 			(effects
 				(font
 					(size 1 1)
@@ -9157,6 +9534,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9f83cb3-5ad3-4e2f-9520-eb5f29f14caf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2/00000000-0000-0000-0000-000061a5475a")
 		(sheetname "/Power/sheet61A580CB/")
@@ -9401,6 +9791,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2dae5183-469f-4e14-810b-45725649faec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d84a876c-724f-445a-85b2-93bd38800747")
 			(effects
 				(font
 					(size 1 1)
@@ -9688,6 +10091,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5437e353-438c-4293-bd4e-6aeb55d27e08")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a6c9cc")
 		(sheetname "/MCU/")
@@ -9933,6 +10349,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "34888dfd-0a40-41c9-9798-06097ee85dcc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5efe9d4f-c2f0-4c40-8d46-0fb677c90b75")
 			(effects
 				(font
 					(size 1 1)
@@ -10192,6 +10621,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "98db40a1-41f1-406c-9818-63d00ee88b3a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b2acfb")
 		(sheetname "/")
@@ -10437,6 +10879,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "309bc377-6bf9-4ee6-a61a-53b970a955e9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "79cec7cc-2267-4631-b7a9-5a995553607d")
 			(effects
 				(font
 					(size 1 1)
@@ -10696,6 +11151,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c2d9bd77-afcf-48bc-be73-82fd3c37aa39")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac0036")
 		(sheetname "/")
@@ -10922,6 +11390,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd5752ae-c1f1-4adc-97fa-6f4b8f3f6eb3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061b68b12")
 		(sheetname "/")
@@ -11141,6 +11622,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd7945e2-95c0-499a-8e61-210ec82d0628")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "76e8fc2e-3e26-4bcd-be48-6c12f2062850")
 			(effects
 				(font
 					(size 1 1)
@@ -11400,6 +11894,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9c2ee995-ee98-4268-a059-e42c7bd4dd38")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b36a6a")
 		(sheetname "/")
@@ -11652,6 +12159,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54e85151-46e8-41a2-877e-cbc9c5193f04")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061acd60d")
 		(sheetname "/")
@@ -11871,6 +12391,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2fe0f46e-f553-43bf-ba95-4f1d81e5f7b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9684ada5-40c7-4889-a811-d3288f68f4bc")
 			(effects
 				(font
 					(size 1 1)
@@ -12388,6 +12921,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "719d1fa9-11ff-4c7d-8667-3b19170c0b08")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-000061e7227a/b4297887-f26c-4bed-b323-92eebe268489")
 		(sheetname "/VREG/")
 		(sheetfile "VREG.kicad_sch")
@@ -12668,6 +13214,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0ee944db-2c3b-4e9b-ad0f-48904b70c6b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061ac26fb/00000000-0000-0000-0000-000061a7d515")
 		(sheetname "/MCU/")
@@ -12933,6 +13492,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e6993a22-1c12-4215-8047-1450c5e930ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061e7227a/2283a944-099b-41f2-bd98-55aa28aba135")
 		(sheetname "/VREG/")
@@ -13159,6 +13731,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2dd23cdf-d7c6-436f-8c05-e9e5e2b9871c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061e7227a/d9d4f4ac-71d0-48e2-8ee1-24b2c29e7539")
 		(sheetname "/VREG/")
@@ -13367,6 +13952,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5234db24-c321-4815-89a2-95582b0f950d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1b8f3b0f-5487-4d8d-8fe6-3fb7b57f9f51")
 			(effects
 				(font
 					(size 1 1)
@@ -13726,6 +14324,19 @@
 				)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41d7585b-a513-441e-b483-0a6e04851a16")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061e7227a/e4211b1f-62f2-4177-95f6-a5dd55c9a4bf")
 		(sheetname "/VREG/")
@@ -13983,6 +14594,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d98fc8c6-0ec1-47ff-acf6-981ba513ead5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061a51593")
 		(sheetname "/Power/MOSFET/")
@@ -14224,6 +14849,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ce09813d-bc98-4da3-a05a-53417347a396")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0ae7ad72-a1da-4aa4-94b4-c05d8c30f5ee")
 			(effects
 				(font
 					(size 1 1)
@@ -14493,6 +15132,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bc05d8b6-db16-4494-95a5-6e9128f3cede")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a7e7a1")
 		(sheetname "/Power/")
@@ -14751,6 +15404,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ca76c1d3-7089-4852-8a5f-5d8425dc4d60")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a64ee0")
 		(sheetname "/Power/")
@@ -14989,6 +15656,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "166d9aa4-bbc2-4598-9587-e565e1d96fa1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7544b5fd-4bfa-4e98-b147-c6bce872fc5d")
 			(effects
 				(font
 					(size 1 1)
@@ -15243,6 +15924,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e8e979a-0c38-4087-95cd-fa2e87e34a5c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2/00000000-0000-0000-0000-000061c6f871")
 		(sheetname "/Power/sheet61A580CB/")
@@ -15481,6 +16176,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "019ebad6-aee2-4744-a67b-8d6d7270977e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "aed114a7-d90e-4aea-b52d-d40d96b61209")
 			(effects
 				(font
 					(size 1 1)
@@ -15735,6 +16444,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b09ac856-72f8-4c57-ad32-8344075919cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061a4e336")
 		(sheetname "/Power/sheet61A57DC9/")
@@ -15890,7 +16613,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "3mR"
+		(property "Value" "33mR"
 			(at 0 -2.62 180)
 			(layer "B.Fab")
 			(uuid "cbdb372c-3cc5-4855-9ec6-7942f3e9c052")
@@ -15915,7 +16638,7 @@
 				)
 			)
 		)
-		(property "Description" "3W 3mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "3mR for the Power"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15941,12 +16664,26 @@
 				(justify mirror)
 			)
 		)
-		(property "JLC" "C5375459"
+		(property "JLC" "C2903495"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "36077a43-366c-4058-86d1-8b9fdfb300a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" "C5375459"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "18a7387e-e1ea-481e-804f-9510d197bd9e")
 			(effects
 				(font
 					(size 1 1)
@@ -16201,6 +16938,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7e2a0a8c-00fd-45c3-ac38-485d3a6636b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061a51593")
 		(sheetname "/Power/sheet61A57DC9/")
@@ -16439,6 +17190,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "89dfaaf8-42f8-48e5-8448-aed9612e908c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0230f671-38d1-43d7-98b3-d2a2e1b5e699")
 			(effects
 				(font
 					(size 1 1)
@@ -16693,6 +17458,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e97fac29-38c4-4a2b-89c9-953cf07609ab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2/00000000-0000-0000-0000-000061a4e336")
 		(sheetname "/Power/sheet61A580CB/")
@@ -16848,7 +17627,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "3mR"
+		(property "Value" "33mR"
 			(at 0 -2.62 180)
 			(layer "B.Fab")
 			(uuid "a47ff00b-d056-4e27-bf3a-835c8b5f884e")
@@ -16873,7 +17652,7 @@
 				)
 			)
 		)
-		(property "Description" "3W 3mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "3mR for the Power"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16899,12 +17678,26 @@
 				(justify mirror)
 			)
 		)
-		(property "JLC" "C5375459"
+		(property "JLC" "C2903495"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ecf5b202-712f-49f4-bd6a-ea10f491156e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" "C5375459"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5a9816a7-c08b-41c1-a530-5900073a1ce9")
 			(effects
 				(font
 					(size 1 1)
@@ -17162,6 +17955,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1d36c0b5-09a4-4ee5-a377-f7f0199c6280")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b0324e")
 		(sheetname "/")
@@ -17357,6 +18164,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "615a1661-e568-4cba-b843-eeef0ed89a27")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cf4b98b0-0f63-4fb1-95aa-4eafe5320b79")
 			(effects
 				(font
 					(size 1 1)
@@ -17568,6 +18389,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fedfa854-f5ca-4810-aa8e-d5a5ea4c744f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b0752a")
 		(sheetname "/")
@@ -17763,6 +18598,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c03fd4d5-5657-4623-b72e-839a4d8595cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1851002c-9372-4e37-b896-2c7f1821a8d3")
 			(effects
 				(font
 					(size 1 1)
@@ -18029,6 +18878,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3478e97e-91c1-43eb-b4ac-a1c15dc1d233")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061a4e336")
 		(sheetname "/Power/MOSFET/")
@@ -18184,7 +19047,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "3mR"
+		(property "Value" "33mR"
 			(at 0 -2.62 180)
 			(layer "B.Fab")
 			(uuid "533e1f53-e01a-40c9-ae70-fea07ee3a1b6")
@@ -18209,7 +19072,7 @@
 				)
 			)
 		)
-		(property "Description" "3W 3mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "3mR for the Power"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18235,12 +19098,26 @@
 				(justify mirror)
 			)
 		)
-		(property "JLC" "C5375459"
+		(property "JLC" "C2903495"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9ebd3a35-d4a1-43de-a279-d69345dc57dd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" "C5375459"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5d12807a-c9dc-4de5-9fc8-f6683d0f47c8")
 			(effects
 				(font
 					(size 1 1)
@@ -18508,6 +19385,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "17caf5a8-0338-411b-a7a8-6fc1d4f74889")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a70190")
 		(sheetname "/Power/")
@@ -18767,6 +19658,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c5ddcf3f-893a-4add-b590-8b4067f96e9b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a793ee")
 		(sheetname "/Power/")
@@ -18987,6 +19892,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fdc81c18-9174-4c71-86b4-497b931d4927")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061b9c633")
 		(sheetname "/")
@@ -19199,6 +20118,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "77bb0550-668d-4d29-89f1-77b6dfa6dac3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c44ef7de-eaa5-4096-9742-c3075c45f607")
 			(effects
 				(font
 					(size 1 1)
@@ -19453,6 +20386,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1af9e6f0-d1cb-4240-8314-4dd43f413082")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b9c5f0")
 		(sheetname "/")
@@ -19665,6 +20612,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3f46b549-a3d7-4442-9920-97bbd6a760ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f789209d-034a-44b5-86d5-b50cbfb8679c")
 			(effects
 				(font
 					(size 1 1)
@@ -19919,6 +20880,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "503aa7d4-6c29-4461-9e0c-9b6e0f5ac0aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b9c5ea")
 		(sheetname "/")
@@ -20157,6 +21132,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1ea32afb-c244-4243-8608-9943bef0d90d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d5ae2ed5-2965-4722-980f-e3ab102efb8f")
 			(effects
 				(font
 					(size 1 1)
@@ -20411,6 +21400,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dc6600fc-7398-4bc5-8747-7a56ac84461e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b9c5e4")
 		(sheetname "/")
@@ -20657,6 +21660,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cf4ea5a2-9313-4b5c-98c3-4e6066d8a1e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061b9c5f6")
 		(sheetname "/")
@@ -20870,6 +21887,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "10e757c3-2f8e-4e14-944b-97b811d7564d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "58415da5-8a6a-44da-ab7b-246b1970f54c")
 			(effects
 				(font
 					(size 1 1)
@@ -21103,6 +22134,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9cbd4e72-075d-4098-aade-44aa5aa12e81")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f0af2916-92bc-4781-a647-478326c3435d")
 			(effects
 				(font
 					(size 1 1)
@@ -21348,6 +22393,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8670d0b7-94e9-4757-b672-0fcbff041c5b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2d270972-d6c2-46f5-9887-6fbd3fcb917f")
 			(effects
 				(font
 					(size 1 1)
@@ -21676,6 +22735,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6081616c-97de-4c9e-8bd3-47c5237b49c6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000061dbf697")
 		(sheetname "/")
@@ -21987,6 +23060,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "72b92718-f100-4aa9-ac0e-1d3a15b0f29d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4b0d8")
 		(sheetname "/Power/")
@@ -22225,6 +23312,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c9076b03-0d70-4f2d-ba04-c0da1e651844")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fe70d748-4d20-48f1-af44-bb068a2c3ff9")
 			(effects
 				(font
 					(size 1 1)
@@ -22479,6 +23580,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b40324fa-0f2d-41b4-a842-b9b09b734ee1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a4bb26")
 		(sheetname "/Power/")
@@ -22716,6 +23831,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c73f23cb-baf6-4667-8919-e491d40ed006")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b0eab62f-eaf6-42de-af89-27f94661f7e6")
 			(effects
 				(font
 					(size 1 1)
@@ -25886,6 +27015,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "05ab0d0c-482b-477e-af46-a7b871e358b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061a4c174")
 		(sheetname "/Power/MOSFET/")
@@ -26124,6 +27267,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5821af2c-fc24-4847-9d70-1f3803c79ae6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3239e170-a0c1-4b3f-8ec2-727f790794b6")
 			(effects
 				(font
 					(size 1 1)
@@ -26378,6 +27535,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5ca53c05-6440-4d30-8b56-756d8cc65ed3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2/00000000-0000-0000-0000-000061a51593")
 		(sheetname "/Power/sheet61A580CB/")
@@ -26603,6 +27774,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f1b49c51-c787-4068-8797-e3420063bfbc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b5ca1713-5898-41ab-9195-6b21a88d6bf9")
 			(effects
 				(font
 					(size 1 1)
@@ -26934,6 +28119,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "dd9b1628-014f-4a2b-9381-e0bdc65e13ff")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4bf89245-043f-47bf-9492-2fb47505d911")
 			(effects
 				(font
 					(size 1 1)
@@ -27275,6 +28474,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b6d2e17d-b81f-494e-8c94-177e2a2f4c36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061c6f871")
 		(sheetname "/Power/MOSFET/")
@@ -27536,6 +28749,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5a527fcf-80b7-4631-85a9-2d1ab4374c25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a6a715")
 		(sheetname "/Power/")
@@ -27786,6 +29013,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b4965edd-774e-403f-80c1-882303ce15fb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3272c9ff-aa37-4ad8-a84f-6c2e970f22e2")
 			(effects
 				(font
 					(size 1 1)
@@ -28081,6 +29322,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a0cd1234-b42a-4aab-9e52-db475e9cc8ab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1faf4d08-971e-4d5e-a90a-3881f8dd3999")
 			(effects
 				(font
 					(size 1 1)
@@ -28430,6 +29685,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e48f87c2-0ccf-4546-8be0-a30b7b0d0cf1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061e36173")
 		(sheetname "/")
@@ -28688,6 +29957,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5bd04b3f-eca1-4c1d-afa2-ef5ee8d7678d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "*NTC* *Thermistor* PIN?ARRAY* bornier* *Terminal?Block* R_*")
 		(path "/00000000-0000-0000-0000-000061e35322")
 		(sheetname "/")
@@ -28925,6 +30208,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "74da699c-4ff4-40b3-bba7-cce194a0bf45")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "90dd9f7c-0dc9-4eab-8ec2-7e7af0d0ce94")
 			(effects
 				(font
 					(size 1 1)
@@ -29276,6 +30573,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "abd59e08-e1d0-486b-8764-758ed1aa5510")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061f93cda")
 		(sheetname "/Power/")
@@ -29611,6 +30922,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2e2c2d87-3044-4345-a2aa-d658afc9c54e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d660bf85-6a6b-4357-b8a3-1297724b47c9")
 			(effects
 				(font
 					(size 1 1)
@@ -29960,6 +31285,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1df72798-c79b-4baf-8c8d-99077f4e1322")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0/00000000-0000-0000-0000-000061f3dee7")
 		(sheetname "/Power/sheet61A57DC9/")
@@ -30301,6 +31640,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a1c1fdd5-a4fd-4cf7-afe9-9e1532412794")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce/00000000-0000-0000-0000-000061f3dee7")
 		(sheetname "/Power/MOSFET/")
@@ -30630,6 +31983,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a1b3a480-57c6-4d09-89e2-9046cef059d3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061db55c6")
 		(sheetname "/")
@@ -30841,6 +32208,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b61038e2-9e41-46f5-b8cf-9f1510d88ee4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6a5be50e-f654-44d3-962e-0156427e6c9f")
 			(effects
 				(font
 					(size 1 1)
@@ -31068,6 +32449,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ea07949e-8333-4323-9376-a8b72f60c9e2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/5f944d54-2594-42c4-97d3-de0671cbabfd")
 		(sheetname "/Power/")
@@ -31268,6 +32663,34 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC" "C53260788"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bad68838-a8a9-425d-bf17-a9565377c5e3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b07292d3-f8d5-4c50-b238-ec71123c19ab")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
@@ -31598,6 +33021,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d92fb4d7-52dc-4eca-892f-c734efa4fcc9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000061e7227a/57a28517-b316-4180-983e-fc9549173f62")
 		(sheetname "/VREG/")
@@ -31843,6 +33280,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fe045747-784a-46ad-b166-dfaa565665d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/00000000-0000-0000-0000-000061e7227a/a85cad86-0f00-4813-91ea-bc9509db09ba")
 		(sheetname "/VREG/")
 		(sheetfile "VREG.kicad_sch")
@@ -32024,6 +33475,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3ace30d2-7143-4cb7-8289-51b24092eef4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3a786d08-f2ac-4ab9-a81b-336d14cdda5f")
 			(effects
 				(font
 					(size 1 1)
@@ -32292,6 +33757,20 @@
 				(justify mirror)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2c5c33f6-24bc-4834-a567-babe9caacc02")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061a3f4e8/13e5b686-8f59-49a2-8b70-80b9e49543eb")
 		(sheetname "/Power/")
@@ -32445,6 +33924,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d3dbfe50-a3af-4d65-873b-fd42cc217f72")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5ac8cc94-762c-48e4-ab28-227ef61f0c84")
 			(effects
 				(font
 					(size 1 1)
@@ -32705,6 +34198,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "42bd5a87-34b5-4bb4-82a2-f23cf016224d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f996aedf-5c29-4706-af79-f6159649820d")
 			(effects
 				(font
 					(size 1 1)

@@ -636,6 +636,12 @@
         },
         {
           "group_by": false,
+          "label": "JLC_POWER",
+          "name": "JLC_POWER",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Part Number",
           "name": "Part Number",
           "show": true

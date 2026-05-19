@@ -1684,7 +1684,16 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
+			(at 173.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" "C501503"
 			(at 173.99 71.12 0)
 			(effects
 				(font
@@ -1792,7 +1801,16 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C501503"
+		(property "JLC" "C919592"
+			(at 173.99 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" "C501503"
 			(at 173.99 96.52 0)
 			(effects
 				(font
@@ -1850,7 +1868,7 @@
 				)
 			)
 		)
-		(property "Value" "3mR"
+		(property "Value" "33mR"
 			(at 195.58 80.8736 90)
 			(effects
 				(font
@@ -1876,7 +1894,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "3W 3mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "3mR for the Power"
 			(at 195.58 83.82 0)
 			(effects
 				(font
@@ -1894,8 +1912,17 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" "C5375459"
+		(property "JLC" "C2903495"
 			(at 195.58 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" "C5375459"
+			(at 195.58 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2014,6 +2041,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 153.67 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8a749989-39f5-4e56-b3e2-05dc175fafdd")
 		)
@@ -2118,6 +2154,15 @@
 		)
 		(property "JLC" "C22939"
 			(at 153.67 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
+			(at 153.67 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2230,6 +2275,15 @@
 			)
 		)
 		(property "JLC" "C22859"
+			(at 205.74 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
 			(at 205.74 101.6 0)
 			(effects
 				(font
@@ -2424,6 +2478,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 190.5 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "15a7af71-f2d0-48f6-95d1-98755947f825")
 		)
@@ -2610,6 +2673,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC_POWER" ""
+			(at 218.44 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1d40d765-c173-4b16-9633-48499e40783b")
 		)
@@ -2777,6 +2849,15 @@
 			)
 		)
 		(property "JLC" "C124362"
+			(at 236.22 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC_POWER" ""
 			(at 236.22 83.82 0)
 			(effects
 				(font
