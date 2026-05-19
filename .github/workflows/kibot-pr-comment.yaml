@@ -32,6 +32,14 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path: diffs
 
+      - name: Download kibot outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: kibot-outputs
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: kibot-outputs
+
       - name: Read PR number
         id: pr
         run: |
@@ -62,10 +70,13 @@ jobs:
             git rm -rf . || true
           fi
 
-          mkdir -p "ci-diffs/pr-${PR}/sch" "ci-diffs/pr-${PR}/pcb" "ci-diffs/pr-${PR}/pcb_no_fills"
-          cp "${{ github.workspace }}/diffs/sch/"*.png        "ci-diffs/pr-${PR}/sch/"        2>/dev/null || true
-          cp "${{ github.workspace }}/diffs/pcb/"*.png        "ci-diffs/pr-${PR}/pcb/"        2>/dev/null || true
+          mkdir -p "ci-diffs/pr-${PR}/sch" "ci-diffs/pr-${PR}/pcb" "ci-diffs/pr-${PR}/pcb_no_fills" "ci-diffs/pr-${PR}/renders"
+          cp "${{ github.workspace }}/diffs/sch/"*.png          "ci-diffs/pr-${PR}/sch/"         2>/dev/null || true
+          cp "${{ github.workspace }}/diffs/pcb/"*.png          "ci-diffs/pr-${PR}/pcb/"         2>/dev/null || true
           cp "${{ github.workspace }}/diffs/pcb_no_fills/"*.png "ci-diffs/pr-${PR}/pcb_no_fills/" 2>/dev/null || true
+          cp "${{ github.workspace }}/kibot-outputs/xESC2-3D_top.png"  "ci-diffs/pr-${PR}/renders/" 2>/dev/null || true
+          cp "${{ github.workspace }}/kibot-outputs/xESC2-top.svg"     "ci-diffs/pr-${PR}/renders/" 2>/dev/null || true
+          cp "${{ github.workspace }}/kibot-outputs/xESC2-bottom.svg"  "ci-diffs/pr-${PR}/renders/" 2>/dev/null || true
 
           git add "ci-diffs/pr-${PR}/"
           git diff --cached --quiet || git commit -m "CI: diff images for PR ${PR}"
@@ -75,17 +86,22 @@ jobs:
         uses: actions/github-script@v7
         env:
           DIFFS_PATH: ${{ github.workspace }}/diffs
+          RENDERS_PATH: ${{ github.workspace }}/kibot-outputs
           PR_NUMBER: ${{ steps.pr.outputs.number }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
         with:
           script: |
             const fs   = require('fs');
             const path = require('path');
 
-            const prNumber  = parseInt(process.env.PR_NUMBER, 10);
-            const diffsPath = process.env.DIFFS_PATH;
-            const owner     = context.repo.owner;
-            const repo      = context.repo.repo;
-            const baseUrl   = `https://${owner}.github.io/${repo}/ci-diffs/pr-${prNumber}`;
+            const prNumber   = parseInt(process.env.PR_NUMBER, 10);
+            const diffsPath  = process.env.DIFFS_PATH;
+            const rendersPath = process.env.RENDERS_PATH;
+            const runId      = process.env.RUN_ID;
+            const owner      = context.repo.owner;
+            const repo       = context.repo.repo;
+            const baseUrl    = `https://${owner}.github.io/${repo}/ci-diffs/pr-${prNumber}`;
+            const runUrl     = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
 
             function imageList(subdir, title) {
               const dir = path.join(diffsPath, subdir);
@@ -96,6 +112,34 @@ jobs:
               const images = pngs.map(f => `![${f}](${baseUrl}/${subdir}/${encodeURIComponent(f)})`).join('\n\n');
               return `<details>\n<summary>${title}</summary>\n\n${images}\n\n</details>`;
             }
+
+            // Artifact download links
+            let diffsLink   = runUrl;
+            let outputsLink = runUrl;
+            try {
+              const { data: { artifacts } } = await github.rest.actions.listWorkflowRunArtifacts({
+                owner, repo, run_id: parseInt(runId, 10),
+              });
+              const da = artifacts.find(a => a.name === 'kibot-diffs');
+              const oa = artifacts.find(a => a.name === 'kibot-outputs');
+              if (da) diffsLink   = `https://github.com/${owner}/${repo}/actions/runs/${runId}/artifacts/${da.id}`;
+              if (oa) outputsLink = `https://github.com/${owner}/${repo}/actions/runs/${runId}/artifacts/${oa.id}`;
+            } catch (e) {}
+
+            // Renderings section
+            const rendersBase = `${baseUrl}/renders`;
+            const renderLines = [];
+            if (fs.existsSync(path.join(rendersPath, 'xESC2-3D_top.png'))) {
+              renderLines.push(`![3D top](${rendersBase}/xESC2-3D_top.png)`);
+            }
+            const svgLinks = [];
+            for (const [file, label] of [['xESC2-top.svg', 'Top'], ['xESC2-bottom.svg', 'Bottom']]) {
+              if (fs.existsSync(path.join(rendersPath, file))) {
+                svgLinks.push(`[PCB ${label}](${rendersBase}/${file})`);
+              }
+            }
+            if (svgLinks.length) renderLines.push(svgLinks.join(' | '));
+            const rendersSection = renderLines.length ? renderLines.join('\n\n') : '_No renders available._';
 
             let bomSection = '_No BOM changes._';
             try {
@@ -110,6 +154,9 @@ jobs:
               marker,
               '## KiBot Diff vs `main`',
               '',
+              '### Renderings',
+              rendersSection,
+              '',
               '### Schematic diff',
               imageList('sch', 'Show schematic diff'),
               '',
@@ -123,6 +170,10 @@ jobs:
               '',
               '### BOM',
               bomSection,
+              '',
+              '---',
+              '',
+              `📦 [Download diffs](${diffsLink}) | [Download build outputs](${outputsLink})`,
             ].join('\n');
 
             const { data: comments } = await github.rest.issues.listComments({
