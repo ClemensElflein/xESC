@@ -23,6 +23,7 @@ outputs:
     type: kibom
     dir: main-bom
     options:
+      variant: default
       format: CSV
       number: 1
       output: 'bom.%x'

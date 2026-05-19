@@ -30,7 +30,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           mkdir -p diff diff/sch diff/pcb diff/pcb_no_fills
-          find release -name "*.csv" ! -name "*cpl*" | head -1 | xargs -I{} cp {} diff/bom_current.csv
+          find release/default -name "*.csv" ! -name "*cpl*" | head -1 | xargs -I{} cp {} diff/bom_current.csv
           git worktree add main-worktree origin/main
 
       - name: Generate BOM for main branch
