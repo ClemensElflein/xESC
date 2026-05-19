@@ -24,10 +24,10 @@ filters:
     exclude_value: true
   - name: use_power_parts
     type: 'field_rename'
-    comment: 'Rename LCSC_POWER to LCSC so power-variant parts are picked up by JLC assembly'
+    comment: 'Rename JLC_POWER to JLC so power-variant parts are picked up by JLC assembly'
     rename:
-      - field: LCSC_POWER
-        name: LCSC
+      - field: JLC_POWER
+        name: JLC
 
 variants:
   - name: rotated
@@ -41,7 +41,7 @@ variants:
     variant: 'default'
     pre_transform: ['apply_jlc_rotation']
   - name: 'POWER'
-    comment: 'POWER assembly variant — uses LCSC_POWER field for alternate JLC parts'
+    comment: 'POWER assembly variant — uses JLC_POWER field for alternate JLC parts'
     type: kibom
     variant: 'POWER'
     pre_transform: ['apply_jlc_rotation', 'use_power_parts']
@@ -125,26 +125,6 @@ outputs:
         - id: Side
           name: Layer
 
-  - name: 'bom'
-    comment: "BoM with kibom"
-    type: kibom
-    dir: release
-    options:
-      format: CSV
-      number: 1
-      output: '%f_%i_jlc.%x'
-      conf:
-        ref_separator: ','
-        hide_pcb_info: true
-        columns:
-          - field: Value
-            name: Comment
-          - field: References
-            name: Designator
-          - Footprint
-          - field: JLC
-            name: 'LCSC Part #'
-
   - name: 'bom_default'
     comment: "BoM for default assembly variant"
     type: kibom
@@ -163,7 +143,7 @@ outputs:
           - field: References
             name: Designator
           - Footprint
-          - field: LCSC
+          - field: JLC
             name: 'LCSC Part #'
 
   - name: 'bom_power'
@@ -184,7 +164,7 @@ outputs:
           - field: References
             name: Designator
           - Footprint
-          - field: LCSC
+          - field: JLC
             name: 'LCSC Part #'
 
   - name: JLCPCB_gerbers
