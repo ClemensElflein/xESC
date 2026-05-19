@@ -593,6 +593,18 @@
           "show": false
         },
         {
+          "group_by": false,
+          "label": "JLC",
+          "name": "JLC",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "JLC_POWER",
+          "name": "JLC_POWER",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
@@ -626,18 +638,6 @@
           "group_by": false,
           "label": "Digikey",
           "name": "Digikey",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "JLC",
-          "name": "JLC",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "JLC_POWER",
-          "name": "JLC_POWER",
           "show": true
         },
         {
