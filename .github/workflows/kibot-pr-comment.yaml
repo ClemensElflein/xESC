@@ -8,6 +8,7 @@ on:
 permissions:
   pull-requests: write
   issues: write
+  contents: write
 
 jobs:
   comment:
@@ -31,101 +32,114 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path: diffs
 
+      - name: Read PR number
+        id: pr
+        run: |
+          PR_NUM=$(cat pr-meta/pr-number.txt | tr -d '[:space:]')
+          [[ "$PR_NUM" =~ ^[0-9]+$ ]] || exit 1
+          echo "number=$PR_NUM" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          path: repo
+
+      - name: Push diff images to gh-pages
+        run: |
+          cd repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          PR="${{ steps.pr.outputs.number }}"
+
+          if git ls-remote --exit-code --heads origin gh-pages > /dev/null 2>&1; then
+            git fetch origin gh-pages
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . || true
+          fi
+
+          mkdir -p "ci-diffs/pr-${PR}/sch" "ci-diffs/pr-${PR}/pcb" "ci-diffs/pr-${PR}/pcb_no_fills"
+          cp "${{ github.workspace }}/diffs/sch/"*.png        "ci-diffs/pr-${PR}/sch/"        2>/dev/null || true
+          cp "${{ github.workspace }}/diffs/pcb/"*.png        "ci-diffs/pr-${PR}/pcb/"        2>/dev/null || true
+          cp "${{ github.workspace }}/diffs/pcb_no_fills/"*.png "ci-diffs/pr-${PR}/pcb_no_fills/" 2>/dev/null || true
+
+          git add "ci-diffs/pr-${PR}/"
+          git diff --cached --quiet || git commit -m "CI: diff images for PR ${PR}"
+          git push origin gh-pages
+
       - name: Post diff comment on PR
         uses: actions/github-script@v7
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIFFS_PATH: ${{ github.workspace }}/diffs
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
         with:
           script: |
-            const fs = require('fs');
+            const fs   = require('fs');
             const path = require('path');
 
-            const prNumber = parseInt(fs.readFileSync('pr-meta/pr-number.txt', 'utf8').trim(), 10);
-            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${{ github.event.workflow_run.id }}`;
-            const uploadsUrl = `https://uploads.github.com/repos/${context.repo.owner}/${context.repo.repo}/issues/${prNumber}/attachments`;
+            const prNumber  = parseInt(process.env.PR_NUMBER, 10);
+            const diffsPath = process.env.DIFFS_PATH;
+            const owner     = context.repo.owner;
+            const repo      = context.repo.repo;
+            const baseUrl   = `https://${owner}.github.io/${repo}/ci-diffs/pr-${prNumber}`;
 
-            // Upload a PNG and return its hosted URL, or null on failure.
-            async function uploadImage(filePath) {
-              try {
-                const data = fs.readFileSync(filePath);
-                const res = await fetch(uploadsUrl, {
-                  method: 'POST',
-                  headers: {
-                    Authorization: `token ${process.env.GH_TOKEN}`,
-                    'Content-Type': 'image/png',
-                  },
-                  body: data,
-                });
-                if (!res.ok) return null;
-                return (await res.json()).url;
-              } catch (e) {
-                return null;
-              }
+            function imageList(subdir) {
+              const dir = path.join(diffsPath, subdir);
+              if (!fs.existsSync(dir)) return '_No changes._';
+              const pngs = fs.readdirSync(dir).filter(f => f.endsWith('.png')).sort();
+              if (pngs.length === 0) return '_No changes._';
+              return pngs.map(f => `![${f}](${baseUrl}/${subdir}/${encodeURIComponent(f)})`).join('\n\n');
             }
 
-            // Upload all PNGs and sort into three buckets based on output name in filename.
-            const pngFiles = fs.existsSync('diffs')
-              ? fs.readdirSync('diffs').filter(f => f.endsWith('.png')).sort()
-              : [];
-
-            const schUrls = [], pcbUrls = [], pcbNoZonesUrls = [];
-            for (const file of pngFiles) {
-              const url = await uploadImage(path.join('diffs', file));
-              if (!url) continue;
-              const lf = file.toLowerCase();
-              if      (lf.includes('_sch'))      schUrls.push(url);
-              else if (lf.includes('no_zones'))  pcbNoZonesUrls.push(url);
-              else                               pcbUrls.push(url);
-            }
-
-            const imgMd = urls => urls.map(u => `![diff](${u})`).join('\n');
-
-            const sections = [];
-            if (schUrls.length)        sections.push(`### Schematic\n${imgMd(schUrls)}`);
-            if (pcbUrls.length)        sections.push(`### PCB\n${imgMd(pcbUrls)}`);
-            if (pcbNoZonesUrls.length) sections.push(`### PCB (without copper fills)\n${imgMd(pcbNoZonesUrls)}`);
-
-            const visualSection = sections.length
-              ? sections.join('\n\n')
-              : `_No visual diffs detected — [view raw artifacts](${runUrl})_`;
-
-            // BOM diff
             let bomSection = '_No BOM changes._';
             try {
-              const bomDiff = fs.readFileSync('diffs/bom_diff.txt', 'utf8').trim();
+              const bomDiff = fs.readFileSync(path.join(diffsPath, 'bom_diff.txt'), 'utf8').trim();
               if (bomDiff) {
                 bomSection = `<details>\n<summary>Show BOM diff</summary>\n\n\`\`\`diff\n${bomDiff}\n\`\`\`\n</details>`;
               }
             } catch (e) {}
 
             const marker = '<!-- kibot-diff-comment -->';
-            const body = `${marker}
-## KiBot Diff vs \`main\`
-
-${visualSection}
-
----
-
-### BOM
-${bomSection}`;
+            const body = [
+              marker,
+              '## KiBot Diff vs `main`',
+              '',
+              '### Schematic diff',
+              imageList('sch'),
+              '',
+              '### PCB diff (with copper fills)',
+              imageList('pcb'),
+              '',
+              '### PCB diff (without copper fills)',
+              imageList('pcb_no_fills'),
+              '',
+              '---',
+              '',
+              '### BOM',
+              bomSection,
+            ].join('\n');
 
             const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner,
+              repo,
               issue_number: prNumber,
             });
             const existing = comments.find(c => c.body.includes(marker));
             if (existing) {
               await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
+                owner,
+                repo,
                 comment_id: existing.id,
                 body,
               });
             } else {
               await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
+                owner,
+                repo,
                 issue_number: prNumber,
                 body,
               });

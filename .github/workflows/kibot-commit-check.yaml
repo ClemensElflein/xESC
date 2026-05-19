@@ -29,7 +29,7 @@ jobs:
       - name: Prepare BOM diff
         if: github.event_name == 'pull_request'
         run: |
-          mkdir -p diff
+          mkdir -p diff diff/sch diff/pcb diff/pcb_no_fills
           find release -name "*.csv" ! -name "*cpl*" | head -1 | xargs -I{} cp {} diff/bom_current.csv
           git worktree add main-worktree origin/main
 
@@ -96,8 +96,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           sudo apt-get install -y poppler-utils -qq
-          shopt -s nullglob
-          for pdf in diff/*.pdf; do
+          find diff -name "*.pdf" | while IFS= read -r pdf; do
             pdftoppm -r 150 -png "$pdf" "${pdf%.pdf}"
           done
 
