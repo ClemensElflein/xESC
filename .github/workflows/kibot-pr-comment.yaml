@@ -87,16 +87,11 @@ jobs:
             const repo      = context.repo.repo;
             const baseUrl   = `https://${owner}.github.io/${repo}/ci-diffs/pr-${prNumber}`;
 
-            function isCopperSilkEdge(f) {
-              return /_Cu\.|Silk|Edge/i.test(f);
-            }
-
-            function imageList(subdir, title, filterFn) {
+            function imageList(subdir, title) {
               const dir = path.join(diffsPath, subdir);
               const noChanges = `<details>\n<summary>${title}</summary>\n\n_No changes._\n\n</details>`;
               if (!fs.existsSync(dir)) return noChanges;
-              let pngs = fs.readdirSync(dir).filter(f => f.endsWith('.png')).sort();
-              if (filterFn) pngs = pngs.filter(filterFn);
+              const pngs = fs.readdirSync(dir).filter(f => f.endsWith('.png')).sort();
               if (pngs.length === 0) return noChanges;
               const images = pngs.map(f => `![${f}](${baseUrl}/${subdir}/${encodeURIComponent(f)})`).join('\n\n');
               return `<details>\n<summary>${title}</summary>\n\n${images}\n\n</details>`;
@@ -119,10 +114,10 @@ jobs:
               imageList('sch', 'Show schematic diff'),
               '',
               '### PCB diff (with copper fills)',
-              imageList('pcb', 'Show PCB diff (with copper fills)', isCopperSilkEdge),
+              imageList('pcb', 'Show PCB diff (with copper fills)'),
               '',
               '### PCB diff (without copper fills)',
-              imageList('pcb_no_fills', 'Show PCB diff (without copper fills)', isCopperSilkEdge),
+              imageList('pcb_no_fills', 'Show PCB diff (without copper fills)'),
               '',
               '---',
               '',
