@@ -63,42 +63,51 @@ jobs:
               }
             }
 
-            // Upload all PNGs and group into schematic / PCB sections.
+            // Upload all PNGs and sort into three buckets based on output name in filename.
             const pngFiles = fs.existsSync('diffs')
               ? fs.readdirSync('diffs').filter(f => f.endsWith('.png')).sort()
               : [];
 
-            let schSection = '';
-            let pcbSection = '';
+            const schUrls = [], pcbUrls = [], pcbNoZonesUrls = [];
             for (const file of pngFiles) {
               const url = await uploadImage(path.join('diffs', file));
               if (!url) continue;
-              const md = `\n![${file}](${url})`;
-              if (file.toLowerCase().includes('sch')) schSection += md;
-              else                                     pcbSection += md;
+              const lf = file.toLowerCase();
+              if      (lf.includes('_sch'))      schUrls.push(url);
+              else if (lf.includes('no_zones'))  pcbNoZonesUrls.push(url);
+              else                               pcbUrls.push(url);
             }
 
-            let imageSection = '';
-            if (schSection) imageSection += `\n\n### Schematic${schSection}`;
-            if (pcbSection) imageSection += `\n\n### PCB${pcbSection}`;
-            if (!imageSection) imageSection = `\n\nNo visual diffs — see **[artifacts](${runUrl})** if the diff generation failed.`;
+            const imgMd = urls => urls.map(u => `![diff](${u})`).join('\n');
+
+            const sections = [];
+            if (schUrls.length)        sections.push(`### Schematic\n${imgMd(schUrls)}`);
+            if (pcbUrls.length)        sections.push(`### PCB\n${imgMd(pcbUrls)}`);
+            if (pcbNoZonesUrls.length) sections.push(`### PCB (without copper fills)\n${imgMd(pcbNoZonesUrls)}`);
+
+            const visualSection = sections.length
+              ? sections.join('\n\n')
+              : `_No visual diffs detected — [view raw artifacts](${runUrl})_`;
 
             // BOM diff
-            let bomSection = '\n\n**BOM:** no changes vs `main`.';
+            let bomSection = '_No BOM changes._';
             try {
               const bomDiff = fs.readFileSync('diffs/bom_diff.txt', 'utf8').trim();
               if (bomDiff) {
-                bomSection = `\n\n<details>\n<summary>BOM diff vs <code>main</code></summary>\n\n\`\`\`diff\n${bomDiff}\n\`\`\`\n</details>`;
+                bomSection = `<details>\n<summary>Show BOM diff</summary>\n\n\`\`\`diff\n${bomDiff}\n\`\`\`\n</details>`;
               }
             } catch (e) {}
 
             const marker = '<!-- kibot-diff-comment -->';
-            const body = [
-              marker,
-              '## KiBot Diff vs `main`',
-              imageSection,
-              bomSection,
-            ].join('\n');
+            const body = `${marker}
+## KiBot Diff vs \`main\`
+
+${visualSection}
+
+---
+
+### BOM
+${bomSection}`;
 
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,

@@ -23,3 +23,15 @@ outputs:
       new_type: git
       pcb: true
       only_different: true
+
+  - name: 'diff_pcb_no_zones'
+    comment: 'PCB diff vs main (zones hidden)'
+    type: 'diff'
+    dir: 'diff'
+    options:
+      old: 'origin/main'
+      old_type: git
+      new_type: git
+      pcb: true
+      only_different: true
+      zones: 'none'
