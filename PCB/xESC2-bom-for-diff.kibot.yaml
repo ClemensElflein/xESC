@@ -1,0 +1,39 @@
+kibot:
+  version: 1
+
+import:
+  - file: .kibot/jlcpcb_rotation_filter.yaml
+
+preflight:
+  run_erc: false
+  run_drc: false
+  update_xml: true
+
+filters:
+  - name: anything_in_Config
+    type: 'generic'
+    comment: 'Remove components with something in config'
+    keys: ["do not place", "DNP", 'bench_test']
+    exclude_config: true
+    exclude_value: true
+
+outputs:
+  - name: 'bom'
+    comment: "BoM for diff comparison"
+    type: kibom
+    dir: main-bom
+    options:
+      format: CSV
+      number: 1
+      output: 'bom.%x'
+      conf:
+        ref_separator: ','
+        hide_pcb_info: true
+        columns:
+          - field: Value
+            name: Comment
+          - field: References
+            name: Designator
+          - Footprint
+          - field: JLC
+            name: 'LCSC Part #'
