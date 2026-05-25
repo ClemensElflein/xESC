@@ -22,6 +22,12 @@ filters:
     keys: ["do not place", "DNP", 'bench_test']
     exclude_config: true
     exclude_value: true
+  - name: use_power_parts
+    type: 'field_rename'
+    comment: 'Rename JLC_POWER to JLC so power-variant parts are picked up by JLC assembly'
+    rename:
+      - field: JLC_POWER
+        name: JLC
 
 variants:
   - name: rotated
@@ -29,6 +35,16 @@ variants:
     type: kibom
     variant: rotated
     pre_transform: apply_jlc_rotation
+  - name: 'default'
+    comment: 'Default assembly variant'
+    type: kibom
+    variant: 'default'
+    pre_transform: ['apply_jlc_rotation']
+  - name: 'POWER'
+    comment: 'POWER assembly variant — uses JLC_POWER field for alternate JLC parts'
+    type: kibom
+    variant: 'POWER'
+    pre_transform: ['apply_jlc_rotation', 'use_power_parts']
 
 outputs:
   - name: 'position'
@@ -57,11 +73,85 @@ outputs:
         - id: Side
           name: Layer
 
-  - name: 'bom'
-    comment: "BoM with kibom"
-    type: kibom
-    dir: release
+  - name: 'position_default'
+    comment: "Pick and place file for default assembly variant"
+    type: position
+    dir: release/default
     options:
+      variant: default
+      output: '%f_cpl_jlc.%x'
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: false
+      use_aux_axis_as_origin: false
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: 'position_power'
+    comment: "Pick and place file for POWER assembly variant"
+    type: position
+    dir: release/POWER
+    options:
+      variant: POWER
+      output: '%f_cpl_jlc.%x'
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: false
+      use_aux_axis_as_origin: false
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: 'bom_default'
+    comment: "BoM for default assembly variant"
+    type: kibom
+    dir: release/default
+    options:
+      variant: default
+      format: CSV
+      number: 1
+      output: '%f_%i_jlc.%x'
+      conf:
+        ref_separator: ','
+        hide_pcb_info: true
+        columns:
+          - field: Value
+            name: Comment
+          - field: References
+            name: Designator
+          - Footprint
+          - field: JLC
+            name: 'LCSC Part #'
+
+  - name: 'bom_power'
+    comment: "BoM for POWER assembly variant"
+    type: kibom
+    dir: release/POWER
+    options:
+      variant: POWER
       format: CSV
       number: 1
       output: '%f_%i_jlc.%x'
