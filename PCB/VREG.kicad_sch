@@ -2345,6 +2345,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C20")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2536,6 +2539,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C21")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2648,7 +2654,7 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
+		(property "FT Rotation Offset" "90"
 			(at 190.5 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -2679,6 +2685,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "U2")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2783,6 +2792,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "R42")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2930,6 +2942,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C17")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3034,6 +3049,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C19")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3138,6 +3156,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "R43")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3653,6 +3674,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "L1")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3833,7 +3857,7 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
+		(property "FT Rotation Offset" "180"
 			(at 72.39 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -3867,6 +3891,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "U3")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4059,6 +4086,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C16")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4161,6 +4191,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061e7227a"
 					(reference "C18")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)

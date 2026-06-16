@@ -2070,7 +2070,7 @@
 				)
 			)
 		)
-		(property "Value" "33mR"
+		(property "Value" "25mR"
 			(at 195.58 80.8736 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2102,7 +2102,7 @@
 				)
 			)
 		)
-		(property "Description" "33mΩ 3W Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
+		(property "Description" "25mΩ 3W Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS"
 			(at 195.58 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2113,7 +2113,7 @@
 				)
 			)
 		)
-		(property "Part Number" "HoJLR2512-3W-33mR-1%"
+		(property "Part Number" "HoYLR2512-3W-25mR-1%"
 			(at 195.58 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2124,7 +2124,7 @@
 				)
 			)
 		)
-		(property "JLC" "C2903495"
+		(property "JLC" "C5375468"
 			(at 195.58 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2341,14 +2341,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "R1")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "R5")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "R9")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2483,14 +2492,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "R2")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "R6")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "R10")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2627,14 +2645,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "R4")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "R8")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "R12")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -2856,14 +2883,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "C1")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "C2")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "C3")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3085,14 +3121,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "C24")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "C25")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "C26")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3307,14 +3352,23 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a3d6ce"
 					(reference "J6")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a57dd0"
 					(reference "J7")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061a3f4e8/00000000-0000-0000-0000-000061a580d2"
 					(reference "J8")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)

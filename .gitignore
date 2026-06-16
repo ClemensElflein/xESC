@@ -28,6 +28,6 @@ fp-info-cache
 PCB/.kibot_3d_model_cache
 PCB/xESC2.kicad_pro-bak
 PCB/#auto_saved_files#
-PCB/~xESC2.kicad_pcb.lck
-PCB/~xESC2.kicad_sch.lck
-PCB/production/
+PCB/*.lck
+PCB/production-*/
+PCB/fabrication-toolkit-options.json

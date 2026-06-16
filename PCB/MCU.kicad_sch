@@ -1948,6 +1948,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "pull-down forces valid OTP"
+		(exclude_from_sim no)
+		(at 55.88 84.328 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "33db79b9-9b2f-4c8e-8ab6-2b76a69f6fa3")
+	)
 	(text "Place Near VDD Pins"
 		(exclude_from_sim no)
 		(at 217.17 53.34 0)
@@ -2143,10 +2153,6 @@
 	(no_connect
 		(at 102.87 82.55)
 		(uuid "a96a5c48-76ec-4131-9943-c00793e26d1a")
-	)
-	(no_connect
-		(at 67.31 82.55)
-		(uuid "b5f8a962-6395-475e-a632-f26449ff4189")
 	)
 	(no_connect
 		(at 67.31 123.19)
@@ -2936,6 +2942,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 82.55) (xy 67.31 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d952f3ec-00db-4a00-961d-90a49182b0f1")
+	)
+	(wire
+		(pts
 			(xy 218.44 30.48) (xy 228.6 30.48)
 		)
 		(stroke
@@ -2943,6 +2959,16 @@
 			(type default)
 		)
 		(uuid "da6095dd-3f0e-429a-b867-640997dd5f42")
+	)
+	(wire
+		(pts
+			(xy 41.91 85.09) (xy 41.91 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db70b564-654b-4e23-b0a9-b07b2f2bda35")
 	)
 	(wire
 		(pts
@@ -3063,6 +3089,16 @@
 			(type default)
 		)
 		(uuid "fa5cae6e-3d01-45f5-9f62-a24d139235c3")
+	)
+	(label "V2_ID"
+		(at 52.07 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "abaabe83-750f-4474-b4c1-93144839b3d0")
 	)
 	(hierarchical_label "CAN_TX"
 		(shape output)
@@ -3614,6 +3650,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C36")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3640,7 +3679,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF/16V"
 			(at 219.202 35.5854 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3673,7 +3712,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 218.44 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -3750,6 +3789,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C40")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3776,7 +3818,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF/16V"
 			(at 229.108 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3809,7 +3851,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 228.6 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -3864,6 +3906,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C41")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -3890,7 +3935,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF/16V"
 			(at 241.3 35.0774 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3923,7 +3968,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 240.03 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -3978,6 +4023,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C42")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4004,7 +4052,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF/16V"
 			(at 254.508 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4037,7 +4085,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 255.27 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4114,6 +4162,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C43")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4404,6 +4455,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C35")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4595,6 +4649,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C39")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4709,6 +4766,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C38")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4735,7 +4795,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF/16V"
 			(at 182.626 43.434 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4768,7 +4828,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 181.61 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4845,6 +4905,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C37")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -4904,7 +4967,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
 			(at 39.37 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -4981,6 +5044,13 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C34")
 					(unit 1)
+					(variant
+						(name "Power")
+						(field
+							(name "Description")
+							(value "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS")
+						)
+					)
 				)
 			)
 		)
@@ -5095,6 +5165,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C32")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -5209,6 +5282,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "C33")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -5827,6 +5903,9 @@
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "U4")
 					(unit 1)
+					(variant
+						(name "Power")
+					)
 				)
 			)
 		)
@@ -5968,6 +6047,86 @@
 			(project "xESC2"
 				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
 					(reference "Y1")
+					(unit 1)
+					(variant
+						(name "Power")
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 41.91 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9dd85162-b87b-4bfd-bfbf-eee0de070f8e")
+		(property "Reference" "#PWR0144"
+			(at 41.91 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 42.037 89.4842 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1623eb29-19b4-4a7a-b218-ca6221c12465")
+		)
+		(instances
+			(project "xESC2"
+				(path "/f1d82565-2f45-4436-9c4d-3203604bc842/00000000-0000-0000-0000-000061ac26fb"
+					(reference "#PWR0144")
 					(unit 1)
 				)
 			)
