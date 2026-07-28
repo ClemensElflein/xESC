@@ -77,7 +77,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "missing_courtyard|152056839|91817499|13f1e2aa-c9e7-4b9c-b74f-60c4a1b0a5c4|00000000-0000-0000-0000-000000000000",
+          "text doesnt need courtyard"
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
