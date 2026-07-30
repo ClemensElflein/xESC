@@ -36386,7 +36386,7 @@
 			(justify bottom)
 		)
 	)
-	(gr_text "xESC2 v2.0.1"
+	(gr_text "xESC2 ${git_version}"
 		(at 152.056839 99.567499 0)
 		(layer "F.SilkS")
 		(uuid "695e32f9-b02e-410b-b911-cbdab843ccfd")
