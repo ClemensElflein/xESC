@@ -17,7 +17,7 @@ Component,Comment,Designator,Footprint,LCSC Part #
 16,LED White,D4,LED_0603_1608Metric,C2290
 17,SD103ATW,D6,SOT-363_SC-70-6,C53260788
 18,Conn_01x03_Male,J5,PinHeader_1x03_P2.54mm_Vertical,C2935909
-19,Conn_01x05_Male,J4,PinHeader_1x05_P2.54mm_Vertical,C2935911
+19,Conn_01x05_Male,"J3,J4",PinHeader_1x05_P2.54mm_Vertical,C2935911
 20,Conn_01x06_Male,"J1,J9,J10",PinHeader_1x06_P2.54mm_Vertical,C19190972
 21,Conn_02x02_Counter_Clockwise,"J6,J7,J8",PinHeader_2x02_P2.54mm_Vertical,C124362
 22,USB_B_Micro,J2,USB_Micro,C145795

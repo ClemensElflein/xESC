@@ -42,6 +42,7 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "D6","SD103ATW","SOT-363_SC-70-6",132.6068,-103.8675,180.0000,bottom
 "J1","Conn_01x06_Male","PinHeader_1x06_P2.54mm_Vertical",131.7368,-83.0175,90.0000,bottom
 "J2","USB_B_Micro","USB_Micro",124.2768,-101.3425,270.0000,top
+"J3","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",124.1168,-85.5575,180.0000,bottom
 "J4","Conn_01x05_Male","PinHeader_1x05_P2.54mm_Vertical",124.1168,-108.4175,90.0000,bottom
 "J5","Conn_01x03_Male","PinHeader_1x03_P2.54mm_Vertical",124.1168,-83.0175,90.0000,bottom
 "J6","Conn_02x02_Counter_Clockwise","PinHeader_2x02_P2.54mm_Vertical",167.2968,-104.6075,0.0000,bottom
