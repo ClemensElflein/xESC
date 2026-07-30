@@ -7905,10 +7905,10 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b8d4cb")
 		(property "Reference" "J3"
 			(at 87.8332 30.9626 0)
@@ -8029,6 +8029,8 @@
 					(unit 1)
 					(variant
 						(name "Power")
+						(dnp yes)
+						(in_bom no)
 					)
 				)
 			)

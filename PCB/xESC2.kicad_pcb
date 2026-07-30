@@ -23365,7 +23365,7 @@
 				(pins "1" "2" "3" "4" "5")
 			)
 		)
-		(attr through_hole exclude_from_bom dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 1.33 -1.27)
@@ -23571,6 +23571,11 @@
 			(pinfunction "Pin_5_5")
 			(pintype "passive")
 			(uuid "e08d3ab6-6976-4de1-96fc-262366d57e7b")
+		)
+		(variant
+			(name "Power")
+			(dnp yes)
+			(exclude_from_bom yes)
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.step"
