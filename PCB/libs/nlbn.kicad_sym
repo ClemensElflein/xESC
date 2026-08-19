@@ -1,0 +1,611 @@
+(kicad_symbol_lib
+	(version 20251024)
+	(generator "kicad_symbol_editor")
+	(generator_version "10.0")
+	(symbol "LCK-TCF833-L50WL-G1_C54950857"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 18.796 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LCK-TCF833-L50WL-G1"
+			(at 0.254 15.494 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "nlbn:LCK-TCF833-L50WL-G1_C54950857"
+			(at 0 -27.178 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://item.szlcsc.com/datasheet/LCK-TCF833-L50WL-G1/58520478.html"
+			(at 0 -29.718 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LCK-TCF833-L50WL-G1 TYPE-C-SMD_LCK-TCF833-L50WL-G1"
+			(at 0 -32.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C54950857"
+			(at 0 -34.798 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LCK-TCF833-L50WL-G1_C54950857_0_1"
+			(rectangle
+				(start -10.16 13.335)
+				(end 10.16 -13.97)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -2.54 -0.127)
+				(radius 0.635)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 12.065) (xy 6.35 12.065)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 3.048) (xy 0 5.588) (xy 1.27 3.048) (xy -1.27 3.048)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start -1.27 9.525)
+				(mid -1.9023 10.16)
+				(end -1.27 10.795)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 9.525)
+				(mid -1.9023 10.16)
+				(end -1.27 10.795)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start -1.27 8.255)
+				(mid -3.1667 10.16)
+				(end -1.27 12.065)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -3.302) (xy 2.54 -0.762) (xy 2.54 0.508)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -4.572) (xy -2.54 -2.032) (xy -2.54 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -7.112) (xy 0 3.048)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -7.112)
+				(radius 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start 1.905 0.508)
+				(end 3.175 1.778)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start 6.35 12.065)
+				(mid 8.2467 10.16)
+				(end 6.35 8.255)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 10.795)
+				(mid 6.9823 10.16)
+				(end 6.35 9.525)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 6.35 10.795)
+				(mid 6.9823 10.16)
+				(end 6.35 9.525)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start 6.35 9.525)
+				(end -1.27 10.795)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 6.35 8.255) (xy -1.27 8.255)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LCK-TCF833-L50WL-G1_C54950857_1_1"
+			(pin passive line
+				(at 0 -19.05 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 10.16 0)
+				(length 5.08)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 1.27 0)
+				(length 5.08)
+				(name "CC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 6.35 180)
+				(length 5.08)
+				(name "D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 3.81 180)
+				(length 5.08)
+				(name "D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -8.89 180)
+				(length 5.08)
+				(name "SBU1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 10.16 0)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -19.05 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -19.05 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 10.16 0)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -15.24 3.81 0)
+				(length 5.08)
+				(name "CC2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 0 180)
+				(length 5.08)
+				(name "D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -2.54 180)
+				(length 5.08)
+				(name "D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -11.43 180)
+				(length 5.08)
+				(name "SBU2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -15.24 10.16 0)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -19.05 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -6.35 -19.05 90)
+				(length 5.08)
+				(name "SHIELD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "SH1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -6.35 -19.05 90)
+				(length 5.08)
+				(hide yes)
+				(name "SHIELD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "SH2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
