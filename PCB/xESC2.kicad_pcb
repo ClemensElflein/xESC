@@ -14133,12 +14133,12 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C54950857"
+		(property "JLC" "C54950857"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "472183f2-058b-405a-93be-09aaa2c2b8f8")
+			(uuid "fec3b55a-690f-4e7e-bfa8-d583ce296509")
 			(effects
 				(font
 					(size 1 1)
@@ -14149,6 +14149,14 @@
 		(path "/4a5098a5-a55f-4625-9177-22ed085176e8")
 		(sheetname "/")
 		(sheetfile "xESC2.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "A4" "B9" "B4" "A9" "B5" "A5" "SH1" "SH2" "A12" "B1" "A1" "B12"
+					"A6" "A7" "B6" "B7" "A8" "B8"
+				)
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -4.45 1.65)
@@ -33999,7 +34007,7 @@
 			)
 		)
 		(property ki_fp_filters "SOT?363*")
-		(path "/3bf17832-e167-4792-b561-64ca8b1dea6b")
+		(path "/3012dbc9-f431-4a0c-9d53-dc7adbdee6f2")
 		(sheetname "/")
 		(sheetfile "xESC2.kicad_sch")
 		(units
