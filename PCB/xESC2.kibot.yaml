@@ -33,9 +33,8 @@ variants:
     variant: "default"
     pre_transform: ["apply_jlc_rotation"]
   - name: "Power"
-    comment: "Power assembly variant"
-    type: kibom
-    variant: "Power"
+    comment: "Power assembly variant (native KiCad variant)"
+    type: kicad
     pre_transform: ["apply_jlc_rotation"]
 
 outputs:
@@ -140,24 +139,25 @@ outputs:
 
   - name: "bom_power"
     comment: "BoM for 'Power' assembly variant"
-    type: kibom
+    type: bom
     dir: release/Power
     options:
       variant: Power
       format: CSV
       number: 1
       output: "%f_%i_jlc.%x"
-      conf:
-        ref_separator: ","
+      ref_separator: ","
+      csv:
         hide_pcb_info: true
-        columns:
-          - field: Value
-            name: Comment
-          - field: References
-            name: Designator
-          - Footprint
-          - field: JLC
-            name: "LCSC Part #"
+        hide_stats_info: true
+      columns:
+        - field: Value
+          name: Comment
+        - field: References
+          name: Designator
+        - Footprint
+        - field: JLC
+          name: "LCSC Part #"
 
   - name: JLCPCB_gerbers
     comment: Gerbers compatible with JLCPCB

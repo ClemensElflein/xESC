@@ -794,7 +794,7 @@
         "uuid": "f1d82565-2f45-4436-9c4d-3203604bc842"
       }
     ],
-    "used_designators": "#FLG4,R44-45,#PWR144-146",
+    "used_designators": "#PWR144-146,R44-45,#FLG4",
     "variants": [
       {
         "name": "Power"
