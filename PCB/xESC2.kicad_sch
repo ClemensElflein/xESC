@@ -13190,7 +13190,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C54950857"
+		(property "JLC" "C54950857"
 			(at 58.166 78.994 0)
 			(hide yes)
 			(show_name no)
