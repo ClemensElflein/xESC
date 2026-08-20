@@ -3,57 +3,49 @@ kibot:
 
 import:
   - file: .kibot/jlcpcb_rotation_filter.yaml
-  
+
 preflight:
   run_erc: false
   run_drc: true
   set_text_variables:
-    - name: 'git_version'
+    - name: "git_version"
       # Replace n.m.i with n.m."x"
       command: >
         git describe --tags | sed -E 's/^(v[0-9]+\.[0-9]+)\.([0-9]+)/\1.x/'
   update_xml: true
 
-
 filters:
   - name: anything_in_Config
-    type: 'generic'
-    comment: 'Remove components with something in config'
-    keys: ["do not place", "DNP", 'bench_test']
+    type: "generic"
+    comment: "Remove components with something in config"
+    keys: ["do not place", "DNP", "bench_test"]
     exclude_config: true
     exclude_value: true
-  - name: use_power_parts
-    type: 'field_rename'
-    comment: 'Rename JLC_POWER to JLC so power-variant parts are picked up by JLC assembly'
-    rename:
-      - field: JLC_POWER
-        name: JLC
-
 variants:
   - name: rotated
-    comment: 'A variant of the PCB with the components rotated like JLC likes it. See .kibot/jlcpcb_rotation_filter.yaml for rotations'
+    comment: "A variant of the PCB with the components rotated like JLC likes it. See .kibot/jlcpcb_rotation_filter.yaml for rotations"
     type: kibom
     variant: rotated
     pre_transform: apply_jlc_rotation
-  - name: 'default'
-    comment: 'Default assembly variant'
+  - name: "default"
+    comment: "Default assembly variant"
     type: kibom
-    variant: 'default'
-    pre_transform: ['apply_jlc_rotation']
-  - name: 'POWER'
-    comment: 'POWER assembly variant — uses JLC_POWER field for alternate JLC parts'
+    variant: "default"
+    pre_transform: ["apply_jlc_rotation"]
+  - name: "Power"
+    comment: "Power assembly variant"
     type: kibom
-    variant: 'POWER'
-    pre_transform: ['apply_jlc_rotation', 'use_power_parts']
+    variant: "Power"
+    pre_transform: ["apply_jlc_rotation"]
 
 outputs:
-  - name: 'position'
+  - name: "position"
     comment: "Pick and place file, JLC style"
     type: position
     dir: release
     options:
       variant: rotated
-      output: '%f_cpl_jlc.%x'
+      output: "%f_cpl_jlc.%x"
       format: CSV
       units: millimeters
       separate_files_for_front_and_back: false
@@ -73,13 +65,13 @@ outputs:
         - id: Side
           name: Layer
 
-  - name: 'position_default'
+  - name: "position_default"
     comment: "Pick and place file for default assembly variant"
     type: position
     dir: release/default
     options:
       variant: default
-      output: '%f_cpl_jlc.%x'
+      output: "%f_cpl_jlc.%x"
       format: CSV
       units: millimeters
       separate_files_for_front_and_back: false
@@ -99,13 +91,13 @@ outputs:
         - id: Side
           name: Layer
 
-  - name: 'position_power'
-    comment: "Pick and place file for POWER assembly variant"
+  - name: "position_power"
+    comment: "Pick and place file for 'Power' assembly variant"
     type: position
-    dir: release/POWER
+    dir: release/Power
     options:
-      variant: POWER
-      output: '%f_cpl_jlc.%x'
+      variant: Power
+      output: "%f_cpl_jlc.%x"
       format: CSV
       units: millimeters
       separate_files_for_front_and_back: false
@@ -125,7 +117,7 @@ outputs:
         - id: Side
           name: Layer
 
-  - name: 'bom_default'
+  - name: "bom_default"
     comment: "BoM for default assembly variant"
     type: kibom
     dir: release/default
@@ -133,9 +125,9 @@ outputs:
       variant: default
       format: CSV
       number: 1
-      output: '%f_%i_jlc.%x'
+      output: "%f_%i_jlc.%x"
       conf:
-        ref_separator: ','
+        ref_separator: ","
         hide_pcb_info: true
         columns:
           - field: Value
@@ -144,19 +136,19 @@ outputs:
             name: Designator
           - Footprint
           - field: JLC
-            name: 'LCSC Part #'
+            name: "LCSC Part #"
 
-  - name: 'bom_power'
-    comment: "BoM for POWER assembly variant"
+  - name: "bom_power"
+    comment: "BoM for 'Power' assembly variant"
     type: kibom
-    dir: release/POWER
+    dir: release/Power
     options:
-      variant: POWER
+      variant: Power
       format: CSV
       number: 1
-      output: '%f_%i_jlc.%x'
+      output: "%f_%i_jlc.%x"
       conf:
-        ref_separator: ','
+        ref_separator: ","
         hide_pcb_info: true
         columns:
           - field: Value
@@ -165,7 +157,7 @@ outputs:
             name: Designator
           - Footprint
           - field: JLC
-            name: 'LCSC Part #'
+            name: "LCSC Part #"
 
   - name: JLCPCB_gerbers
     comment: Gerbers compatible with JLCPCB
@@ -187,7 +179,7 @@ outputs:
       use_gerber_net_attributes: false
       line_width: 0.1
       subtract_mask_from_silk: true
-      inner_extension_pattern: '.g%n'
+      inner_extension_pattern: ".g%n"
     layers:
       - copper
       - F.Silkscreen
@@ -203,67 +195,67 @@ outputs:
     dir: release
     options:
       pth_and_npth_single_file: false
-      pth_id: '-PTH'
-      npth_id: '-NPTH'
+      pth_id: "-PTH"
+      npth_id: "-NPTH"
       metric_units: true
       map: gerber
       route_mode_for_oval_holes: false
       output: "%f%i.%x"
 
-  - name: 'ibom'
-    comment: 'Generates an interactive web page useful to identify the position of the components in the PCB.'
-    type: 'ibom'
-    dir: 'release'
+  - name: "ibom"
+    comment: "Generates an interactive web page useful to identify the position of the components in the PCB."
+    type: "ibom"
+    dir: "release"
     options:
       dnf_filter: [anything_in_Config, _mechanical]
       extra_fields: Stock_PN
       highlight_pin1: true
 
-  - name: 'pdf_sch_print'
-    comment: 'Exports the PCB to the most common exchange format. Suitable for printing.'
-    type: 'pdf_sch_print'
-    dir: 'release'
+  - name: "pdf_sch_print"
+    comment: "Exports the PCB to the most common exchange format. Suitable for printing."
+    type: "pdf_sch_print"
+    dir: "release"
     options:
       dnf_filter: anything_in_Config
 
-  - name: 'pcbdraw_svg'
-    comment: 'Exports the PCB as a 2D model (SVG, PNG or JPG).'
-    type: 'pcbdraw'
-    dir: 'release'
+  - name: "pcbdraw_svg"
+    comment: "Exports the PCB as a 2D model (SVG, PNG or JPG)."
+    type: "pcbdraw"
+    dir: "release"
     options:
-      format: 'svg'
+      format: "svg"
       dnf_filter: anything_in_Config
 
-  - name: 'pcbdraw_png'
-    comment: 'Exports the PCB as a 2D model (SVG, PNG or JPG).'
-    type: 'pcbdraw'
-    dir: 'release'
+  - name: "pcbdraw_png"
+    comment: "Exports the PCB as a 2D model (SVG, PNG or JPG)."
+    type: "pcbdraw"
+    dir: "release"
     options:
-      format: 'png'
+      format: "png"
       dnf_filter: anything_in_Config
 
-  - name: 'pcbdraw_svg_bottom'
-    comment: 'Exports the PCB as a 2D model (SVG, PNG or JPG).'
-    type: 'pcbdraw'
-    dir: 'release'
-    options:
-      bottom: true
-      format: 'svg'
-      dnf_filter: anything_in_Config
-
-  - name: 'pcbdraw_png_bottom'
-    comment: 'Exports the PCB as a 2D model (SVG, PNG or JPG).'
-    type: 'pcbdraw'
-    dir: 'release'
+  - name: "pcbdraw_svg_bottom"
+    comment: "Exports the PCB as a 2D model (SVG, PNG or JPG)."
+    type: "pcbdraw"
+    dir: "release"
     options:
       bottom: true
-      format: 'png'
+      format: "svg"
       dnf_filter: anything_in_Config
 
-  - name: 'render_3d'
+  - name: "pcbdraw_png_bottom"
+    comment: "Exports the PCB as a 2D model (SVG, PNG or JPG)."
+    type: "pcbdraw"
+    dir: "release"
+    options:
+      bottom: true
+      format: "png"
+      dnf_filter: anything_in_Config
+
+  - name: "render_3d"
     comment: "Exports the image generated by KiCad's 3D viewer."
-    type: 'render_3d'
-    dir: 'release'
+    type: "render_3d"
+    dir: "release"
     options:
       rotate_x: 1
       rotate_y: 1
