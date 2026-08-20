@@ -622,7 +622,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "hw-openmower-sabo.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -660,12 +660,6 @@
           "label": "JLC",
           "name": "JLC",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "JLC_POWER",
-          "name": "JLC_POWER",
-          "show": false
         },
         {
           "group_by": true,
@@ -732,15 +726,9 @@
           "label": "FT Rotation Offset",
           "name": "FT Rotation Offset",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC Part",
-          "name": "LCSC Part",
-          "show": false
         }
       ],
-      "filter_string": "r",
+      "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",

@@ -6682,17 +6682,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 36.83 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "5e207596-6958-4997-a196-fceb279c6b4d")
 		)
@@ -6815,17 +6804,6 @@
 			)
 		)
 		(property "JLC" "C25744"
-			(at 36.83 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 36.83 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -7041,17 +7019,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 48.26 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "baec9290-5ffe-4841-b430-1e3bd2f44562")
 		)
@@ -7180,17 +7147,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 55.88 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "585504eb-dfcf-4939-8e12-4c6b0f0ca2ab")
 		)
@@ -7309,17 +7265,6 @@
 			)
 		)
 		(property "JLC" "C25867"
-			(at 63.5 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 63.5 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -7535,17 +7480,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 41.91 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "80b5b39f-fc6d-4c4f-86b3-26219ddc0279")
 		)
@@ -7664,17 +7598,6 @@
 			)
 		)
 		(property "JLC" "C25879"
-			(at 46.99 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 46.99 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -7813,17 +7736,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 52.07 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "e29436c0-e328-487e-b9e2-4cc58f8d9961")
 		)
@@ -7920,17 +7832,6 @@
 			)
 		)
 		(property "JLC" ""
-			(at 52.07 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 52.07 127 0)
 			(hide yes)
 			(show_name no)
@@ -8047,17 +7948,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 46.99 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "3dda0950-023d-4209-a8ac-cb046b71c703")
 		)
@@ -8154,17 +8044,6 @@
 			)
 		)
 		(property "JLC" ""
-			(at 41.91 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 41.91 127 0)
 			(hide yes)
 			(show_name no)
@@ -8280,17 +8159,6 @@
 			)
 		)
 		(property "JLC" "C2935911"
-			(at 93.98 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 93.98 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -8517,17 +8385,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 96.52 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "0a45cdf0-f933-4215-acac-62c3a505a213")
 		)
@@ -8646,17 +8503,6 @@
 			)
 		)
 		(property "JLC" "C22843"
-			(at 96.52 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 96.52 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -8795,17 +8641,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 107.95 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "087a9622-6089-4818-a9c4-ebe0d6cf1a42")
 		)
@@ -8924,17 +8759,6 @@
 			)
 		)
 		(property "JLC" "C22843"
-			(at 107.95 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 107.95 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -9073,17 +8897,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 118.11 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "3e0579b5-cbd4-4ffb-98ea-79c17739a37d")
 		)
@@ -9202,17 +9015,6 @@
 			)
 		)
 		(property "JLC" "C22843"
-			(at 118.11 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 118.11 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -9406,17 +9208,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 123.19 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "e70a2aec-b25e-405a-8cef-82010a64fceb")
 		)
@@ -9523,17 +9314,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 113.03 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "1d157d54-6715-4459-80b1-4b2b9cd76d8e")
 		)
@@ -9630,17 +9410,6 @@
 			)
 		)
 		(property "JLC" ""
-			(at 101.6 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 101.6 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -9856,17 +9625,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 132.08 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "67ac4b02-cb0e-4851-ae79-00e095ec015a")
 		)
@@ -9985,17 +9743,6 @@
 			)
 		)
 		(property "JLC" "C22843"
-			(at 132.08 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 132.08 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -10211,17 +9958,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 74.93 22.86 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "0567cf44-6e4b-48ae-bdf9-e70d37d33cf9")
 		)
@@ -10350,17 +10086,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 30.48 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "35e354c1-0063-4439-9666-6e3a8de17d6f")
 		)
@@ -10479,17 +10204,6 @@
 			)
 		)
 		(property "JLC" "C25092"
-			(at 30.48 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 30.48 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -10918,17 +10632,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 80.01 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "689cb426-0710-4f61-87de-81b5add45036")
 		)
@@ -11209,17 +10912,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 58.42 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f94c5fce-1d9e-4753-9ac6-ab19b89526a9")
 		)
@@ -11480,17 +11172,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 194.31 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "46c13a10-54b2-4381-91b0-84dade636555")
 		)
@@ -11588,17 +11269,6 @@
 		)
 		(property "JLC" "C2290"
 			(at 194.31 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
-			(at 194.31 147.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11726,17 +11396,6 @@
 			)
 		)
 		(property "JLC" "C440252"
-			(at 162.56 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 162.56 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -11875,17 +11534,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 162.56 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "ba2046b7-fa52-4746-a3ed-2c515954caea")
 		)
@@ -12004,17 +11652,6 @@
 			)
 		)
 		(property "JLC" "C25091"
-			(at 203.2 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 203.2 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -12145,17 +11782,6 @@
 		)
 		(property "JLC" "C2286"
 			(at 203.2 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
-			(at 203.2 147.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12652,17 +12278,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 44.45 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Config" "+POWER"
 			(at 44.45 186.69 0)
 			(hide yes)
@@ -12770,17 +12385,6 @@
 				)
 			)
 		)
-		(property "JLC_POWER" ""
-			(at 36.83 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "5"
 			(uuid "18d1ddf1-8842-4505-9d2e-42a5a307ca39")
 		)
@@ -12878,17 +12482,6 @@
 			)
 		)
 		(property "JLC" "C53260788"
-			(at 31.75 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 31.75 161.29 90)
 			(hide yes)
 			(show_name no)
@@ -13074,17 +12667,6 @@
 			)
 		)
 		(property "JLC" "C53260788"
-			(at 26.67 161.29 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 26.67 161.29 90)
 			(hide yes)
 			(show_name no)
@@ -14267,17 +13849,6 @@
 			)
 		)
 		(property "JLC" "C22859"
-			(at 36.83 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLC_POWER" ""
 			(at 36.83 186.69 0)
 			(hide yes)
 			(show_name no)
