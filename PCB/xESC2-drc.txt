@@ -1,0 +1,18 @@
+** Drc report for xESC2.kicad_pcb **
+** Created on 2026-08-23T16:47:31 **
+
+** Found 2 DRC violations **
+[pth_inside_courtyard]: PTH inside courtyard
+    ; warning (excluded)
+    @(124.6 mm, 97.76 mm): PTH pad SH1 [GND] of J2
+    @(124.116839 mm, 85.557499 mm): Footprint J3
+[pth_inside_courtyard]: PTH inside courtyard
+    ; warning (excluded)
+    @(124.6 mm, 106.44 mm): PTH pad SH2 [GND] of J2
+    @(124.116839 mm, 108.417499 mm): Footprint J4
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **
