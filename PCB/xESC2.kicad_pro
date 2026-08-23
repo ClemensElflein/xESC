@@ -832,7 +832,7 @@
     ]
   ],
   "text_variables": {
-    "git_version": "v0.0.0"
+    "git_version": ""
   },
   "tuning_profiles": {
     "meta": {
