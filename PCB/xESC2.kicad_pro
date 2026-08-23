@@ -79,10 +79,6 @@
       ],
       "drc_exclusions": [
         [
-          "missing_courtyard|152056839|91817499|13f1e2aa-c9e7-4b9c-b74f-60c4a1b0a5c4|00000000-0000-0000-0000-000000000000",
-          "text doesnt need courtyard"
-        ],
-        [
           "pth_inside_courtyard|124600000|106440000|9cae4f9d-f412-46b0-8fef-80827c63acd1|00000000-0000-0000-0000-000061e0f220",
           ""
         ],

@@ -86,6 +86,7 @@
 			(outputdirectory "GERBER")
 		)
 	)
+	(property "git_version" "")
 	(variants
 		(variant
 			(name "Power")
@@ -35520,7 +35521,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "40.0000 mm"
+		(gr_text "40,0000 mm"
 			(at 179.506839 98.317499 90)
 			(layer "Dwgs.User")
 			(uuid "47d9fcdc-c993-4982-b551-f9ce189dbaa6")
@@ -35556,7 +35557,7 @@
 			(extension_offset 0)
 			(keep_text_aligned yes)
 		)
-		(gr_text "80.0000 mm"
+		(gr_text "80,0000 mm"
 			(at 129.056839 125.967498 0)
 			(layer "Dwgs.User")
 			(uuid "7e9e8ae3-681c-4bef-ba9a-720c4c156388")
